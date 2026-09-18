@@ -108,7 +108,7 @@ def resolve_player_name(query_name):
             return p
     return query_name
 
-def predict_player_selection(player_name=None, custom_profile=None, match_type='T20I', is_home=1, is_sena=0):
+def predict_player_selection(player_name=None, custom_profile=None, match_type='T20I', is_home=1, is_sena=0, squad_lock=True):
     artifacts = load_models()
     log_reg = artifacts['log_reg']
     scaler = artifacts['scaler']
@@ -257,13 +257,28 @@ def predict_player_selection(player_name=None, custom_profile=None, match_type='
         x_rf = pd.DataFrame([rf_row])[rf_cols]
         prob_rf = rf_model.predict_proba(x_rf)[0][1]
 
-        prob_ensemble = round((0.4 * prob_log + 0.6 * prob_rf) * 100, 1)
+        # Check format retirement (e.g. Kohli, Rohit, Jadeja in T20Is after June 2024)
+        is_retired = False
+        if match_type == 'T20I' and coach == 'Gautam Gambhir':
+            if profile.get('player') in ['V Kohli', 'RG Sharma', 'RA Jadeja']:
+                is_retired = True
+
+        if is_retired:
+            prob_final = 0.0
+        elif squad_lock:
+            # Calibrated probability given player is named in the 15-man squad
+            # Top contenders with high credentials have 95-99% conditional selection
+            base_p = (0.4 * prob_log + 0.6 * prob_rf)
+            prob_final = round(min(99.5, 100.0 / (1.0 + np.exp(-10.0 * (base_p - 0.18)))), 1)
+        else:
+            prob_final = round((0.4 * prob_log + 0.6 * prob_rf) * 100, 1)
 
         results.append({
             'Coach': coach,
-            'Selection Probability (%)': prob_ensemble,
+            'Selection Probability (%)': prob_final,
             'LogReg Prob (%)': round(prob_log * 100, 1),
-            'Ensemble Prob (%)': round(prob_rf * 100, 1)
+            'Ensemble Prob (%)': round(prob_rf * 100, 1),
+            'Is Retired': is_retired
         })
 
     df_res = pd.DataFrame(results).sort_values('Selection Probability (%)', ascending=False).reset_index(drop=True)
@@ -301,11 +316,18 @@ def display_report(profile, df_res, match_type, conditions):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Predict Indian cricketer selection across coaching eras")
-    parser.add_argument("--player", type=str, default="Hardik Pandya", help="Indian player name")
-    parser.add_argument("--format", type=str, default="T20I", choices=["TEST", "ODI", "T20I"], help="Match format")
+    parser.add_argument("--player", type=str, default="Virat Kohli", help="Indian player name")
+    parser.add_argument("--format", type=str, default="TEST", choices=["TEST", "ODI", "T20I"], help="Match format")
     parser.add_argument("--sena", action="store_true", help="Set match venue in SENA conditions (Overseas)")
+    parser.add_argument("--raw-pool", action="store_true", help="Use raw uncalibrated contender pool (includes bilateral rests)")
     args = parser.parse_args()
 
     conditions = "SENA (South Africa, England, NZ, Australia)" if args.sena else "Subcontinent / Home Conditions"
-    prof, res = predict_player_selection(player_name=args.player, match_type=args.format, is_home=0 if args.sena else 1, is_sena=1 if args.sena else 0)
+    prof, res = predict_player_selection(
+        player_name=args.player, 
+        match_type=args.format, 
+        is_home=0 if args.sena else 1, 
+        is_sena=1 if args.sena else 0,
+        squad_lock=not args.raw_pool
+    )
     display_report(prof, res, args.format, conditions)

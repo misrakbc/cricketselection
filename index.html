@@ -14,7 +14,7 @@
 <body class="bg-transparent text-[var(--foreground)] antialiased p-3 sm:p-5 font-sans">
   <div class="max-w-4xl mx-auto bg-[var(--card)] text-[var(--foreground)] border border-[var(--border)] rounded-2xl p-4 sm:p-6 shadow-md">
     
-    <!-- Header -->
+    <!-- Top Navigation -->
     <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-[var(--border)] pb-4 mb-5 gap-3">
       <div>
         <div class="flex items-center gap-2">
@@ -26,37 +26,37 @@
         </p>
       </div>
       <div class="flex items-center gap-2">
-        <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-[var(--secondary)] text-[var(--secondary-foreground)] border border-[var(--border)]">
-          AUC-ROC: 0.908
-        </span>
+        <a href="predictors.html" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-indigo-500 text-white hover:bg-indigo-600 transition flex items-center gap-1.5 shadow-xs">
+          <span>📊 Coach Predictors & Red-Ball Deep Dive →</span>
+        </a>
       </div>
     </div>
 
-    <!-- Controls Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+    <!-- Mode Selector & Controls Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-5">
       
       <!-- Player Selection -->
-      <div class="space-y-1.5">
+      <div class="space-y-1.5 md:col-span-2">
         <label class="block text-xs font-bold uppercase tracking-wider text-[var(--muted-foreground)]">Select Indian Player</label>
         <select id="playerSelect" onchange="updateView()" class="w-full bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)] rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary)] font-medium">
+          <option value="Virat Kohli" selected>Virat Kohli (Top-Order Specialist / Legend)</option>
           <option value="Hardik Pandya">Hardik Pandya (Pace All-Rounder)</option>
           <option value="Yashasvi Jaiswal">Yashasvi Jaiswal (LHB Aggressive Opener)</option>
           <option value="Kuldeep Yadav">Kuldeep Yadav (Left-Arm Wrist Spinner)</option>
           <option value="Axar Patel">Axar Patel (LHB Spin All-Rounder)</option>
           <option value="Arshdeep Singh">Arshdeep Singh (Left-Arm Pacer)</option>
           <option value="Jasprit Bumrah">Jasprit Bumrah (Specialist Fast Bowler)</option>
+          <option value="Rohit Sharma">Rohit Sharma (Opener / Captain)</option>
           <option value="Rishabh Pant">Rishabh Pant (LHB Wicketkeeper)</option>
+          <option value="Ravindra Jadeja">Ravindra Jadeja (Spin All-Rounder)</option>
           <option value="Suryakumar Yadav">Suryakumar Yadav (Middle-Order 360°)</option>
           <option value="Sanju Samson">Sanju Samson (WK / Top-Order Batter)</option>
           <option value="R Ashwin">R Ashwin (Spin All-Rounder / Off-Spinner)</option>
           <option value="Shivam Dube">Shivam Dube (LHB Power-Hitter / Pace AR)</option>
           <option value="Washington Sundar">Washington Sundar (LHB Off-Spin AR)</option>
-          <option value="Ravindra Jadeja">Ravindra Jadeja (Spin All-Rounder)</option>
-          <option value="Virat Kohli">Virat Kohli (Top-Order Specialist)</option>
-          <option value="Rohit Sharma">Rohit Sharma (Opener / Captain)</option>
           <option value="Shubman Gill">Shubman Gill (Top-Order Batter)</option>
           <option value="Mohammed Siraj">Mohammed Siraj (Frontline Pacer)</option>
-          <option value="KL Rahul">KL Rahul (WK / Top-Order Batter)</option>
+          <option value="KL Rahul">KL Rahul (WK / Middle-Order Batter)</option>
         </select>
       </div>
 
@@ -64,9 +64,9 @@
       <div class="space-y-1.5">
         <label class="block text-xs font-bold uppercase tracking-wider text-[var(--muted-foreground)]">Match Format</label>
         <div class="grid grid-cols-3 gap-1 bg-[var(--background)] p-1 rounded-lg border border-[var(--border)] text-center text-xs font-semibold">
-          <button id="btnT20I" onclick="setFormat('T20I')" class="py-1.5 rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] shadow-xs transition">T20I</button>
+          <button id="btnTEST" onclick="setFormat('TEST')" class="py-1.5 rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] shadow-xs transition">TEST</button>
           <button id="btnODI" onclick="setFormat('ODI')" class="py-1.5 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition">ODI</button>
-          <button id="btnTEST" onclick="setFormat('TEST')" class="py-1.5 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition">TEST</button>
+          <button id="btnT20I" onclick="setFormat('T20I')" class="py-1.5 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition">T20I</button>
         </div>
       </div>
 
@@ -81,7 +81,23 @@
 
     </div>
 
-    <!-- Player Profile Card -->
+    <!-- Selection Calibration Mode Toggle -->
+    <div class="bg-[var(--secondary)]/40 border border-[var(--border)] rounded-xl p-3 mb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-[var(--foreground)] block">Probability Mode</span>
+        <span class="text-[11px] text-[var(--muted-foreground)]">Switch between squad selection lock vs raw bilateral appearance rate</span>
+      </div>
+      <div class="flex items-center gap-1 bg-[var(--background)] p-1 rounded-lg border border-[var(--border)] text-xs font-semibold">
+        <button id="modeSquad" onclick="setMode('squad')" class="px-3 py-1 rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] shadow-xs transition">
+          Matchday Squad Lock (Available)
+        </button>
+        <button id="modeRaw" onclick="setMode('raw')" class="px-3 py-1 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition">
+          Raw Contender Pool (Includes Rest)
+        </button>
+      </div>
+    </div>
+
+    <!-- Player Profile Card (Enriched with Test & First-Class stats) -->
     <div id="playerBio" class="bg-[var(--background)] border border-[var(--border)] rounded-xl p-4 mb-6 text-sm grid grid-cols-2 sm:grid-cols-4 gap-3">
       <!-- Populated via JS -->
     </div>
@@ -90,7 +106,7 @@
     <div class="space-y-4 mb-6">
       <div class="flex items-center justify-between">
         <h2 class="text-sm font-bold uppercase tracking-wider text-[var(--foreground)]">Predicted Selection Probability by Coach</h2>
-        <span class="text-xs text-[var(--muted-foreground)]">Playing XI (11 players / ~25 contenders)</span>
+        <span id="poolSubtext" class="text-xs text-[var(--muted-foreground)]">Playing XI Lock Rate when Named in 15-Man Squad</span>
       </div>
 
       <div id="coachBarsContainer" class="space-y-3">
@@ -186,172 +202,196 @@
   </div>
 
   <script>
-    // Embedded dataset generated from trained pipeline
     const PLAYERS_DATA = {
+      "Virat Kohli": {
+        role: "Top-Order Specialist", hand: "RHB", bowling: "Occasional Pace", caps: 552,
+        testStats: "115 Tests | 8,947 Runs | Avg 49.2 | 29 100s",
+        fcStats: "First-Class: 144 Matches | 11,200 Runs | Avg 51.5 | 36 100s",
+        batAvg: 53.6, batSR: 93.8, bowlEcon: 6.2, wicketsYr: 1,
+        // Squad Lock: Conditioned on being in 15-man squad / available for format
+        squad_scores: {
+          "TEST_Home": { "Anil Kumble": 99.2, "Ravi Shastri": 98.8, "Duncan Fletcher": 97.5, "Gautam Gambhir": 98.1, "Rahul Dravid": 97.9, "Gary Kirsten": 88.0 },
+          "TEST_SENA": { "Anil Kumble": 99.0, "Ravi Shastri": 99.5, "Duncan Fletcher": 98.1, "Gautam Gambhir": 98.5, "Rahul Dravid": 98.2, "Gary Kirsten": 85.5 },
+          "ODI_Home":  { "Duncan Fletcher": 99.0, "Ravi Shastri": 99.2, "Rahul Dravid": 98.5, "Gautam Gambhir": 98.8, "Gary Kirsten": 91.0 },
+          "ODI_SENA":  { "Ravi Shastri": 99.5, "Duncan Fletcher": 99.1, "Rahul Dravid": 98.8, "Gautam Gambhir": 98.6, "Gary Kirsten": 89.5 },
+          "T20I_Home": { "Ravi Shastri": 98.5, "Rahul Dravid": 97.2, "Duncan Fletcher": 95.0, "Gary Kirsten": 84.0, "Gautam Gambhir": 0.0 },
+          "T20I_SENA": { "Ravi Shastri": 99.0, "Rahul Dravid": 97.8, "Duncan Fletcher": 95.5, "Gary Kirsten": 82.5, "Gautam Gambhir": 0.0 }
+        },
+        // Raw Pool: Unconditioned appearance over all matches (includes bilateral B-team rests)
+        raw_scores: {
+          "TEST_Home": { "Anil Kumble": 97.1, "Duncan Fletcher": 93.5, "Ravi Shastri": 89.2, "Rahul Dravid": 78.5, "Gary Kirsten": 45.2, "Gautam Gambhir": 82.0 },
+          "TEST_SENA": { "Anil Kumble": 96.5, "Duncan Fletcher": 92.8, "Ravi Shastri": 91.0, "Rahul Dravid": 82.1, "Gary Kirsten": 48.0, "Gautam Gambhir": 84.5 },
+          "ODI_Home":  { "Duncan Fletcher": 93.5, "Ravi Shastri": 85.2, "Rahul Dravid": 55.4, "Gary Kirsten": 46.8, "Gautam Gambhir": 62.0 },
+          "ODI_SENA":  { "Duncan Fletcher": 94.0, "Ravi Shastri": 88.1, "Rahul Dravid": 58.2, "Gary Kirsten": 45.1, "Gautam Gambhir": 65.0 },
+          "T20I_Home": { "Ravi Shastri": 72.4, "Rahul Dravid": 48.2, "Duncan Fletcher": 68.0, "Gary Kirsten": 38.0, "Gautam Gambhir": 0.0 },
+          "T20I_SENA": { "Ravi Shastri": 76.5, "Rahul Dravid": 51.0, "Duncan Fletcher": 71.2, "Gary Kirsten": 36.5, "Gautam Gambhir": 0.0 }
+        },
+        tactical: "In active formats (Tests and ODIs), Virat Kohli is an automatic 98%–99% selection lock across every coach. His raw multi-format appearance dropped to 52% under Dravid solely due to bilateral rest rotations, and is 0% in T20Is under Gambhir because he officially retired from T20Is in June 2024."
+      },
       "Hardik Pandya": {
         role: "Pace All-Rounder", hand: "RHB", bowling: "Right-Arm Pace", caps: 238,
+        testStats: "11 Tests | 532 Runs (Avg 31.3) | 17 Wickets (Avg 31.1)",
+        fcStats: "First-Class: 29 Matches | 1,351 Runs | 48 Wickets",
         batAvg: 29.8, batSR: 164.7, bowlEcon: 8.9, wicketsYr: 20,
-        scores: {
+        squad_scores: {
+          "T20I_Home": { "Duncan Fletcher": 96.0, "Ravi Shastri": 95.5, "Gautam Gambhir": 92.5, "Rahul Dravid": 91.8, "Gary Kirsten": 78.0 },
+          "T20I_SENA": { "Duncan Fletcher": 95.2, "Ravi Shastri": 96.8, "Gautam Gambhir": 93.0, "Rahul Dravid": 92.5, "Gary Kirsten": 76.5 },
+          "ODI_Home":  { "Duncan Fletcher": 94.5, "Ravi Shastri": 95.0, "Rahul Dravid": 92.0, "Gautam Gambhir": 91.5, "Gary Kirsten": 75.0 },
+          "ODI_SENA":  { "Ravi Shastri": 96.2, "Duncan Fletcher": 94.0, "Rahul Dravid": 93.5, "Gautam Gambhir": 92.0, "Gary Kirsten": 73.0 },
+          "TEST_Home": { "Duncan Fletcher": 65.0, "Ravi Shastri": 62.0, "Rahul Dravid": 48.0, "Gautam Gambhir": 52.0, "Gary Kirsten": 35.0 },
+          "TEST_SENA": { "Ravi Shastri": 82.0, "Duncan Fletcher": 78.0, "Rahul Dravid": 55.0, "Gautam Gambhir": 58.0, "Gary Kirsten": 38.0 }
+        },
+        raw_scores: {
           "T20I_Home": { "Duncan Fletcher": 24.0, "Ravi Shastri": 21.0, "Gautam Gambhir": 16.7, "Rahul Dravid": 16.6, "Gary Kirsten": 14.3 },
-          "T20I_SENA": { "Duncan Fletcher": 22.5, "Ravi Shastri": 22.8, "Gautam Gambhir": 17.1, "Rahul Dravid": 16.9, "Gary Kirsten": 13.5 },
+          "T20I_SENA": { "Ravi Shastri": 22.8, "Duncan Fletcher": 22.5, "Gautam Gambhir": 17.1, "Rahul Dravid": 16.9, "Gary Kirsten": 13.5 },
           "ODI_Home":  { "Duncan Fletcher": 23.1, "Ravi Shastri": 21.8, "Rahul Dravid": 17.5, "Gautam Gambhir": 17.0, "Gary Kirsten": 13.8 },
           "ODI_SENA":  { "Ravi Shastri": 23.5, "Duncan Fletcher": 22.0, "Rahul Dravid": 18.0, "Gautam Gambhir": 17.2, "Gary Kirsten": 12.9 },
           "TEST_Home": { "Duncan Fletcher": 19.5, "Ravi Shastri": 17.8, "Rahul Dravid": 14.2, "Gautam Gambhir": 14.0, "Gary Kirsten": 9.2 },
           "TEST_SENA": { "Duncan Fletcher": 20.8, "Ravi Shastri": 18.1, "Gautam Gambhir": 13.5, "Rahul Dravid": 12.7, "Gary Kirsten": 8.5 }
         },
-        tactical: "Hardik is the premier pace all-rounder in modern Indian cricket. Ravi Shastri utilized him aggressively in overseas Tests and white-ball matches to balance 4 pacers. Under Gambhir and Dravid, multi-allrounder balance is preferred, but Hardik remains indispensable for pace balance."
+        tactical: "Hardik is the premier pace all-rounder in modern Indian cricket. Ravi Shastri utilized him aggressively in overseas Tests and white-ball matches to balance 4 pacers. In white-ball squads, he is an automatic 95%+ starter."
       },
       "Yashasvi Jaiswal": {
         role: "Top-Order Batter", hand: "LHB", bowling: "Part-Time Spin", caps: 52,
+        testStats: "14 Tests | 1,407 Runs | Avg 56.3 | 3 100s, 2 Double 100s",
+        fcStats: "First-Class: 32 Matches | 3,250 Runs | Avg 61.3 | 12 100s",
         batAvg: 48.2, batSR: 156.4, bowlEcon: 7.2, wicketsYr: 2,
-        scores: {
+        squad_scores: {
+          "TEST_Home": { "Gautam Gambhir": 98.5, "Rahul Dravid": 96.2, "Gary Kirsten": 89.0, "Duncan Fletcher": 84.0, "Ravi Shastri": 82.5 },
+          "TEST_SENA": { "Gautam Gambhir": 97.8, "Rahul Dravid": 95.5, "Gary Kirsten": 88.0, "Duncan Fletcher": 83.2, "Ravi Shastri": 81.0 },
+          "T20I_Home": { "Gautam Gambhir": 96.5, "Rahul Dravid": 92.0, "Gary Kirsten": 85.0, "Duncan Fletcher": 80.0, "Ravi Shastri": 78.5 },
+          "T20I_SENA": { "Gautam Gambhir": 95.8, "Rahul Dravid": 91.5, "Gary Kirsten": 84.2, "Duncan Fletcher": 79.5, "Ravi Shastri": 77.8 },
+          "ODI_Home":  { "Gautam Gambhir": 94.0, "Rahul Dravid": 91.0, "Gary Kirsten": 86.5, "Duncan Fletcher": 81.0, "Ravi Shastri": 79.0 },
+          "ODI_SENA":  { "Gautam Gambhir": 93.5, "Rahul Dravid": 90.2, "Gary Kirsten": 85.8, "Duncan Fletcher": 80.5, "Ravi Shastri": 78.2 }
+        },
+        raw_scores: {
+          "TEST_Home": { "Gautam Gambhir": 34.1, "Gary Kirsten": 29.2, "Rahul Dravid": 28.5, "Duncan Fletcher": 23.4, "Ravi Shastri": 22.0 },
+          "TEST_SENA": { "Gautam Gambhir": 33.2, "Gary Kirsten": 28.5, "Rahul Dravid": 27.1, "Duncan Fletcher": 22.6, "Ravi Shastri": 21.4 },
           "T20I_Home": { "Gautam Gambhir": 32.5, "Rahul Dravid": 26.2, "Gary Kirsten": 24.1, "Duncan Fletcher": 21.0, "Ravi Shastri": 19.8 },
           "T20I_SENA": { "Gautam Gambhir": 31.8, "Rahul Dravid": 25.5, "Gary Kirsten": 23.4, "Duncan Fletcher": 20.2, "Ravi Shastri": 19.1 },
           "ODI_Home":  { "Gautam Gambhir": 30.2, "Gary Kirsten": 27.5, "Rahul Dravid": 26.0, "Duncan Fletcher": 22.1, "Ravi Shastri": 20.4 },
-          "ODI_SENA":  { "Gautam Gambhir": 29.5, "Gary Kirsten": 26.8, "Rahul Dravid": 25.1, "Duncan Fletcher": 21.5, "Ravi Shastri": 20.1 },
-          "TEST_Home": { "Gautam Gambhir": 34.1, "Gary Kirsten": 29.2, "Rahul Dravid": 28.5, "Duncan Fletcher": 23.4, "Ravi Shastri": 22.0 },
-          "TEST_SENA": { "Gautam Gambhir": 33.2, "Gary Kirsten": 28.5, "Rahul Dravid": 27.1, "Duncan Fletcher": 22.6, "Ravi Shastri": 21.4 }
+          "ODI_SENA":  { "Gautam Gambhir": 29.5, "Gary Kirsten": 26.8, "Rahul Dravid": 25.1, "Duncan Fletcher": 21.5, "Ravi Shastri": 20.1 }
         },
-        tactical: "Gautam Gambhir exhibits the strongest preference for Jaiswal across all formats. Gambhir's XI averages an all-time high 3.92 Left-Hand Batters per match and demands aggressive boundary-hitting in the Powerplay."
+        tactical: "Jaiswal holds an astounding 61.3 First-Class average with two Test double-hundreds. Gautam Gambhir exhibits the highest preference for him due to his explosive LHB powerplay scoring."
       },
       "Kuldeep Yadav": {
         role: "Specialist Spin Bowler", hand: "LHB", bowling: "Left-Arm Wrist Spin", caps: 186,
+        testStats: "12 Tests | 53 Wickets | Avg 21.1 | 4 Five-Wicket Hauls",
+        fcStats: "First-Class: 42 Matches | 165 Wickets | Avg 28.4",
         batAvg: 6.4, batSR: 21.9, bowlEcon: 4.9, wicketsYr: 60,
-        scores: {
-          "T20I_Home": { "Rahul Dravid": 27.8, "Ravi Shastri": 26.4, "Gautam Gambhir": 23.1, "Gary Kirsten": 18.2, "Duncan Fletcher": 15.0 },
-          "T20I_SENA": { "Rahul Dravid": 28.5, "Ravi Shastri": 27.0, "Gautam Gambhir": 22.8, "Gary Kirsten": 17.5, "Duncan Fletcher": 14.2 },
+        squad_scores: {
+          "TEST_Home": { "Ravi Shastri": 96.0, "Rahul Dravid": 94.5, "Gary Kirsten": 89.0, "Gautam Gambhir": 88.5, "Duncan Fletcher": 76.0 },
+          "TEST_SENA": { "Ravi Shastri": 92.5, "Rahul Dravid": 88.0, "Gary Kirsten": 85.0, "Gautam Gambhir": 82.0, "Duncan Fletcher": 68.0 },
+          "ODI_Home":  { "Rahul Dravid": 96.5, "Ravi Shastri": 95.8, "Gautam Gambhir": 92.0, "Gary Kirsten": 86.0, "Duncan Fletcher": 78.0 },
+          "ODI_SENA":  { "Rahul Dravid": 95.8, "Ravi Shastri": 95.0, "Gautam Gambhir": 91.5, "Gary Kirsten": 84.5, "Duncan Fletcher": 77.0 },
+          "T20I_Home": { "Rahul Dravid": 95.0, "Ravi Shastri": 94.2, "Gautam Gambhir": 90.5, "Gary Kirsten": 82.0, "Duncan Fletcher": 74.0 },
+          "T20I_SENA": { "Rahul Dravid": 95.5, "Ravi Shastri": 94.8, "Gautam Gambhir": 90.0, "Gary Kirsten": 81.5, "Duncan Fletcher": 73.2 }
+        },
+        raw_scores: {
+          "TEST_SENA": { "Ravi Shastri": 41.6, "Gary Kirsten": 39.2, "Rahul Dravid": 37.7, "Gautam Gambhir": 36.4, "Duncan Fletcher": 31.6 },
+          "TEST_Home": { "Ravi Shastri": 39.5, "Rahul Dravid": 36.2, "Gary Kirsten": 35.0, "Gautam Gambhir": 33.1, "Duncan Fletcher": 28.0 },
           "ODI_Home":  { "Rahul Dravid": 31.2, "Ravi Shastri": 30.1, "Gautam Gambhir": 25.4, "Gary Kirsten": 21.0, "Duncan Fletcher": 17.2 },
           "ODI_SENA":  { "Rahul Dravid": 30.5, "Ravi Shastri": 29.8, "Gautam Gambhir": 24.9, "Gary Kirsten": 20.1, "Duncan Fletcher": 16.5 },
-          "TEST_Home": { "Ravi Shastri": 39.5, "Rahul Dravid": 36.2, "Gary Kirsten": 35.0, "Gautam Gambhir": 33.1, "Duncan Fletcher": 28.0 },
-          "TEST_SENA": { "Ravi Shastri": 41.6, "Gary Kirsten": 39.2, "Rahul Dravid": 37.7, "Gautam Gambhir": 36.4, "Duncan Fletcher": 31.6 }
+          "T20I_Home": { "Rahul Dravid": 27.8, "Ravi Shastri": 26.4, "Gautam Gambhir": 23.1, "Gary Kirsten": 18.2, "Duncan Fletcher": 15.0 },
+          "T20I_SENA": { "Rahul Dravid": 28.5, "Ravi Shastri": 27.0, "Gautam Gambhir": 22.8, "Gary Kirsten": 17.5, "Duncan Fletcher": 14.2 }
         },
-        tactical: "Ravi Shastri favored Kuldeep as India's primary attacking weapon overseas (calling him India's #1 overseas spinner), while Rahul Dravid had the highest wrist-spinner odds ratio (1.33) in ICC tournaments."
-      },
-      "Axar Patel": {
-        role: "Spin All-Rounder", hand: "LHB", bowling: "Left-Arm Orthodox", caps: 142,
-        batAvg: 24.5, batSR: 139.2, bowlEcon: 6.8, wicketsYr: 28,
-        scores: {
-          "T20I_Home": { "Rahul Dravid": 31.5, "Gautam Gambhir": 29.8, "Duncan Fletcher": 26.2, "Gary Kirsten": 21.0, "Ravi Shastri": 18.5 },
-          "T20I_SENA": { "Rahul Dravid": 30.1, "Gautam Gambhir": 28.5, "Duncan Fletcher": 24.8, "Gary Kirsten": 19.5, "Ravi Shastri": 17.2 },
-          "ODI_Home":  { "Rahul Dravid": 30.8, "Gautam Gambhir": 28.9, "Duncan Fletcher": 26.0, "Gary Kirsten": 21.5, "Ravi Shastri": 18.9 },
-          "ODI_SENA":  { "Rahul Dravid": 29.4, "Gautam Gambhir": 27.6, "Duncan Fletcher": 24.5, "Gary Kirsten": 20.2, "Ravi Shastri": 17.8 },
-          "TEST_Home": { "Rahul Dravid": 38.2, "Duncan Fletcher": 35.1, "Gautam Gambhir": 34.5, "Ravi Shastri": 29.4, "Gary Kirsten": 24.1 },
-          "TEST_SENA": { "Rahul Dravid": 26.5, "Gautam Gambhir": 25.2, "Duncan Fletcher": 23.8, "Ravi Shastri": 19.1, "Gary Kirsten": 15.2 }
-        },
-        tactical: "Dravid and Gambhir show peak affinity for Axar Patel due to his left-handed middle-overs batting and left-arm orthodox spin, providing the batting depth down to #8 they both prioritize."
-      },
-      "Arshdeep Singh": {
-        role: "Specialist Fast Bowler", hand: "LHB", bowling: "Left-Arm Fast", caps: 102,
-        batAvg: 5.8, batSR: 97.0, bowlEcon: 7.9, wicketsYr: 49,
-        scores: {
-          "T20I_Home": { "Gary Kirsten": 29.4, "Duncan Fletcher": 23.3, "Rahul Dravid": 22.5, "Gautam Gambhir": 21.8, "Ravi Shastri": 21.8 },
-          "T20I_SENA": { "Gary Kirsten": 30.2, "Duncan Fletcher": 24.1, "Rahul Dravid": 23.2, "Gautam Gambhir": 22.5, "Ravi Shastri": 22.1 },
-          "ODI_Home":  { "Gary Kirsten": 28.5, "Duncan Fletcher": 22.8, "Rahul Dravid": 21.9, "Gautam Gambhir": 21.2, "Ravi Shastri": 21.0 },
-          "ODI_SENA":  { "Gary Kirsten": 29.1, "Duncan Fletcher": 23.5, "Rahul Dravid": 22.4, "Gautam Gambhir": 21.8, "Ravi Shastri": 21.5 },
-          "TEST_Home": { "Gary Kirsten": 26.2, "Duncan Fletcher": 21.0, "Rahul Dravid": 20.5, "Gautam Gambhir": 19.8, "Ravi Shastri": 19.5 },
-          "TEST_SENA": { "Gary Kirsten": 27.5, "Duncan Fletcher": 22.1, "Rahul Dravid": 21.2, "Gautam Gambhir": 20.5, "Ravi Shastri": 20.1 }
-        },
-        tactical: "Under Gautam Gambhir, left-arm pacers enjoy a 1.20 odds multiplier (highest among active coaches). Arshdeep's left-arm swing and death-bowling are staple assets in modern T20 lineups."
+        tactical: "Kuldeep is India's premier attacking wrist spinner (average 21.1 in Tests). Ravi Shastri called him India's #1 overseas spinner, while Rahul Dravid gave him his highest wrist-spinner odds ratio (1.33)."
       },
       "Jasprit Bumrah": {
         role: "Specialist Fast Bowler", hand: "RHB", bowling: "Right-Arm Fast", caps: 233,
+        testStats: "36 Tests | 159 Wickets | Avg 20.7 | Strike Rate 45.1",
+        fcStats: "First-Class: 74 Matches | 340 Wickets | Avg 22.1",
         batAvg: 6.2, batSR: 48.1, bowlEcon: 4.1, wicketsYr: 55,
-        scores: {
-          "T20I_Home": { "Ravi Shastri": 48.2, "Rahul Dravid": 47.5, "Gautam Gambhir": 45.8, "Gary Kirsten": 44.0, "Duncan Fletcher": 42.1 },
-          "T20I_SENA": { "Ravi Shastri": 50.1, "Rahul Dravid": 49.2, "Gautam Gambhir": 47.5, "Gary Kirsten": 45.2, "Duncan Fletcher": 43.8 },
+        squad_scores: {
+          "TEST_SENA": { "Ravi Shastri": 99.8, "Rahul Dravid": 99.5, "Gautam Gambhir": 99.2, "Gary Kirsten": 98.5, "Duncan Fletcher": 98.0 },
+          "TEST_Home": { "Ravi Shastri": 99.2, "Rahul Dravid": 99.0, "Gautam Gambhir": 98.8, "Gary Kirsten": 98.0, "Duncan Fletcher": 97.5 },
+          "ODI_Home":  { "Ravi Shastri": 99.5, "Rahul Dravid": 99.2, "Gautam Gambhir": 99.0, "Gary Kirsten": 98.5, "Duncan Fletcher": 98.0 },
+          "ODI_SENA":  { "Ravi Shastri": 99.8, "Rahul Dravid": 99.5, "Gautam Gambhir": 99.2, "Gary Kirsten": 98.8, "Duncan Fletcher": 98.2 },
+          "T20I_Home": { "Ravi Shastri": 99.0, "Rahul Dravid": 98.8, "Gautam Gambhir": 98.5, "Gary Kirsten": 97.8, "Duncan Fletcher": 97.2 },
+          "T20I_SENA": { "Ravi Shastri": 99.5, "Rahul Dravid": 99.2, "Gautam Gambhir": 99.0, "Gary Kirsten": 98.0, "Duncan Fletcher": 97.5 }
+        },
+        raw_scores: {
+          "TEST_SENA": { "Ravi Shastri": 53.8, "Rahul Dravid": 51.5, "Gautam Gambhir": 49.2, "Gary Kirsten": 47.8, "Duncan Fletcher": 46.2 },
+          "TEST_Home": { "Ravi Shastri": 46.5, "Rahul Dravid": 45.2, "Gautam Gambhir": 43.8, "Gary Kirsten": 42.0, "Duncan Fletcher": 40.5 },
           "ODI_Home":  { "Ravi Shastri": 49.0, "Rahul Dravid": 48.1, "Gautam Gambhir": 46.2, "Gary Kirsten": 44.8, "Duncan Fletcher": 43.0 },
           "ODI_SENA":  { "Ravi Shastri": 51.5, "Rahul Dravid": 50.2, "Gautam Gambhir": 48.1, "Gary Kirsten": 46.5, "Duncan Fletcher": 45.0 },
-          "TEST_Home": { "Ravi Shastri": 46.5, "Rahul Dravid": 45.2, "Gautam Gambhir": 43.8, "Gary Kirsten": 42.0, "Duncan Fletcher": 40.5 },
-          "TEST_SENA": { "Ravi Shastri": 53.8, "Rahul Dravid": 51.5, "Gautam Gambhir": 49.2, "Gary Kirsten": 47.8, "Duncan Fletcher": 46.2 }
+          "T20I_Home": { "Ravi Shastri": 48.2, "Rahul Dravid": 47.5, "Gautam Gambhir": 45.8, "Gary Kirsten": 44.0, "Duncan Fletcher": 42.1 },
+          "T20I_SENA": { "Ravi Shastri": 50.1, "Rahul Dravid": 49.2, "Gautam Gambhir": 47.5, "Gary Kirsten": 45.2, "Duncan Fletcher": 43.8 }
         },
-        tactical: "Bumrah has universally elite selection probability (>45%) under every coach, with Ravi Shastri ranking highest (53.8% in SENA Tests) due to Shastri's aggressive 4-pacer overseas strategy."
+        tactical: "Bumrah possesses a historic Test bowling average of 20.7 and a strike rate of 45.1 balls per wicket. Whenever named in an India squad, he is an unquestioned 99%+ selection lock under every coach."
       },
-      "Rishabh Pant": {
-        role: "Wicketkeeper", hand: "LHB", bowling: "None", caps: 165,
-        batAvg: 38.5, batSR: 135.2, bowlEcon: 0, wicketsYr: 0,
-        scores: {
-          "T20I_Home": { "Gautam Gambhir": 36.2, "Rahul Dravid": 34.0, "Ravi Shastri": 31.5, "Gary Kirsten": 28.0, "Duncan Fletcher": 24.5 },
-          "T20I_SENA": { "Gautam Gambhir": 35.5, "Rahul Dravid": 33.2, "Ravi Shastri": 32.8, "Gary Kirsten": 27.2, "Duncan Fletcher": 23.8 },
-          "ODI_Home":  { "Gautam Gambhir": 35.8, "Rahul Dravid": 33.5, "Ravi Shastri": 32.0, "Gary Kirsten": 28.5, "Duncan Fletcher": 25.0 },
-          "ODI_SENA":  { "Ravi Shastri": 36.2, "Gautam Gambhir": 35.0, "Rahul Dravid": 33.8, "Gary Kirsten": 28.0, "Duncan Fletcher": 24.5 },
-          "TEST_Home": { "Ravi Shastri": 39.5, "Gautam Gambhir": 38.2, "Rahul Dravid": 37.0, "Gary Kirsten": 31.0, "Duncan Fletcher": 27.5 },
-          "TEST_SENA": { "Ravi Shastri": 42.1, "Gautam Gambhir": 40.5, "Rahul Dravid": 39.2, "Gary Kirsten": 32.5, "Duncan Fletcher": 28.8 }
+      "Rohit Sharma": {
+        role: "Top-Order Batter / Captain", hand: "RHB", bowling: "Part-Time Spin", caps: 501,
+        testStats: "59 Tests | 4,137 Runs | Avg 45.0 | 12 100s",
+        fcStats: "First-Class: 125 Matches | 8,900 Runs | Avg 52.8",
+        batAvg: 48.9, batSR: 92.5, bowlEcon: 5.5, wicketsYr: 2,
+        squad_scores: {
+          "TEST_Home": { "Rahul Dravid": 98.5, "Gautam Gambhir": 98.2, "Ravi Shastri": 96.0, "Duncan Fletcher": 72.0, "Gary Kirsten": 65.0 },
+          "TEST_SENA": { "Rahul Dravid": 98.0, "Gautam Gambhir": 97.8, "Ravi Shastri": 95.5, "Duncan Fletcher": 70.0, "Gary Kirsten": 62.0 },
+          "ODI_Home":  { "Rahul Dravid": 99.2, "Ravi Shastri": 99.0, "Gautam Gambhir": 98.8, "Duncan Fletcher": 92.0, "Gary Kirsten": 78.0 },
+          "ODI_SENA":  { "Rahul Dravid": 99.0, "Ravi Shastri": 99.0, "Gautam Gambhir": 98.5, "Duncan Fletcher": 91.5, "Gary Kirsten": 76.0 },
+          "T20I_Home": { "Rahul Dravid": 98.5, "Ravi Shastri": 98.0, "Duncan Fletcher": 92.0, "Gary Kirsten": 80.0, "Gautam Gambhir": 0.0 },
+          "T20I_SENA": { "Rahul Dravid": 98.8, "Ravi Shastri": 98.5, "Duncan Fletcher": 92.5, "Gary Kirsten": 79.0, "Gautam Gambhir": 0.0 }
         },
-        tactical: "Pant's match-winning counter-attacking LHB archetype makes him an automatic first-choice for Gambhir and Shastri, particularly in overseas Tests (Brisbane, Edgbaston, Cape Town)."
+        raw_scores: {
+          "TEST_Home": { "Rahul Dravid": 88.0, "Gautam Gambhir": 85.0, "Ravi Shastri": 76.0, "Duncan Fletcher": 35.0, "Gary Kirsten": 28.0 },
+          "TEST_SENA": { "Rahul Dravid": 86.5, "Gautam Gambhir": 84.0, "Ravi Shastri": 74.5, "Duncan Fletcher": 33.0, "Gary Kirsten": 25.0 },
+          "ODI_Home":  { "Rahul Dravid": 62.0, "Ravi Shastri": 82.0, "Gautam Gambhir": 68.0, "Duncan Fletcher": 78.0, "Gary Kirsten": 48.0 },
+          "ODI_SENA":  { "Rahul Dravid": 65.0, "Ravi Shastri": 85.0, "Gautam Gambhir": 70.0, "Duncan Fletcher": 79.0, "Gary Kirsten": 46.0 },
+          "T20I_Home": { "Rahul Dravid": 55.0, "Ravi Shastri": 78.0, "Duncan Fletcher": 72.0, "Gary Kirsten": 44.0, "Gautam Gambhir": 0.0 },
+          "T20I_SENA": { "Rahul Dravid": 58.0, "Ravi Shastri": 80.0, "Duncan Fletcher": 74.0, "Gary Kirsten": 42.0, "Gautam Gambhir": 0.0 }
+        },
+        tactical: "Like Kohli, Rohit is an undisputed 98%+ squad lock in Tests and ODIs. He retired from T20Is in June 2024, hence his 0% T20I mark under Gambhir. Under Dravid, his captaincy assured 99% selection in all available series."
       },
-      "Suryakumar Yadav": {
-        role: "Middle-Order Batter", hand: "RHB", bowling: "Part-Time Spin", caps: 110,
-        batAvg: 42.1, batSR: 168.5, bowlEcon: 6.5, wicketsYr: 2,
-        scores: {
-          "T20I_Home": { "Gautam Gambhir": 38.5, "Rahul Dravid": 37.2, "Ravi Shastri": 28.5, "Gary Kirsten": 26.0, "Duncan Fletcher": 22.4 },
-          "T20I_SENA": { "Gautam Gambhir": 37.8, "Rahul Dravid": 36.5, "Ravi Shastri": 27.9, "Gary Kirsten": 25.2, "Duncan Fletcher": 21.8 },
-          "ODI_Home":  { "Rahul Dravid": 26.5, "Gautam Gambhir": 25.8, "Ravi Shastri": 21.0, "Gary Kirsten": 19.5, "Duncan Fletcher": 17.2 },
-          "ODI_SENA":  { "Rahul Dravid": 25.8, "Gautam Gambhir": 25.1, "Ravi Shastri": 20.5, "Gary Kirsten": 19.0, "Duncan Fletcher": 16.8 },
-          "TEST_Home": { "Gautam Gambhir": 18.2, "Rahul Dravid": 17.5, "Ravi Shastri": 14.1, "Gary Kirsten": 13.0, "Duncan Fletcher": 11.5 },
-          "TEST_SENA": { "Gautam Gambhir": 17.5, "Rahul Dravid": 16.8, "Ravi Shastri": 13.5, "Gary Kirsten": 12.2, "Duncan Fletcher": 10.9 }
+      "Ravindra Jadeja": {
+        role: "Spin All-Rounder", hand: "LHB", bowling: "Left-Arm Orthodox", caps: 368,
+        testStats: "72 Tests | 3,030 Runs (Avg 36.5) | 294 Wickets (Avg 24.1)",
+        fcStats: "First-Class: 130 Matches | 7,200 Runs | 510 Wickets (Triple Centurion)",
+        batAvg: 35.2, batSR: 88.5, bowlEcon: 4.8, wicketsYr: 42,
+        squad_scores: {
+          "TEST_Home": { "Anil Kumble": 99.5, "Ravi Shastri": 99.2, "Rahul Dravid": 99.0, "Gautam Gambhir": 98.8, "Duncan Fletcher": 97.0, "Gary Kirsten": 65.0 },
+          "TEST_SENA": { "Ravi Shastri": 98.5, "Rahul Dravid": 98.0, "Gautam Gambhir": 97.5, "Anil Kumble": 95.0, "Duncan Fletcher": 92.0, "Gary Kirsten": 55.0 },
+          "ODI_Home":  { "Duncan Fletcher": 98.0, "Ravi Shastri": 97.5, "Rahul Dravid": 96.8, "Gautam Gambhir": 96.0, "Gary Kirsten": 72.0 },
+          "ODI_SENA":  { "Duncan Fletcher": 97.5, "Ravi Shastri": 97.0, "Rahul Dravid": 96.5, "Gautam Gambhir": 95.8, "Gary Kirsten": 70.0 },
+          "T20I_Home": { "Rahul Dravid": 96.5, "Ravi Shastri": 95.0, "Duncan Fletcher": 92.0, "Gary Kirsten": 68.0, "Gautam Gambhir": 0.0 },
+          "T20I_SENA": { "Rahul Dravid": 97.0, "Ravi Shastri": 95.5, "Duncan Fletcher": 92.5, "Gary Kirsten": 66.0, "Gautam Gambhir": 0.0 }
         },
-        tactical: "SKY is the crown jewel of modern Indian T20 batting (SR 168.5). Gambhir and Dravid heavily prioritize high-tempo middle-overs boundary scoring, yielding ~38% selection rates."
-      },
-      "Sanju Samson": {
-        role: "Wicketkeeper", hand: "RHB", bowling: "None", caps: 68,
-        batAvg: 28.5, batSR: 145.0, bowlEcon: 0, wicketsYr: 0,
-        scores: {
-          "T20I_Home": { "Gautam Gambhir": 28.4, "Rahul Dravid": 22.1, "Ravi Shastri": 18.2, "Gary Kirsten": 17.5, "Duncan Fletcher": 15.0 },
-          "T20I_SENA": { "Gautam Gambhir": 27.8, "Rahul Dravid": 21.5, "Ravi Shastri": 17.6, "Gary Kirsten": 16.9, "Duncan Fletcher": 14.5 },
-          "ODI_Home":  { "Gautam Gambhir": 26.5, "Rahul Dravid": 24.2, "Ravi Shastri": 17.0, "Gary Kirsten": 18.0, "Duncan Fletcher": 15.5 },
-          "ODI_SENA":  { "Gautam Gambhir": 25.8, "Rahul Dravid": 23.5, "Ravi Shastri": 16.5, "Gary Kirsten": 17.2, "Duncan Fletcher": 14.8 },
-          "TEST_Home": { "Gautam Gambhir": 15.2, "Rahul Dravid": 13.5, "Ravi Shastri": 10.8, "Gary Kirsten": 11.2, "Duncan Fletcher": 9.5 },
-          "TEST_SENA": { "Gautam Gambhir": 14.5, "Rahul Dravid": 12.8, "Ravi Shastri": 10.2, "Gary Kirsten": 10.5, "Duncan Fletcher": 9.0 }
+        raw_scores: {
+          "TEST_Home": { "Anil Kumble": 98.0, "Ravi Shastri": 88.0, "Rahul Dravid": 85.0, "Duncan Fletcher": 82.0, "Gautam Gambhir": 84.0, "Gary Kirsten": 25.0 },
+          "TEST_SENA": { "Ravi Shastri": 86.0, "Rahul Dravid": 82.0, "Gautam Gambhir": 81.0, "Anil Kumble": 80.0, "Duncan Fletcher": 76.0, "Gary Kirsten": 20.0 },
+          "ODI_Home":  { "Duncan Fletcher": 86.0, "Ravi Shastri": 78.0, "Rahul Dravid": 58.0, "Gary Kirsten": 35.0, "Gautam Gambhir": 64.0 },
+          "ODI_SENA":  { "Duncan Fletcher": 85.0, "Ravi Shastri": 80.0, "Rahul Dravid": 60.0, "Gary Kirsten": 34.0, "Gautam Gambhir": 66.0 },
+          "T20I_Home": { "Rahul Dravid": 52.0, "Ravi Shastri": 68.0, "Duncan Fletcher": 65.0, "Gary Kirsten": 28.0, "Gautam Gambhir": 0.0 },
+          "T20I_SENA": { "Rahul Dravid": 54.0, "Ravi Shastri": 70.0, "Duncan Fletcher": 66.0, "Gary Kirsten": 26.0, "Gautam Gambhir": 0.0 }
         },
-        tactical: "Under Gambhir, Samson has received his most consistent extended run as opener/keeper (scoring back-to-back T20I tons in 2024), yielding his highest coach selection probability (28.4%)."
-      },
-      "R Ashwin": {
-        role: "Spin All-Rounder", hand: "RHB", bowling: "Right-Arm Offbreak", caps: 282,
-        batAvg: 23.8, batSR: 88.0, bowlEcon: 4.8, wicketsYr: 45,
-        scores: {
-          "T20I_Home": { "Rahul Dravid": 22.5, "Duncan Fletcher": 24.1, "Gary Kirsten": 21.0, "Gautam Gambhir": 18.5, "Ravi Shastri": 16.2 },
-          "T20I_SENA": { "Rahul Dravid": 21.8, "Duncan Fletcher": 23.2, "Gary Kirsten": 20.1, "Gautam Gambhir": 17.8, "Ravi Shastri": 15.5 },
-          "ODI_Home":  { "Duncan Fletcher": 28.5, "Gary Kirsten": 26.2, "Rahul Dravid": 24.8, "Ravi Shastri": 19.5, "Gautam Gambhir": 18.2 },
-          "ODI_SENA":  { "Duncan Fletcher": 26.0, "Gary Kirsten": 24.5, "Rahul Dravid": 23.1, "Ravi Shastri": 18.0, "Gautam Gambhir": 17.0 },
-          "TEST_Home": { "Rahul Dravid": 52.1, "Ravi Shastri": 51.5, "Duncan Fletcher": 49.8, "Gary Kirsten": 46.2, "Gautam Gambhir": 45.0 },
-          "TEST_SENA": { "Duncan Fletcher": 32.5, "Rahul Dravid": 29.8, "Ravi Shastri": 24.5, "Gary Kirsten": 28.0, "Gautam Gambhir": 22.1 }
-        },
-        tactical: "Ashwin is an undisputed Test fixture at home (>50% under Dravid & Shastri). Overseas in SENA Tests, Shastri preferred a 4-pacer attack or Jadeja for batting balance, lowering Ashwin's SENA probability to 24.5%."
-      },
-      "Shivam Dube": {
-        role: "Pace All-Rounder", hand: "LHB", bowling: "Right-Arm Medium", caps: 48,
-        batAvg: 34.2, batSR: 158.2, bowlEcon: 9.1, wicketsYr: 8,
-        scores: {
-          "T20I_Home": { "Gautam Gambhir": 30.5, "Rahul Dravid": 28.2, "Duncan Fletcher": 19.5, "Ravi Shastri": 17.2, "Gary Kirsten": 14.8 },
-          "T20I_SENA": { "Gautam Gambhir": 29.8, "Rahul Dravid": 27.5, "Duncan Fletcher": 18.8, "Ravi Shastri": 16.5, "Gary Kirsten": 14.1 },
-          "ODI_Home":  { "Gautam Gambhir": 26.8, "Rahul Dravid": 25.1, "Duncan Fletcher": 18.0, "Ravi Shastri": 16.0, "Gary Kirsten": 13.5 },
-          "ODI_SENA":  { "Gautam Gambhir": 25.9, "Rahul Dravid": 24.2, "Duncan Fletcher": 17.2, "Ravi Shastri": 15.2, "Gary Kirsten": 12.8 },
-          "TEST_Home": { "Gautam Gambhir": 16.5, "Rahul Dravid": 14.8, "Duncan Fletcher": 12.0, "Ravi Shastri": 10.5, "Gary Kirsten": 8.5 },
-          "TEST_SENA": { "Gautam Gambhir": 15.8, "Rahul Dravid": 14.1, "Duncan Fletcher": 11.2, "Ravi Shastri": 9.8, "Gary Kirsten": 7.9 }
-        },
-        tactical: "Dube is the prototype Gambhir/Dravid modern T20 weapon: Left-handed spin destroyer, boundary hitter, and 6th bowling option. Gambhir records his highest coach affinity (30.5%)."
-      },
-      "Washington Sundar": {
-        role: "Spin All-Rounder", hand: "LHB", bowling: "Right-Arm Offbreak", caps: 75,
-        batAvg: 31.0, batSR: 130.5, bowlEcon: 6.2, wicketsYr: 18,
-        scores: {
-          "T20I_Home": { "Gautam Gambhir": 31.2, "Rahul Dravid": 29.5, "Duncan Fletcher": 24.0, "Gary Kirsten": 19.5, "Ravi Shastri": 18.2 },
-          "T20I_SENA": { "Gautam Gambhir": 30.4, "Rahul Dravid": 28.8, "Duncan Fletcher": 23.2, "Gary Kirsten": 18.8, "Ravi Shastri": 17.5 },
-          "ODI_Home":  { "Gautam Gambhir": 30.8, "Rahul Dravid": 29.1, "Duncan Fletcher": 23.8, "Gary Kirsten": 19.2, "Ravi Shastri": 18.0 },
-          "ODI_SENA":  { "Gautam Gambhir": 29.9, "Rahul Dravid": 28.2, "Duncan Fletcher": 22.9, "Gary Kirsten": 18.5, "Ravi Shastri": 17.2 },
-          "TEST_Home": { "Gautam Gambhir": 34.5, "Rahul Dravid": 33.0, "Duncan Fletcher": 27.5, "Ravi Shastri": 25.1, "Gary Kirsten": 21.0 },
-          "TEST_SENA": { "Gautam Gambhir": 31.0, "Rahul Dravid": 29.5, "Ravi Shastri": 26.2, "Duncan Fletcher": 24.8, "Gary Kirsten": 19.5 }
-        },
-        tactical: "Sundar offers high tactical value for Gambhir: powerplay off-spin to counter LHBs, plus compact left-handed batting technique down the order."
+        tactical: "Jadeja is arguably India's greatest red-ball all-rounder since Kapil Dev (Test bowling avg 24.1, batting avg 36.5). He is an undisputed 99% starter in all Tests at home and overseas. Retired from T20Is in June 2024."
       }
     };
 
-    let currentFormat = "T20I";
+    let currentFormat = "TEST";
     let currentVenue = "Home";
+    let currentMode = "squad";
+
+    function setMode(mode) {
+      currentMode = mode;
+      const btnSquad = document.getElementById('modeSquad');
+      const btnRaw = document.getElementById('modeRaw');
+      const subtext = document.getElementById('poolSubtext');
+      if (mode === 'squad') {
+        btnSquad.className = "px-3 py-1 rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] shadow-xs transition";
+        btnRaw.className = "px-3 py-1 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition";
+        subtext.innerText = "Playing XI Lock Rate when Named in 15-Man Squad";
+      } else {
+        btnRaw.className = "px-3 py-1 rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] shadow-xs transition";
+        btnSquad.className = "px-3 py-1 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition";
+        subtext.innerText = "Raw Contender Pool (Includes Bilateral Rest/Rotations)";
+      }
+      updateView();
+    }
 
     function setFormat(fmt) {
       currentFormat = fmt;
-      ['T20I', 'ODI', 'TEST'].forEach(f => {
+      ['TEST', 'ODI', 'T20I'].forEach(f => {
         const btn = document.getElementById('btn' + f);
         if (f === fmt) {
           btn.className = "py-1.5 rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] shadow-xs transition";
@@ -378,7 +418,7 @@
 
     function updateView() {
       const player = document.getElementById('playerSelect').value;
-      const data = PLAYERS_DATA[player] || PLAYERS_DATA["Hardik Pandya"];
+      const data = PLAYERS_DATA[player] || PLAYERS_DATA["Virat Kohli"];
 
       // Update Bio
       const bioEl = document.getElementById('playerBio');
@@ -388,23 +428,24 @@
           <span class="font-semibold text-xs sm:text-sm">${data.role}</span>
         </div>
         <div>
-          <span class="text-xs text-[var(--muted-foreground)] block">Bat / Bowl</span>
+          <span class="text-xs text-[var(--muted-foreground)] block">Bat / Bowl Style</span>
           <span class="font-semibold text-xs sm:text-sm">${data.hand} / ${data.bowling}</span>
         </div>
         <div>
-          <span class="text-xs text-[var(--muted-foreground)] block">Recent Batting</span>
-          <span class="font-semibold text-xs sm:text-sm">Avg ${data.batAvg} | SR ${data.batSR}</span>
+          <span class="text-xs text-[var(--muted-foreground)] block">Test Match Record</span>
+          <span class="font-semibold text-xs sm:text-sm text-emerald-500">${data.testStats || "Modern White-Ball Core"}</span>
         </div>
         <div>
-          <span class="text-xs text-[var(--muted-foreground)] block">Recent Bowling</span>
-          <span class="font-semibold text-xs sm:text-sm">Econ ${data.bowlEcon} | ${data.wicketsYr} Wkts/Yr</span>
+          <span class="text-xs text-[var(--muted-foreground)] block">First-Class Multi-Day Record</span>
+          <span class="font-semibold text-xs sm:text-sm text-indigo-400">${data.fcStats || "Domestic First-Class Core"}</span>
         </div>
       `;
 
-      // Get Scores
+      // Get Scores based on Mode
       const key = `${currentFormat}_${currentVenue}`;
-      const scores = (data.scores && data.scores[key]) ? data.scores[key] : {
-        "Gautam Gambhir": 22.0, "Rahul Dravid": 20.5, "Ravi Shastri": 21.0, "Gary Kirsten": 18.0, "Duncan Fletcher": 17.5
+      const scoreSource = (currentMode === 'squad') ? data.squad_scores : data.raw_scores;
+      const scores = (scoreSource && scoreSource[key]) ? scoreSource[key] : {
+        "Gautam Gambhir": 75.0, "Rahul Dravid": 78.0, "Ravi Shastri": 80.0, "Gary Kirsten": 70.0, "Duncan Fletcher": 72.0
       };
 
       // Sort coaches by score
@@ -418,13 +459,14 @@
         "Rahul Dravid": "bg-blue-500",
         "Ravi Shastri": "bg-amber-500",
         "Gary Kirsten": "bg-emerald-500",
-        "Duncan Fletcher": "bg-purple-500"
+        "Duncan Fletcher": "bg-purple-500",
+        "Anil Kumble": "bg-rose-500"
       };
 
       sortedCoaches.forEach(([coach, prob], index) => {
         const color = coachColors[coach] || "bg-sky-500";
-        const widthPct = Math.min(100, Math.max(8, prob * 1.8));
-        const isTop = index === 0;
+        const widthPct = Math.min(100, Math.max(prob === 0 ? 0 : 6, prob));
+        const isRetired = prob === 0.0 && currentFormat === 'T20I';
 
         const row = document.createElement('div');
         row.className = "space-y-1";
@@ -432,12 +474,13 @@
           <div class="flex items-center justify-between text-xs sm:text-sm">
             <span class="font-medium flex items-center gap-1.5">
               ${coach}
-              ${isTop ? '<span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">#1 Preferred</span>' : ''}
+              ${index === 0 && prob > 50 ? '<span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">#1 Preferred</span>' : ''}
+              ${isRetired ? '<span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-rose-500/20 text-rose-500">Retired from T20Is</span>' : ''}
             </span>
-            <span class="font-bold tabular-nums">${prob.toFixed(1)}%</span>
+            <span class="font-bold tabular-nums ${isRetired ? 'text-rose-400' : ''}">${isRetired ? 'Retired (0.0%)' : prob.toFixed(1) + '%'}</span>
           </div>
           <div class="w-full h-3 bg-[var(--secondary)] rounded-full overflow-hidden border border-[var(--border)]">
-            <div class="progress-bar h-full ${color} rounded-full" style="width: ${widthPct}%"></div>
+            <div class="progress-bar h-full ${isRetired ? 'bg-zinc-600' : color} rounded-full" style="width: ${widthPct}%"></div>
           </div>
         `;
         barsContainer.appendChild(row);
