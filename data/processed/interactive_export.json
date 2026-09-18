@@ -1,0 +1,1442 @@
+{
+  "Hardik Pandya": {
+    "profile": {
+      "player": "HH Pandya",
+      "role": "Pace All-Rounder",
+      "hand": "RHB",
+      "bowling": "Pace",
+      "arm": "Right",
+      "career_caps": 238,
+      "recent_caps_1y": 24,
+      "recent_format_caps_1y": 0,
+      "recent_bat_avg_1y": 29.75,
+      "recent_bat_sr_1y": 164.71,
+      "recent_bowl_econ_1y": 8.94,
+      "recent_wickets_1y": 20
+    },
+    "t20_home": [
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 24.0,
+        "LogReg Prob (%)": 29.8,
+        "Ensemble Prob (%)": 20.1
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 21.0,
+        "LogReg Prob (%)": 23.2,
+        "Ensemble Prob (%)": 19.6
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 16.7,
+        "LogReg Prob (%)": 17.4,
+        "Ensemble Prob (%)": 16.2
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 16.6,
+        "LogReg Prob (%)": 14.1,
+        "Ensemble Prob (%)": 18.3
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 14.3,
+        "LogReg Prob (%)": 4.9,
+        "Ensemble Prob (%)": 20.5
+      }
+    ],
+    "test_sena": [
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 20.8,
+        "LogReg Prob (%)": 38.7,
+        "Ensemble Prob (%)": 8.9
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 18.1,
+        "LogReg Prob (%)": 30.9,
+        "Ensemble Prob (%)": 9.6
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 13.5,
+        "LogReg Prob (%)": 23.8,
+        "Ensemble Prob (%)": 6.6
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 12.7,
+        "LogReg Prob (%)": 19.5,
+        "Ensemble Prob (%)": 8.2
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 8.5,
+        "LogReg Prob (%)": 7.0,
+        "Ensemble Prob (%)": 9.5
+      }
+    ]
+  },
+  "Yashasvi Jaiswal": {
+    "profile": {
+      "player": "YBK Jaiswal",
+      "role": "Top-Order Batter",
+      "hand": "LHB",
+      "bowling": "Wrist Spin",
+      "arm": "Right",
+      "career_caps": 53,
+      "recent_caps_1y": 8,
+      "recent_format_caps_1y": 5,
+      "recent_bat_avg_1y": 44.55,
+      "recent_bat_sr_1y": 71.85,
+      "recent_bowl_econ_1y": 7.25,
+      "recent_wickets_1y": 0
+    },
+    "t20_home": [
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 47.2,
+        "LogReg Prob (%)": 30.7,
+        "Ensemble Prob (%)": 58.2
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 44.5,
+        "LogReg Prob (%)": 29.0,
+        "Ensemble Prob (%)": 54.9
+      },
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 44.3,
+        "LogReg Prob (%)": 28.5,
+        "Ensemble Prob (%)": 54.8
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 40.9,
+        "LogReg Prob (%)": 26.0,
+        "Ensemble Prob (%)": 50.8
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 36.9,
+        "LogReg Prob (%)": 23.2,
+        "Ensemble Prob (%)": 46.1
+      }
+    ],
+    "test_sena": [
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 56.7,
+        "LogReg Prob (%)": 37.7,
+        "Ensemble Prob (%)": 69.3
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 56.2,
+        "LogReg Prob (%)": 39.6,
+        "Ensemble Prob (%)": 67.3
+      },
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 55.3,
+        "LogReg Prob (%)": 37.2,
+        "Ensemble Prob (%)": 67.3
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 54.3,
+        "LogReg Prob (%)": 30.9,
+        "Ensemble Prob (%)": 69.8
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 53.9,
+        "LogReg Prob (%)": 34.3,
+        "Ensemble Prob (%)": 67.0
+      }
+    ]
+  },
+  "Kuldeep Yadav": {
+    "profile": {
+      "player": "Kuldeep Yadav",
+      "role": "Specialist Spin Bowler",
+      "hand": "LHB",
+      "bowling": "Wrist Spin",
+      "arm": "Left",
+      "career_caps": 186,
+      "recent_caps_1y": 26,
+      "recent_format_caps_1y": 5,
+      "recent_bat_avg_1y": 6.38,
+      "recent_bat_sr_1y": 21.89,
+      "recent_bowl_econ_1y": 4.93,
+      "recent_wickets_1y": 60
+    },
+    "t20_home": [
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 33.3,
+        "LogReg Prob (%)": 28.1,
+        "Ensemble Prob (%)": 36.8
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 32.7,
+        "LogReg Prob (%)": 38.0,
+        "Ensemble Prob (%)": 29.2
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 30.8,
+        "LogReg Prob (%)": 24.6,
+        "Ensemble Prob (%)": 34.9
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 28.0,
+        "LogReg Prob (%)": 31.6,
+        "Ensemble Prob (%)": 25.6
+      },
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 25.8,
+        "LogReg Prob (%)": 15.9,
+        "Ensemble Prob (%)": 32.3
+      }
+    ],
+    "test_sena": [
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 41.6,
+        "LogReg Prob (%)": 47.6,
+        "Ensemble Prob (%)": 37.6
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 39.2,
+        "LogReg Prob (%)": 36.7,
+        "Ensemble Prob (%)": 40.9
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 37.7,
+        "LogReg Prob (%)": 32.6,
+        "Ensemble Prob (%)": 41.1
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 36.4,
+        "LogReg Prob (%)": 40.7,
+        "Ensemble Prob (%)": 33.6
+      },
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 31.6,
+        "LogReg Prob (%)": 21.9,
+        "Ensemble Prob (%)": 38.0
+      }
+    ]
+  },
+  "Axar Patel": {
+    "profile": {
+      "player": "AR Patel",
+      "role": "Spin All-Rounder",
+      "hand": "LHB",
+      "bowling": "Left-Arm Orthodox",
+      "arm": "Left",
+      "career_caps": 186,
+      "recent_caps_1y": 37,
+      "recent_format_caps_1y": 1,
+      "recent_bat_avg_1y": 17.82,
+      "recent_bat_sr_1y": 100.0,
+      "recent_bowl_econ_1y": 6.58,
+      "recent_wickets_1y": 40
+    },
+    "t20_home": [
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 45.6,
+        "LogReg Prob (%)": 39.0,
+        "Ensemble Prob (%)": 49.9
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 41.4,
+        "LogReg Prob (%)": 35.5,
+        "Ensemble Prob (%)": 45.3
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 34.5,
+        "LogReg Prob (%)": 20.2,
+        "Ensemble Prob (%)": 44.1
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 33.5,
+        "LogReg Prob (%)": 22.6,
+        "Ensemble Prob (%)": 40.8
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 32.8,
+        "LogReg Prob (%)": 23.2,
+        "Ensemble Prob (%)": 39.2
+      }
+    ],
+    "test_sena": [
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 41.7,
+        "LogReg Prob (%)": 48.7,
+        "Ensemble Prob (%)": 36.9
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 40.1,
+        "LogReg Prob (%)": 45.0,
+        "Ensemble Prob (%)": 36.8
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 33.4,
+        "LogReg Prob (%)": 27.3,
+        "Ensemble Prob (%)": 37.4
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 32.6,
+        "LogReg Prob (%)": 30.2,
+        "Ensemble Prob (%)": 34.2
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 31.5,
+        "LogReg Prob (%)": 31.0,
+        "Ensemble Prob (%)": 31.9
+      }
+    ]
+  },
+  "Arshdeep Singh": {
+    "profile": {
+      "player": "Arshdeep Singh",
+      "role": "Specialist Fast Bowler",
+      "hand": "LHB",
+      "bowling": "Left-Arm Fast",
+      "arm": "Left",
+      "career_caps": 102,
+      "recent_caps_1y": 35,
+      "recent_format_caps_1y": 0,
+      "recent_bat_avg_1y": 5.82,
+      "recent_bat_sr_1y": 96.97,
+      "recent_bowl_econ_1y": 7.86,
+      "recent_wickets_1y": 49
+    },
+    "t20_home": [
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 29.4,
+        "LogReg Prob (%)": 29.0,
+        "Ensemble Prob (%)": 29.7
+      },
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 23.3,
+        "LogReg Prob (%)": 13.5,
+        "Ensemble Prob (%)": 29.9
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 22.5,
+        "LogReg Prob (%)": 17.3,
+        "Ensemble Prob (%)": 26.0
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 21.8,
+        "LogReg Prob (%)": 18.4,
+        "Ensemble Prob (%)": 24.0
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 21.8,
+        "LogReg Prob (%)": 17.2,
+        "Ensemble Prob (%)": 24.8
+      }
+    ],
+    "test_sena": [
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 21.7,
+        "LogReg Prob (%)": 37.7,
+        "Ensemble Prob (%)": 11.0
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 16.6,
+        "LogReg Prob (%)": 23.7,
+        "Ensemble Prob (%)": 11.8
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 15.7,
+        "LogReg Prob (%)": 23.6,
+        "Ensemble Prob (%)": 10.5
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 15.4,
+        "LogReg Prob (%)": 25.1,
+        "Ensemble Prob (%)": 8.9
+      },
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 15.4,
+        "LogReg Prob (%)": 18.8,
+        "Ensemble Prob (%)": 13.1
+      }
+    ]
+  },
+  "Sanju Samson": {
+    "profile": {
+      "player": "SV Samson",
+      "role": "Wicketkeeper",
+      "hand": "RHB",
+      "bowling": "None",
+      "arm": "None",
+      "career_caps": 81,
+      "recent_caps_1y": 24,
+      "recent_format_caps_1y": 0,
+      "recent_bat_avg_1y": 30.05,
+      "recent_bat_sr_1y": 161.76,
+      "recent_bowl_econ_1y": 0.0,
+      "recent_wickets_1y": 0
+    },
+    "t20_home": [
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 18.5,
+        "LogReg Prob (%)": 18.2,
+        "Ensemble Prob (%)": 18.7
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 17.6,
+        "LogReg Prob (%)": 19.9,
+        "Ensemble Prob (%)": 16.1
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 17.5,
+        "LogReg Prob (%)": 17.0,
+        "Ensemble Prob (%)": 17.9
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 14.7,
+        "LogReg Prob (%)": 18.9,
+        "Ensemble Prob (%)": 11.9
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 14.2,
+        "LogReg Prob (%)": 12.3,
+        "Ensemble Prob (%)": 15.4
+      }
+    ],
+    "test_sena": [
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 17.4,
+        "LogReg Prob (%)": 27.0,
+        "Ensemble Prob (%)": 10.9
+      },
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 17.1,
+        "LogReg Prob (%)": 24.8,
+        "Ensemble Prob (%)": 11.9
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 15.4,
+        "LogReg Prob (%)": 23.4,
+        "Ensemble Prob (%)": 10.1
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 14.1,
+        "LogReg Prob (%)": 25.8,
+        "Ensemble Prob (%)": 6.4
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 13.1,
+        "LogReg Prob (%)": 17.3,
+        "Ensemble Prob (%)": 10.3
+      }
+    ]
+  },
+  "Jasprit Bumrah": {
+    "profile": {
+      "player": "JJ Bumrah",
+      "role": "Specialist Fast Bowler",
+      "hand": "RHB",
+      "bowling": "Pace",
+      "arm": "Right",
+      "career_caps": 233,
+      "recent_caps_1y": 31,
+      "recent_format_caps_1y": 4,
+      "recent_bat_avg_1y": 7.75,
+      "recent_bat_sr_1y": 72.09,
+      "recent_bowl_econ_1y": 4.49,
+      "recent_wickets_1y": 49
+    },
+    "t20_home": [
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 38.2,
+        "LogReg Prob (%)": 35.1,
+        "Ensemble Prob (%)": 40.3
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 36.9,
+        "LogReg Prob (%)": 30.7,
+        "Ensemble Prob (%)": 41.1
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 36.4,
+        "LogReg Prob (%)": 33.6,
+        "Ensemble Prob (%)": 38.3
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 28.3,
+        "LogReg Prob (%)": 24.1,
+        "Ensemble Prob (%)": 31.1
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 27.7,
+        "LogReg Prob (%)": 21.9,
+        "Ensemble Prob (%)": 31.6
+      }
+    ],
+    "test_sena": [
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 44.8,
+        "LogReg Prob (%)": 44.5,
+        "Ensemble Prob (%)": 45.0
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 44.3,
+        "LogReg Prob (%)": 39.7,
+        "Ensemble Prob (%)": 47.4
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 42.7,
+        "LogReg Prob (%)": 42.9,
+        "Ensemble Prob (%)": 42.6
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 36.3,
+        "LogReg Prob (%)": 32.1,
+        "Ensemble Prob (%)": 39.0
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 35.5,
+        "LogReg Prob (%)": 29.4,
+        "Ensemble Prob (%)": 39.5
+      }
+    ]
+  },
+  "R Ashwin": {
+    "profile": {
+      "player": "R Ashwin",
+      "role": "Spin All-Rounder",
+      "hand": "RHB",
+      "bowling": "Finger Spin",
+      "arm": "Right",
+      "career_caps": 282,
+      "recent_caps_1y": 0,
+      "recent_format_caps_1y": 0,
+      "recent_bat_avg_1y": 23.65,
+      "recent_bat_sr_1y": 59.48,
+      "recent_bowl_econ_1y": 3.38,
+      "recent_wickets_1y": 0
+    },
+    "t20_home": [
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 9.6,
+        "LogReg Prob (%)": 18.0,
+        "Ensemble Prob (%)": 4.0
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 8.2,
+        "LogReg Prob (%)": 13.4,
+        "Ensemble Prob (%)": 4.8
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 5.7,
+        "LogReg Prob (%)": 10.4,
+        "Ensemble Prob (%)": 2.5
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 4.7,
+        "LogReg Prob (%)": 10.1,
+        "Ensemble Prob (%)": 1.2
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 4.4,
+        "LogReg Prob (%)": 8.6,
+        "Ensemble Prob (%)": 1.7
+      }
+    ],
+    "test_sena": [
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 15.1,
+        "LogReg Prob (%)": 24.5,
+        "Ensemble Prob (%)": 8.8
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 13.0,
+        "LogReg Prob (%)": 18.7,
+        "Ensemble Prob (%)": 9.1
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 11.1,
+        "LogReg Prob (%)": 14.8,
+        "Ensemble Prob (%)": 8.6
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 10.0,
+        "LogReg Prob (%)": 14.3,
+        "Ensemble Prob (%)": 7.2
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 9.3,
+        "LogReg Prob (%)": 12.2,
+        "Ensemble Prob (%)": 7.3
+      }
+    ]
+  },
+  "Shivam Dube": {
+    "profile": {
+      "player": "Shivam Dube",
+      "role": "Pace All-Rounder",
+      "hand": "LHB",
+      "bowling": "Pace",
+      "arm": "Right",
+      "career_caps": 40,
+      "recent_caps_1y": 14,
+      "recent_format_caps_1y": 9,
+      "recent_bat_avg_1y": 32.0,
+      "recent_bat_sr_1y": 142.0,
+      "recent_bowl_econ_1y": 7.8,
+      "recent_wickets_1y": 10
+    },
+    "t20_home": [
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 59.5,
+        "LogReg Prob (%)": 57.8,
+        "Ensemble Prob (%)": 60.7
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 57.1,
+        "LogReg Prob (%)": 45.4,
+        "Ensemble Prob (%)": 64.9
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 53.1,
+        "LogReg Prob (%)": 38.4,
+        "Ensemble Prob (%)": 63.0
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 46.4,
+        "LogReg Prob (%)": 32.7,
+        "Ensemble Prob (%)": 55.4
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 44.3,
+        "LogReg Prob (%)": 16.6,
+        "Ensemble Prob (%)": 62.7
+      }
+    ],
+    "test_sena": [
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 58.7,
+        "LogReg Prob (%)": 67.0,
+        "Ensemble Prob (%)": 53.1
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 54.6,
+        "LogReg Prob (%)": 55.2,
+        "Ensemble Prob (%)": 54.2
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 51.1,
+        "LogReg Prob (%)": 48.1,
+        "Ensemble Prob (%)": 53.2
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 45.5,
+        "LogReg Prob (%)": 42.0,
+        "Ensemble Prob (%)": 47.9
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 42.0,
+        "LogReg Prob (%)": 22.9,
+        "Ensemble Prob (%)": 54.7
+      }
+    ]
+  },
+  "Washington Sundar": {
+    "profile": {
+      "player": "Washington Sundar",
+      "role": "Spin All-Rounder",
+      "hand": "LHB",
+      "bowling": "Finger Spin",
+      "arm": "Right",
+      "career_caps": 105,
+      "recent_caps_1y": 20,
+      "recent_format_caps_1y": 4,
+      "recent_bat_avg_1y": 24.31,
+      "recent_bat_sr_1y": 61.96,
+      "recent_bowl_econ_1y": 4.05,
+      "recent_wickets_1y": 12
+    },
+    "t20_home": [
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 38.4,
+        "LogReg Prob (%)": 40.0,
+        "Ensemble Prob (%)": 37.4
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 37.6,
+        "LogReg Prob (%)": 36.5,
+        "Ensemble Prob (%)": 38.3
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 29.7,
+        "LogReg Prob (%)": 23.3,
+        "Ensemble Prob (%)": 34.0
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 28.8,
+        "LogReg Prob (%)": 24.0,
+        "Ensemble Prob (%)": 32.0
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 28.1,
+        "LogReg Prob (%)": 20.8,
+        "Ensemble Prob (%)": 33.0
+      }
+    ],
+    "test_sena": [
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 41.1,
+        "LogReg Prob (%)": 49.8,
+        "Ensemble Prob (%)": 35.3
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 39.5,
+        "LogReg Prob (%)": 46.0,
+        "Ensemble Prob (%)": 35.1
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 33.0,
+        "LogReg Prob (%)": 31.9,
+        "Ensemble Prob (%)": 33.8
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 32.4,
+        "LogReg Prob (%)": 31.1,
+        "Ensemble Prob (%)": 33.3
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 31.2,
+        "LogReg Prob (%)": 28.1,
+        "Ensemble Prob (%)": 33.3
+      }
+    ]
+  },
+  "Rishabh Pant": {
+    "profile": {
+      "player": "RR Pant",
+      "role": "Wicketkeeper",
+      "hand": "LHB",
+      "bowling": "None",
+      "arm": "None",
+      "career_caps": 153,
+      "recent_caps_1y": 3,
+      "recent_format_caps_1y": 3,
+      "recent_bat_avg_1y": 25.67,
+      "recent_bat_sr_1y": 80.21,
+      "recent_bowl_econ_1y": 0.0,
+      "recent_wickets_1y": 0
+    },
+    "t20_home": [
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 28.3,
+        "LogReg Prob (%)": 21.8,
+        "Ensemble Prob (%)": 32.6
+      },
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 28.0,
+        "LogReg Prob (%)": 19.9,
+        "Ensemble Prob (%)": 33.4
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 26.8,
+        "LogReg Prob (%)": 19.4,
+        "Ensemble Prob (%)": 31.7
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 26.1,
+        "LogReg Prob (%)": 19.2,
+        "Ensemble Prob (%)": 30.7
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 20.5,
+        "LogReg Prob (%)": 12.7,
+        "Ensemble Prob (%)": 25.7
+      }
+    ],
+    "test_sena": [
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 32.9,
+        "LogReg Prob (%)": 26.3,
+        "Ensemble Prob (%)": 37.3
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 32.3,
+        "LogReg Prob (%)": 26.1,
+        "Ensemble Prob (%)": 36.5
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 32.1,
+        "LogReg Prob (%)": 29.3,
+        "Ensemble Prob (%)": 34.0
+      },
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 30.7,
+        "LogReg Prob (%)": 26.9,
+        "Ensemble Prob (%)": 33.3
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 24.9,
+        "LogReg Prob (%)": 17.7,
+        "Ensemble Prob (%)": 29.7
+      }
+    ]
+  },
+  "Suryakumar Yadav": {
+    "profile": {
+      "player": "SA Yadav",
+      "role": "Middle-Order Batter",
+      "hand": "RHB",
+      "bowling": "Finger Spin",
+      "arm": "Right",
+      "career_caps": 148,
+      "recent_caps_1y": 30,
+      "recent_format_caps_1y": 0,
+      "recent_bat_avg_1y": 30.77,
+      "recent_bat_sr_1y": 149.12,
+      "recent_bowl_econ_1y": 7.33,
+      "recent_wickets_1y": 0
+    },
+    "t20_home": [
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 21.6,
+        "LogReg Prob (%)": 17.7,
+        "Ensemble Prob (%)": 24.2
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 18.9,
+        "LogReg Prob (%)": 13.0,
+        "Ensemble Prob (%)": 22.8
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 17.4,
+        "LogReg Prob (%)": 13.8,
+        "Ensemble Prob (%)": 19.8
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 15.5,
+        "LogReg Prob (%)": 16.1,
+        "Ensemble Prob (%)": 15.2
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 15.3,
+        "LogReg Prob (%)": 13.4,
+        "Ensemble Prob (%)": 16.7
+      }
+    ],
+    "test_sena": [
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 14.4,
+        "LogReg Prob (%)": 24.2,
+        "Ensemble Prob (%)": 7.9
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 12.4,
+        "LogReg Prob (%)": 18.2,
+        "Ensemble Prob (%)": 8.5
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 11.2,
+        "LogReg Prob (%)": 22.2,
+        "Ensemble Prob (%)": 3.9
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 11.1,
+        "LogReg Prob (%)": 19.2,
+        "Ensemble Prob (%)": 5.6
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 10.5,
+        "LogReg Prob (%)": 18.6,
+        "Ensemble Prob (%)": 5.0
+      }
+    ]
+  },
+  "Virat Kohli": {
+    "profile": {
+      "player": "V Kohli",
+      "role": "Top-Order Batter",
+      "hand": "RHB",
+      "bowling": "Pace",
+      "arm": "Right",
+      "career_caps": 552,
+      "recent_caps_1y": 12,
+      "recent_format_caps_1y": 0,
+      "recent_bat_avg_1y": 76.0,
+      "recent_bat_sr_1y": 106.89,
+      "recent_bowl_econ_1y": 5.87,
+      "recent_wickets_1y": 0
+    },
+    "t20_home": [
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 22.1,
+        "LogReg Prob (%)": 33.8,
+        "Ensemble Prob (%)": 14.4
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 17.5,
+        "LogReg Prob (%)": 27.7,
+        "Ensemble Prob (%)": 10.8
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 14.9,
+        "LogReg Prob (%)": 25.9,
+        "Ensemble Prob (%)": 7.6
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 11.4,
+        "LogReg Prob (%)": 18.6,
+        "Ensemble Prob (%)": 6.7
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 9.1,
+        "LogReg Prob (%)": 19.8,
+        "Ensemble Prob (%)": 2.0
+      }
+    ],
+    "test_sena": [
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 25.3,
+        "LogReg Prob (%)": 43.1,
+        "Ensemble Prob (%)": 13.4
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 22.9,
+        "LogReg Prob (%)": 36.3,
+        "Ensemble Prob (%)": 13.9
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 19.2,
+        "LogReg Prob (%)": 34.2,
+        "Ensemble Prob (%)": 9.2
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 15.5,
+        "LogReg Prob (%)": 25.3,
+        "Ensemble Prob (%)": 9.0
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 14.2,
+        "LogReg Prob (%)": 26.8,
+        "Ensemble Prob (%)": 5.9
+      }
+    ]
+  },
+  "Rohit Sharma": {
+    "profile": {
+      "player": "RG Sharma",
+      "role": "Top-Order Batter",
+      "hand": "RHB",
+      "bowling": "Finger Spin",
+      "arm": "Right",
+      "career_caps": 501,
+      "recent_caps_1y": 12,
+      "recent_format_caps_1y": 0,
+      "recent_bat_avg_1y": 53.09,
+      "recent_bat_sr_1y": 93.29,
+      "recent_bowl_econ_1y": 4.89,
+      "recent_wickets_1y": 0
+    },
+    "t20_home": [
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 17.8,
+        "LogReg Prob (%)": 27.2,
+        "Ensemble Prob (%)": 11.6
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 17.3,
+        "LogReg Prob (%)": 22.0,
+        "Ensemble Prob (%)": 14.2
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 13.4,
+        "LogReg Prob (%)": 20.4,
+        "Ensemble Prob (%)": 8.7
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 10.6,
+        "LogReg Prob (%)": 14.3,
+        "Ensemble Prob (%)": 8.0
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 7.7,
+        "LogReg Prob (%)": 15.3,
+        "Ensemble Prob (%)": 2.6
+      }
+    ],
+    "test_sena": [
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 21.7,
+        "LogReg Prob (%)": 29.5,
+        "Ensemble Prob (%)": 16.6
+      },
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 21.5,
+        "LogReg Prob (%)": 35.7,
+        "Ensemble Prob (%)": 12.1
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 16.7,
+        "LogReg Prob (%)": 27.6,
+        "Ensemble Prob (%)": 9.5
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 13.8,
+        "LogReg Prob (%)": 19.9,
+        "Ensemble Prob (%)": 9.7
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 12.5,
+        "LogReg Prob (%)": 21.2,
+        "Ensemble Prob (%)": 6.7
+      }
+    ]
+  },
+  "Mohammed Siraj": {
+    "profile": {
+      "player": "Mohammed Siraj",
+      "role": "Specialist Fast Bowler",
+      "hand": "RHB",
+      "bowling": "Pace",
+      "arm": "Right",
+      "career_caps": 112,
+      "recent_caps_1y": 12,
+      "recent_format_caps_1y": 5,
+      "recent_bat_avg_1y": 3.6,
+      "recent_bat_sr_1y": 39.13,
+      "recent_bowl_econ_1y": 3.58,
+      "recent_wickets_1y": 26
+    },
+    "t20_home": [
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 32.2,
+        "LogReg Prob (%)": 25.3,
+        "Ensemble Prob (%)": 36.9
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 31.4,
+        "LogReg Prob (%)": 22.8,
+        "Ensemble Prob (%)": 37.1
+      },
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 30.7,
+        "LogReg Prob (%)": 26.6,
+        "Ensemble Prob (%)": 33.5
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 27.0,
+        "LogReg Prob (%)": 15.8,
+        "Ensemble Prob (%)": 34.5
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 25.0,
+        "LogReg Prob (%)": 17.6,
+        "Ensemble Prob (%)": 30.0
+      }
+    ],
+    "test_sena": [
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 49.6,
+        "LogReg Prob (%)": 33.4,
+        "Ensemble Prob (%)": 60.4
+      },
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 48.9,
+        "LogReg Prob (%)": 34.9,
+        "Ensemble Prob (%)": 58.2
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 48.0,
+        "LogReg Prob (%)": 30.5,
+        "Ensemble Prob (%)": 59.6
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 45.2,
+        "LogReg Prob (%)": 21.8,
+        "Ensemble Prob (%)": 60.9
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 43.6,
+        "LogReg Prob (%)": 24.0,
+        "Ensemble Prob (%)": 56.7
+      }
+    ]
+  },
+  "Ravindra Jadeja": {
+    "profile": {
+      "player": "RA Jadeja",
+      "role": "Spin All-Rounder",
+      "hand": "LHB",
+      "bowling": "Left-Arm Orthodox",
+      "arm": "Left",
+      "career_caps": 367,
+      "recent_caps_1y": 11,
+      "recent_format_caps_1y": 5,
+      "recent_bat_avg_1y": 33.0,
+      "recent_bat_sr_1y": 64.96,
+      "recent_bowl_econ_1y": 3.53,
+      "recent_wickets_1y": 23
+    },
+    "t20_home": [
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 44.2,
+        "LogReg Prob (%)": 44.8,
+        "Ensemble Prob (%)": 43.7
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 42.5,
+        "LogReg Prob (%)": 41.2,
+        "Ensemble Prob (%)": 43.5
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 37.2,
+        "LogReg Prob (%)": 27.0,
+        "Ensemble Prob (%)": 44.1
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 34.6,
+        "LogReg Prob (%)": 24.3,
+        "Ensemble Prob (%)": 41.5
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 32.8,
+        "LogReg Prob (%)": 27.7,
+        "Ensemble Prob (%)": 36.1
+      }
+    ],
+    "test_sena": [
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 60.1,
+        "LogReg Prob (%)": 54.7,
+        "Ensemble Prob (%)": 63.6
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 58.1,
+        "LogReg Prob (%)": 51.0,
+        "Ensemble Prob (%)": 62.9
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 52.3,
+        "LogReg Prob (%)": 35.5,
+        "Ensemble Prob (%)": 63.6
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 51.6,
+        "LogReg Prob (%)": 36.3,
+        "Ensemble Prob (%)": 61.7
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 49.5,
+        "LogReg Prob (%)": 32.3,
+        "Ensemble Prob (%)": 61.0
+      }
+    ]
+  },
+  "KL Rahul": {
+    "profile": {
+      "player": "KL Rahul",
+      "role": "Wicketkeeper",
+      "hand": "RHB",
+      "bowling": "None",
+      "arm": "None",
+      "career_caps": 229,
+      "recent_caps_1y": 16,
+      "recent_format_caps_1y": 5,
+      "recent_bat_avg_1y": 50.79,
+      "recent_bat_sr_1y": 66.26,
+      "recent_bowl_econ_1y": 0.0,
+      "recent_wickets_1y": 0
+    },
+    "t20_home": [
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 44.4,
+        "LogReg Prob (%)": 33.9,
+        "Ensemble Prob (%)": 51.4
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 42.9,
+        "LogReg Prob (%)": 29.8,
+        "Ensemble Prob (%)": 51.6
+      },
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 42.7,
+        "LogReg Prob (%)": 31.4,
+        "Ensemble Prob (%)": 50.2
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 41.4,
+        "LogReg Prob (%)": 32.5,
+        "Ensemble Prob (%)": 47.3
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 34.4,
+        "LogReg Prob (%)": 22.5,
+        "Ensemble Prob (%)": 42.4
+      }
+    ],
+    "test_sena": [
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 59.9,
+        "LogReg Prob (%)": 41.7,
+        "Ensemble Prob (%)": 72.0
+      },
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 59.7,
+        "LogReg Prob (%)": 40.5,
+        "Ensemble Prob (%)": 72.6
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 58.7,
+        "LogReg Prob (%)": 43.3,
+        "Ensemble Prob (%)": 69.0
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 58.2,
+        "LogReg Prob (%)": 38.6,
+        "Ensemble Prob (%)": 71.3
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 49.9,
+        "LogReg Prob (%)": 30.1,
+        "Ensemble Prob (%)": 63.1
+      }
+    ]
+  },
+  "Shubman Gill": {
+    "profile": {
+      "player": "Shubman Gill",
+      "role": "Top-Order Batter",
+      "hand": "RHB",
+      "bowling": "Finger Spin",
+      "arm": "Right",
+      "career_caps": 140,
+      "recent_caps_1y": 28,
+      "recent_format_caps_1y": 4,
+      "recent_bat_avg_1y": 33.73,
+      "recent_bat_sr_1y": 91.54,
+      "recent_bowl_econ_1y": 6.24,
+      "recent_wickets_1y": 0
+    },
+    "t20_home": [
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 51.3,
+        "LogReg Prob (%)": 37.5,
+        "Ensemble Prob (%)": 60.6
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 45.4,
+        "LogReg Prob (%)": 29.1,
+        "Ensemble Prob (%)": 56.3
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 44.7,
+        "LogReg Prob (%)": 31.1,
+        "Ensemble Prob (%)": 53.7
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 39.1,
+        "LogReg Prob (%)": 21.1,
+        "Ensemble Prob (%)": 51.1
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 35.7,
+        "LogReg Prob (%)": 22.4,
+        "Ensemble Prob (%)": 44.5
+      }
+    ],
+    "test_sena": [
+      {
+        "Coach": "Duncan Fletcher",
+        "Selection Probability (%)": 60.0,
+        "LogReg Prob (%)": 47.1,
+        "Ensemble Prob (%)": 68.6
+      },
+      {
+        "Coach": "Gary Kirsten",
+        "Selection Probability (%)": 54.5,
+        "LogReg Prob (%)": 37.9,
+        "Ensemble Prob (%)": 65.5
+      },
+      {
+        "Coach": "Ravi Shastri (Head Coach)",
+        "Selection Probability (%)": 52.0,
+        "LogReg Prob (%)": 40.1,
+        "Ensemble Prob (%)": 60.0
+      },
+      {
+        "Coach": "Gautam Gambhir",
+        "Selection Probability (%)": 51.5,
+        "LogReg Prob (%)": 30.1,
+        "Ensemble Prob (%)": 65.8
+      },
+      {
+        "Coach": "Rahul Dravid",
+        "Selection Probability (%)": 49.5,
+        "LogReg Prob (%)": 28.4,
+        "Ensemble Prob (%)": 63.5
+      }
+    ]
+  }
+}
