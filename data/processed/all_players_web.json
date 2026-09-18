@@ -1,0 +1,1864 @@
+{
+  "Virat Kohli": {
+    "role": "Top-Order Batter",
+    "hand": "RHB",
+    "bowling": "Pace",
+    "caps": 552,
+    "batAvg": 76.0,
+    "batSR": 106.89,
+    "bowlEcon": 5.87,
+    "wicketsYr": 0,
+    "squad_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 66.1,
+        "Ravi Shastri": 61.1,
+        "Gary Kirsten": 51.4,
+        "Rahul Dravid": 41.5,
+        "Gautam Gambhir": 39.6
+      },
+      "TEST_SENA": {
+        "Duncan Fletcher": 67.4,
+        "Ravi Shastri": 62.0,
+        "Gary Kirsten": 53.0,
+        "Rahul Dravid": 43.8,
+        "Gautam Gambhir": 40.7
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 59.9,
+        "Ravi Shastri": 53.3,
+        "Gary Kirsten": 44.7,
+        "Gautam Gambhir": 39.3,
+        "Rahul Dravid": 39.1
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 60.4,
+        "Ravi Shastri": 53.5,
+        "Gary Kirsten": 45.9,
+        "Rahul Dravid": 40.4,
+        "Gautam Gambhir": 39.7
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 60.2,
+        "Ravi Shastri": 48.9,
+        "Gary Kirsten": 42.3,
+        "Rahul Dravid": 34.2,
+        "Gautam Gambhir": 0.0
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 60.6,
+        "Ravi Shastri": 50.0,
+        "Gary Kirsten": 43.4,
+        "Rahul Dravid": 35.5,
+        "Gautam Gambhir": 0.0
+      }
+    },
+    "raw_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 24.7,
+        "Ravi Shastri": 22.5,
+        "Gary Kirsten": 18.6,
+        "Rahul Dravid": 14.6,
+        "Gautam Gambhir": 13.8
+      },
+      "TEST_SENA": {
+        "Duncan Fletcher": 25.3,
+        "Ravi Shastri": 22.9,
+        "Gary Kirsten": 19.2,
+        "Rahul Dravid": 15.5,
+        "Gautam Gambhir": 14.2
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 22.0,
+        "Ravi Shastri": 19.3,
+        "Gary Kirsten": 15.9,
+        "Gautam Gambhir": 13.7,
+        "Rahul Dravid": 13.6
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 22.2,
+        "Ravi Shastri": 19.4,
+        "Gary Kirsten": 16.4,
+        "Rahul Dravid": 14.1,
+        "Gautam Gambhir": 13.8
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 22.1,
+        "Ravi Shastri": 17.5,
+        "Gary Kirsten": 14.9,
+        "Rahul Dravid": 11.4,
+        "Gautam Gambhir": 0.0
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 22.3,
+        "Ravi Shastri": 18.0,
+        "Gary Kirsten": 15.4,
+        "Rahul Dravid": 12.0,
+        "Gautam Gambhir": 0.0
+      }
+    }
+  },
+  "Rohit Sharma": {
+    "role": "Top-Order Batter",
+    "hand": "RHB",
+    "bowling": "Finger Spin",
+    "caps": 501,
+    "batAvg": 53.09,
+    "batSR": 93.29,
+    "bowlEcon": 4.89,
+    "wicketsYr": 0,
+    "squad_scores": {
+      "TEST_Home": {
+        "Ravi Shastri": 59.8,
+        "Duncan Fletcher": 58.2,
+        "Gary Kirsten": 46.2,
+        "Rahul Dravid": 38.8,
+        "Gautam Gambhir": 35.4
+      },
+      "TEST_SENA": {
+        "Ravi Shastri": 59.3,
+        "Duncan Fletcher": 58.8,
+        "Gary Kirsten": 46.9,
+        "Rahul Dravid": 39.5,
+        "Gautam Gambhir": 36.5
+      },
+      "ODI_Home": {
+        "Ravi Shastri": 57.4,
+        "Duncan Fletcher": 54.8,
+        "Gary Kirsten": 44.3,
+        "Rahul Dravid": 40.4,
+        "Gautam Gambhir": 39.1
+      },
+      "ODI_SENA": {
+        "Ravi Shastri": 55.5,
+        "Duncan Fletcher": 54.2,
+        "Gary Kirsten": 43.9,
+        "Rahul Dravid": 40.8,
+        "Gautam Gambhir": 39.6
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 49.6,
+        "Ravi Shastri": 48.2,
+        "Gary Kirsten": 38.7,
+        "Rahul Dravid": 32.2,
+        "Gautam Gambhir": 0.0
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 48.2,
+        "Ravi Shastri": 46.4,
+        "Gary Kirsten": 37.9,
+        "Rahul Dravid": 31.3,
+        "Gautam Gambhir": 0.0
+      }
+    },
+    "raw_scores": {
+      "TEST_Home": {
+        "Ravi Shastri": 22.0,
+        "Duncan Fletcher": 21.3,
+        "Gary Kirsten": 16.5,
+        "Rahul Dravid": 13.4,
+        "Gautam Gambhir": 12.0
+      },
+      "TEST_SENA": {
+        "Ravi Shastri": 21.7,
+        "Duncan Fletcher": 21.5,
+        "Gary Kirsten": 16.7,
+        "Rahul Dravid": 13.8,
+        "Gautam Gambhir": 12.5
+      },
+      "ODI_Home": {
+        "Ravi Shastri": 21.0,
+        "Duncan Fletcher": 19.9,
+        "Gary Kirsten": 15.7,
+        "Rahul Dravid": 14.1,
+        "Gautam Gambhir": 13.6
+      },
+      "ODI_SENA": {
+        "Ravi Shastri": 20.2,
+        "Duncan Fletcher": 19.7,
+        "Gary Kirsten": 15.5,
+        "Rahul Dravid": 14.3,
+        "Gautam Gambhir": 13.8
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 17.8,
+        "Ravi Shastri": 17.3,
+        "Gary Kirsten": 13.4,
+        "Rahul Dravid": 10.6,
+        "Gautam Gambhir": 0.0
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 17.3,
+        "Ravi Shastri": 16.5,
+        "Gary Kirsten": 13.1,
+        "Rahul Dravid": 10.1,
+        "Gautam Gambhir": 0.0
+      }
+    }
+  },
+  "Jasprit Bumrah": {
+    "role": "Specialist Fast Bowler",
+    "hand": "RHB",
+    "bowling": "Pace",
+    "caps": 233,
+    "batAvg": 7.75,
+    "batSR": 72.09,
+    "bowlEcon": 4.49,
+    "wicketsYr": 49,
+    "squad_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 92.7,
+        "Gary Kirsten": 92.5,
+        "Ravi Shastri": 91.4,
+        "Rahul Dravid": 85.9,
+        "Gautam Gambhir": 84.2
+      },
+      "TEST_SENA": {
+        "Duncan Fletcher": 93.6,
+        "Gary Kirsten": 93.3,
+        "Ravi Shastri": 92.2,
+        "Rahul Dravid": 86.1,
+        "Gautam Gambhir": 85.1
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 83.3,
+        "Ravi Shastri": 82.9,
+        "Gary Kirsten": 82.1,
+        "Rahul Dravid": 71.2,
+        "Gautam Gambhir": 69.7
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 85.0,
+        "Gary Kirsten": 84.3,
+        "Ravi Shastri": 83.8,
+        "Gautam Gambhir": 72.5,
+        "Rahul Dravid": 71.7
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 88.3,
+        "Gary Kirsten": 86.9,
+        "Ravi Shastri": 86.3,
+        "Rahul Dravid": 73.7,
+        "Gautam Gambhir": 72.5
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 91.0,
+        "Gary Kirsten": 90.6,
+        "Ravi Shastri": 88.3,
+        "Rahul Dravid": 79.5,
+        "Gautam Gambhir": 77.7
+      }
+    },
+    "raw_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 43.4,
+        "Gary Kirsten": 43.2,
+        "Ravi Shastri": 41.6,
+        "Rahul Dravid": 36.1,
+        "Gautam Gambhir": 34.7
+      },
+      "TEST_SENA": {
+        "Duncan Fletcher": 44.8,
+        "Gary Kirsten": 44.3,
+        "Ravi Shastri": 42.7,
+        "Rahul Dravid": 36.3,
+        "Gautam Gambhir": 35.5
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 34.0,
+        "Ravi Shastri": 33.8,
+        "Gary Kirsten": 33.2,
+        "Rahul Dravid": 27.0,
+        "Gautam Gambhir": 26.3
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 35.3,
+        "Gary Kirsten": 34.8,
+        "Ravi Shastri": 34.4,
+        "Gautam Gambhir": 27.7,
+        "Rahul Dravid": 27.3
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 38.2,
+        "Gary Kirsten": 36.9,
+        "Ravi Shastri": 36.4,
+        "Rahul Dravid": 28.3,
+        "Gautam Gambhir": 27.7
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 41.1,
+        "Gary Kirsten": 40.7,
+        "Ravi Shastri": 38.2,
+        "Rahul Dravid": 31.6,
+        "Gautam Gambhir": 30.5
+      }
+    }
+  },
+  "Hardik Pandya": {
+    "role": "Pace All-Rounder",
+    "hand": "RHB",
+    "bowling": "Pace",
+    "caps": 238,
+    "batAvg": 29.75,
+    "batSR": 164.71,
+    "bowlEcon": 8.94,
+    "wicketsYr": 20,
+    "squad_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 58.1,
+        "Ravi Shastri": 50.6,
+        "Gautam Gambhir": 40.3,
+        "Rahul Dravid": 35.9,
+        "Gary Kirsten": 28.0
+      },
+      "TEST_SENA": {
+        "Duncan Fletcher": 56.9,
+        "Ravi Shastri": 50.3,
+        "Gautam Gambhir": 38.8,
+        "Rahul Dravid": 37.1,
+        "Gary Kirsten": 27.9
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 55.7,
+        "Ravi Shastri": 52.2,
+        "Gautam Gambhir": 45.8,
+        "Rahul Dravid": 40.8,
+        "Gary Kirsten": 39.8
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 55.4,
+        "Ravi Shastri": 51.7,
+        "Gautam Gambhir": 44.3,
+        "Rahul Dravid": 42.2,
+        "Gary Kirsten": 40.4
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 64.5,
+        "Ravi Shastri": 57.5,
+        "Gautam Gambhir": 46.7,
+        "Rahul Dravid": 46.5,
+        "Gary Kirsten": 40.8
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 63.0,
+        "Ravi Shastri": 56.2,
+        "Rahul Dravid": 47.1,
+        "Gautam Gambhir": 46.4,
+        "Gary Kirsten": 40.0
+      }
+    },
+    "raw_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 21.3,
+        "Ravi Shastri": 18.2,
+        "Gautam Gambhir": 14.1,
+        "Rahul Dravid": 12.2,
+        "Gary Kirsten": 8.5
+      },
+      "TEST_SENA": {
+        "Duncan Fletcher": 20.8,
+        "Ravi Shastri": 18.1,
+        "Gautam Gambhir": 13.5,
+        "Rahul Dravid": 12.7,
+        "Gary Kirsten": 8.5
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 20.3,
+        "Ravi Shastri": 18.9,
+        "Gautam Gambhir": 16.3,
+        "Rahul Dravid": 14.3,
+        "Gary Kirsten": 13.9
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 20.2,
+        "Ravi Shastri": 18.7,
+        "Gautam Gambhir": 15.7,
+        "Rahul Dravid": 14.9,
+        "Gary Kirsten": 14.1
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 24.0,
+        "Ravi Shastri": 21.0,
+        "Gautam Gambhir": 16.7,
+        "Rahul Dravid": 16.6,
+        "Gary Kirsten": 14.3
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 23.3,
+        "Ravi Shastri": 20.5,
+        "Rahul Dravid": 16.8,
+        "Gautam Gambhir": 16.5,
+        "Gary Kirsten": 13.9
+      }
+    }
+  },
+  "Yashasvi Jaiswal": {
+    "role": "Top-Order Batter",
+    "hand": "LHB",
+    "bowling": "Wrist Spin",
+    "caps": 53,
+    "batAvg": 44.55,
+    "batSR": 71.85,
+    "bowlEcon": 7.25,
+    "wicketsYr": 0,
+    "squad_scores": {
+      "TEST_Home": {
+        "Ravi Shastri": 98.3,
+        "Gary Kirsten": 98.2,
+        "Duncan Fletcher": 97.9,
+        "Rahul Dravid": 97.5,
+        "Gautam Gambhir": 97.3
+      },
+      "TEST_SENA": {
+        "Gary Kirsten": 98.0,
+        "Ravi Shastri": 97.9,
+        "Duncan Fletcher": 97.6,
+        "Gautam Gambhir": 97.4,
+        "Rahul Dravid": 97.3
+      },
+      "ODI_Home": {
+        "Ravi Shastri": 92.6,
+        "Gary Kirsten": 91.2,
+        "Rahul Dravid": 90.0,
+        "Duncan Fletcher": 89.7,
+        "Gautam Gambhir": 84.9
+      },
+      "ODI_SENA": {
+        "Ravi Shastri": 91.3,
+        "Gary Kirsten": 90.7,
+        "Rahul Dravid": 89.3,
+        "Duncan Fletcher": 88.7,
+        "Gautam Gambhir": 85.2
+      },
+      "T20I_Home": {
+        "Ravi Shastri": 94.9,
+        "Gary Kirsten": 93.4,
+        "Duncan Fletcher": 93.3,
+        "Rahul Dravid": 90.8,
+        "Gautam Gambhir": 86.9
+      },
+      "T20I_SENA": {
+        "Ravi Shastri": 94.2,
+        "Gary Kirsten": 93.7,
+        "Duncan Fletcher": 93.0,
+        "Rahul Dravid": 91.3,
+        "Gautam Gambhir": 88.7
+      }
+    },
+    "raw_scores": {
+      "TEST_Home": {
+        "Ravi Shastri": 58.5,
+        "Gary Kirsten": 58.1,
+        "Duncan Fletcher": 56.6,
+        "Rahul Dravid": 54.6,
+        "Gautam Gambhir": 53.9
+      },
+      "TEST_SENA": {
+        "Gary Kirsten": 56.7,
+        "Ravi Shastri": 56.2,
+        "Duncan Fletcher": 55.3,
+        "Gautam Gambhir": 54.3,
+        "Rahul Dravid": 53.9
+      },
+      "ODI_Home": {
+        "Ravi Shastri": 43.3,
+        "Gary Kirsten": 41.4,
+        "Rahul Dravid": 39.9,
+        "Duncan Fletcher": 39.7,
+        "Gautam Gambhir": 35.3
+      },
+      "ODI_SENA": {
+        "Ravi Shastri": 41.5,
+        "Gary Kirsten": 40.8,
+        "Rahul Dravid": 39.2,
+        "Duncan Fletcher": 38.6,
+        "Gautam Gambhir": 35.5
+      },
+      "T20I_Home": {
+        "Ravi Shastri": 47.2,
+        "Gary Kirsten": 44.5,
+        "Duncan Fletcher": 44.3,
+        "Rahul Dravid": 40.9,
+        "Gautam Gambhir": 36.9
+      },
+      "T20I_SENA": {
+        "Ravi Shastri": 45.8,
+        "Gary Kirsten": 45.0,
+        "Duncan Fletcher": 43.9,
+        "Rahul Dravid": 41.5,
+        "Gautam Gambhir": 38.6
+      }
+    }
+  },
+  "Kuldeep Yadav": {
+    "role": "Specialist Spin Bowler",
+    "hand": "LHB",
+    "bowling": "Wrist Spin",
+    "caps": 186,
+    "batAvg": 6.38,
+    "batSR": 21.89,
+    "bowlEcon": 4.93,
+    "wicketsYr": 60,
+    "squad_scores": {
+      "TEST_Home": {
+        "Ravi Shastri": 92.6,
+        "Gary Kirsten": 90.9,
+        "Gautam Gambhir": 89.3,
+        "Rahul Dravid": 89.3,
+        "Duncan Fletcher": 81.6
+      },
+      "TEST_SENA": {
+        "Ravi Shastri": 91.4,
+        "Gary Kirsten": 89.3,
+        "Rahul Dravid": 87.8,
+        "Gautam Gambhir": 86.3,
+        "Duncan Fletcher": 79.5
+      },
+      "ODI_Home": {
+        "Ravi Shastri": 85.2,
+        "Gary Kirsten": 84.3,
+        "Rahul Dravid": 83.0,
+        "Gautam Gambhir": 82.0,
+        "Duncan Fletcher": 75.3
+      },
+      "ODI_SENA": {
+        "Ravi Shastri": 84.2,
+        "Gary Kirsten": 84.2,
+        "Rahul Dravid": 81.1,
+        "Gautam Gambhir": 79.1,
+        "Duncan Fletcher": 73.9
+      },
+      "T20I_Home": {
+        "Gary Kirsten": 82.2,
+        "Ravi Shastri": 81.3,
+        "Rahul Dravid": 78.2,
+        "Gautam Gambhir": 73.1,
+        "Duncan Fletcher": 68.5
+      },
+      "T20I_SENA": {
+        "Gary Kirsten": 85.3,
+        "Ravi Shastri": 83.4,
+        "Rahul Dravid": 78.9,
+        "Gautam Gambhir": 74.8,
+        "Duncan Fletcher": 72.3
+      }
+    },
+    "raw_scores": {
+      "TEST_Home": {
+        "Ravi Shastri": 43.2,
+        "Gary Kirsten": 41.0,
+        "Gautam Gambhir": 39.3,
+        "Rahul Dravid": 39.3,
+        "Duncan Fletcher": 32.9
+      },
+      "TEST_SENA": {
+        "Ravi Shastri": 41.6,
+        "Gary Kirsten": 39.2,
+        "Rahul Dravid": 37.7,
+        "Gautam Gambhir": 36.4,
+        "Duncan Fletcher": 31.6
+      },
+      "ODI_Home": {
+        "Ravi Shastri": 35.5,
+        "Gary Kirsten": 34.8,
+        "Rahul Dravid": 33.8,
+        "Gautam Gambhir": 33.2,
+        "Duncan Fletcher": 29.2
+      },
+      "ODI_SENA": {
+        "Ravi Shastri": 34.8,
+        "Gary Kirsten": 34.8,
+        "Rahul Dravid": 32.6,
+        "Gautam Gambhir": 31.3,
+        "Duncan Fletcher": 28.4
+      },
+      "T20I_Home": {
+        "Gary Kirsten": 33.3,
+        "Ravi Shastri": 32.7,
+        "Rahul Dravid": 30.8,
+        "Gautam Gambhir": 28.0,
+        "Duncan Fletcher": 25.8
+      },
+      "T20I_SENA": {
+        "Gary Kirsten": 35.6,
+        "Ravi Shastri": 34.1,
+        "Rahul Dravid": 31.2,
+        "Gautam Gambhir": 28.9,
+        "Duncan Fletcher": 27.6
+      }
+    }
+  },
+  "Axar Patel": {
+    "role": "Spin All-Rounder",
+    "hand": "LHB",
+    "bowling": "Left-Arm Orthodox",
+    "caps": 186,
+    "batAvg": 17.82,
+    "batSR": 100.0,
+    "bowlEcon": 6.58,
+    "wicketsYr": 40,
+    "squad_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 90.9,
+        "Gary Kirsten": 88.1,
+        "Rahul Dravid": 81.6,
+        "Ravi Shastri": 78.8,
+        "Gautam Gambhir": 77.3
+      },
+      "TEST_SENA": {
+        "Duncan Fletcher": 91.4,
+        "Gary Kirsten": 90.1,
+        "Rahul Dravid": 82.3,
+        "Ravi Shastri": 81.2,
+        "Gautam Gambhir": 79.5
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 89.5,
+        "Gary Kirsten": 87.5,
+        "Gautam Gambhir": 78.3,
+        "Ravi Shastri": 77.0,
+        "Rahul Dravid": 76.8
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 90.5,
+        "Gary Kirsten": 89.7,
+        "Gautam Gambhir": 81.5,
+        "Ravi Shastri": 79.2,
+        "Rahul Dravid": 78.0
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 94.0,
+        "Gary Kirsten": 91.2,
+        "Rahul Dravid": 83.9,
+        "Ravi Shastri": 82.5,
+        "Gautam Gambhir": 81.5
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 95.1,
+        "Gary Kirsten": 93.8,
+        "Rahul Dravid": 85.9,
+        "Gautam Gambhir": 85.8,
+        "Ravi Shastri": 85.8
+      }
+    },
+    "raw_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 41.0,
+        "Gary Kirsten": 38.0,
+        "Rahul Dravid": 32.9,
+        "Ravi Shastri": 31.1,
+        "Gautam Gambhir": 30.2
+      },
+      "TEST_SENA": {
+        "Duncan Fletcher": 41.7,
+        "Gary Kirsten": 40.1,
+        "Rahul Dravid": 33.4,
+        "Ravi Shastri": 32.6,
+        "Gautam Gambhir": 31.5
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 39.5,
+        "Gary Kirsten": 37.4,
+        "Gautam Gambhir": 30.8,
+        "Ravi Shastri": 30.1,
+        "Rahul Dravid": 30.0
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 40.6,
+        "Gary Kirsten": 39.6,
+        "Gautam Gambhir": 32.8,
+        "Ravi Shastri": 31.4,
+        "Rahul Dravid": 30.6
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 45.6,
+        "Gary Kirsten": 41.4,
+        "Rahul Dravid": 34.5,
+        "Ravi Shastri": 33.5,
+        "Gautam Gambhir": 32.8
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 47.7,
+        "Gary Kirsten": 45.2,
+        "Rahul Dravid": 36.1,
+        "Ravi Shastri": 36.0,
+        "Gautam Gambhir": 35.9
+      }
+    }
+  },
+  "Arshdeep Singh": {
+    "role": "Specialist Fast Bowler",
+    "hand": "LHB",
+    "bowling": "Left-Arm Fast",
+    "caps": 102,
+    "batAvg": 5.82,
+    "batSR": 96.97,
+    "bowlEcon": 7.86,
+    "wicketsYr": 49,
+    "squad_scores": {
+      "TEST_Home": {
+        "Gary Kirsten": 57.7,
+        "Rahul Dravid": 44.5,
+        "Ravi Shastri": 43.1,
+        "Duncan Fletcher": 42.6,
+        "Gautam Gambhir": 41.5
+      },
+      "TEST_SENA": {
+        "Gary Kirsten": 59.1,
+        "Rahul Dravid": 46.4,
+        "Ravi Shastri": 44.4,
+        "Gautam Gambhir": 43.5,
+        "Duncan Fletcher": 43.5
+      },
+      "ODI_Home": {
+        "Gary Kirsten": 62.6,
+        "Duncan Fletcher": 49.9,
+        "Rahul Dravid": 49.9,
+        "Ravi Shastri": 48.2,
+        "Gautam Gambhir": 46.2
+      },
+      "ODI_SENA": {
+        "Gary Kirsten": 66.4,
+        "Rahul Dravid": 52.9,
+        "Duncan Fletcher": 52.0,
+        "Gautam Gambhir": 51.0,
+        "Ravi Shastri": 50.9
+      },
+      "T20I_Home": {
+        "Gary Kirsten": 75.8,
+        "Duncan Fletcher": 63.1,
+        "Rahul Dravid": 61.2,
+        "Gautam Gambhir": 59.4,
+        "Ravi Shastri": 59.3
+      },
+      "T20I_SENA": {
+        "Gary Kirsten": 80.4,
+        "Duncan Fletcher": 68.1,
+        "Rahul Dravid": 66.5,
+        "Gautam Gambhir": 65.7,
+        "Ravi Shastri": 65.4
+      }
+    },
+    "raw_scores": {
+      "TEST_Home": {
+        "Gary Kirsten": 21.1,
+        "Rahul Dravid": 15.8,
+        "Ravi Shastri": 15.2,
+        "Duncan Fletcher": 15.0,
+        "Gautam Gambhir": 14.6
+      },
+      "TEST_SENA": {
+        "Gary Kirsten": 21.7,
+        "Rahul Dravid": 16.6,
+        "Ravi Shastri": 15.7,
+        "Gautam Gambhir": 15.4,
+        "Duncan Fletcher": 15.4
+      },
+      "ODI_Home": {
+        "Gary Kirsten": 23.2,
+        "Rahul Dravid": 18.0,
+        "Duncan Fletcher": 17.9,
+        "Ravi Shastri": 17.3,
+        "Gautam Gambhir": 16.5
+      },
+      "ODI_SENA": {
+        "Gary Kirsten": 24.8,
+        "Rahul Dravid": 19.1,
+        "Duncan Fletcher": 18.8,
+        "Gautam Gambhir": 18.4,
+        "Ravi Shastri": 18.4
+      },
+      "T20I_Home": {
+        "Gary Kirsten": 29.4,
+        "Duncan Fletcher": 23.3,
+        "Rahul Dravid": 22.5,
+        "Gautam Gambhir": 21.8,
+        "Ravi Shastri": 21.8
+      },
+      "T20I_SENA": {
+        "Gary Kirsten": 32.1,
+        "Duncan Fletcher": 25.6,
+        "Rahul Dravid": 24.8,
+        "Gautam Gambhir": 24.5,
+        "Ravi Shastri": 24.4
+      }
+    }
+  },
+  "Rishabh Pant": {
+    "role": "Wicketkeeper",
+    "hand": "LHB",
+    "bowling": "None",
+    "caps": 153,
+    "batAvg": 25.67,
+    "batSR": 80.21,
+    "bowlEcon": 0.0,
+    "wicketsYr": 0,
+    "squad_scores": {
+      "TEST_Home": {
+        "Gautam Gambhir": 82.9,
+        "Gary Kirsten": 81.8,
+        "Ravi Shastri": 81.2,
+        "Duncan Fletcher": 79.0,
+        "Rahul Dravid": 66.6
+      },
+      "TEST_SENA": {
+        "Gautam Gambhir": 81.6,
+        "Ravi Shastri": 80.7,
+        "Gary Kirsten": 80.4,
+        "Duncan Fletcher": 78.1,
+        "Rahul Dravid": 66.6
+      },
+      "ODI_Home": {
+        "Gautam Gambhir": 64.3,
+        "Duncan Fletcher": 63.8,
+        "Gary Kirsten": 63.1,
+        "Ravi Shastri": 58.2,
+        "Rahul Dravid": 40.6
+      },
+      "ODI_SENA": {
+        "Gary Kirsten": 63.8,
+        "Duncan Fletcher": 62.9,
+        "Gautam Gambhir": 62.8,
+        "Ravi Shastri": 56.3,
+        "Rahul Dravid": 43.8
+      },
+      "T20I_Home": {
+        "Gary Kirsten": 73.7,
+        "Duncan Fletcher": 73.0,
+        "Gautam Gambhir": 70.6,
+        "Ravi Shastri": 69.3,
+        "Rahul Dravid": 56.3
+      },
+      "T20I_SENA": {
+        "Gary Kirsten": 71.7,
+        "Duncan Fletcher": 70.6,
+        "Gautam Gambhir": 67.1,
+        "Ravi Shastri": 66.3,
+        "Rahul Dravid": 54.3
+      }
+    },
+    "raw_scores": {
+      "TEST_Home": {
+        "Gautam Gambhir": 33.8,
+        "Gary Kirsten": 33.1,
+        "Ravi Shastri": 32.6,
+        "Duncan Fletcher": 31.3,
+        "Rahul Dravid": 24.9
+      },
+      "TEST_SENA": {
+        "Gautam Gambhir": 32.9,
+        "Ravi Shastri": 32.3,
+        "Gary Kirsten": 32.1,
+        "Duncan Fletcher": 30.7,
+        "Rahul Dravid": 24.9
+      },
+      "ODI_Home": {
+        "Gautam Gambhir": 23.9,
+        "Duncan Fletcher": 23.7,
+        "Gary Kirsten": 23.4,
+        "Ravi Shastri": 21.3,
+        "Rahul Dravid": 14.2
+      },
+      "ODI_SENA": {
+        "Gary Kirsten": 23.7,
+        "Duncan Fletcher": 23.3,
+        "Gautam Gambhir": 23.2,
+        "Ravi Shastri": 20.5,
+        "Rahul Dravid": 15.5
+      },
+      "T20I_Home": {
+        "Gary Kirsten": 28.3,
+        "Duncan Fletcher": 28.0,
+        "Gautam Gambhir": 26.8,
+        "Ravi Shastri": 26.1,
+        "Rahul Dravid": 20.5
+      },
+      "T20I_SENA": {
+        "Gary Kirsten": 27.3,
+        "Duncan Fletcher": 26.8,
+        "Gautam Gambhir": 25.1,
+        "Ravi Shastri": 24.8,
+        "Rahul Dravid": 19.7
+      }
+    }
+  },
+  "Ravindra Jadeja": {
+    "role": "Spin All-Rounder",
+    "hand": "LHB",
+    "bowling": "Left-Arm Orthodox",
+    "caps": 367,
+    "batAvg": 33.0,
+    "batSR": 64.96,
+    "bowlEcon": 3.53,
+    "wicketsYr": 23,
+    "squad_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 98.9,
+        "Gary Kirsten": 98.8,
+        "Ravi Shastri": 97.9,
+        "Gautam Gambhir": 97.8,
+        "Rahul Dravid": 97.4
+      },
+      "TEST_SENA": {
+        "Duncan Fletcher": 98.5,
+        "Gary Kirsten": 98.2,
+        "Ravi Shastri": 96.9,
+        "Gautam Gambhir": 96.6,
+        "Rahul Dravid": 95.9
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 94.6,
+        "Gary Kirsten": 93.7,
+        "Ravi Shastri": 89.6,
+        "Rahul Dravid": 89.0,
+        "Gautam Gambhir": 87.9
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 93.2,
+        "Gary Kirsten": 91.8,
+        "Rahul Dravid": 85.7,
+        "Ravi Shastri": 85.4,
+        "Gautam Gambhir": 84.1
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 93.2,
+        "Gary Kirsten": 92.1,
+        "Ravi Shastri": 87.3,
+        "Rahul Dravid": 84.1,
+        "Gautam Gambhir": 0.0
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 92.9,
+        "Gary Kirsten": 91.4,
+        "Ravi Shastri": 84.5,
+        "Rahul Dravid": 82.2,
+        "Gautam Gambhir": 0.0
+      }
+    },
+    "raw_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 63.2,
+        "Gary Kirsten": 61.7,
+        "Ravi Shastri": 56.7,
+        "Gautam Gambhir": 55.9,
+        "Rahul Dravid": 54.4
+      },
+      "TEST_SENA": {
+        "Duncan Fletcher": 60.1,
+        "Gary Kirsten": 58.1,
+        "Ravi Shastri": 52.3,
+        "Gautam Gambhir": 51.6,
+        "Rahul Dravid": 49.5
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 46.6,
+        "Gary Kirsten": 44.9,
+        "Ravi Shastri": 39.5,
+        "Rahul Dravid": 38.9,
+        "Gautam Gambhir": 37.8
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 44.2,
+        "Gary Kirsten": 42.2,
+        "Rahul Dravid": 35.9,
+        "Ravi Shastri": 35.6,
+        "Gautam Gambhir": 34.6
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 44.2,
+        "Gary Kirsten": 42.5,
+        "Ravi Shastri": 37.2,
+        "Rahul Dravid": 34.6,
+        "Gautam Gambhir": 0.0
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 43.8,
+        "Gary Kirsten": 41.6,
+        "Ravi Shastri": 35.0,
+        "Rahul Dravid": 33.3,
+        "Gautam Gambhir": 0.0
+      }
+    }
+  },
+  "Suryakumar Yadav": {
+    "role": "Middle-Order Batter",
+    "hand": "RHB",
+    "bowling": "Finger Spin",
+    "caps": 148,
+    "batAvg": 30.77,
+    "batSR": 149.12,
+    "bowlEcon": 7.33,
+    "wicketsYr": 0,
+    "squad_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 44.1,
+        "Gary Kirsten": 37.6,
+        "Gautam Gambhir": 35.5,
+        "Rahul Dravid": 34.5,
+        "Ravi Shastri": 33.4
+      },
+      "TEST_SENA": {
+        "Duncan Fletcher": 41.2,
+        "Gary Kirsten": 36.3,
+        "Gautam Gambhir": 33.7,
+        "Rahul Dravid": 33.3,
+        "Ravi Shastri": 32.0
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 49.3,
+        "Gary Kirsten": 42.9,
+        "Ravi Shastri": 38.8,
+        "Rahul Dravid": 36.7,
+        "Gautam Gambhir": 36.5
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 44.7,
+        "Gary Kirsten": 41.0,
+        "Rahul Dravid": 35.7,
+        "Ravi Shastri": 35.6,
+        "Gautam Gambhir": 33.8
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 59.0,
+        "Gary Kirsten": 52.2,
+        "Rahul Dravid": 48.5,
+        "Gautam Gambhir": 43.9,
+        "Ravi Shastri": 43.4
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 56.5,
+        "Gary Kirsten": 51.7,
+        "Rahul Dravid": 48.7,
+        "Gautam Gambhir": 42.4,
+        "Ravi Shastri": 42.1
+      }
+    },
+    "raw_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 15.6,
+        "Gary Kirsten": 13.0,
+        "Gautam Gambhir": 12.1,
+        "Rahul Dravid": 11.6,
+        "Ravi Shastri": 11.1
+      },
+      "TEST_SENA": {
+        "Duncan Fletcher": 14.4,
+        "Gary Kirsten": 12.4,
+        "Gautam Gambhir": 11.2,
+        "Rahul Dravid": 11.1,
+        "Ravi Shastri": 10.5
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 17.7,
+        "Gary Kirsten": 15.1,
+        "Ravi Shastri": 13.4,
+        "Gautam Gambhir": 12.5,
+        "Rahul Dravid": 12.5
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 15.9,
+        "Gary Kirsten": 14.3,
+        "Ravi Shastri": 12.1,
+        "Rahul Dravid": 12.1,
+        "Gautam Gambhir": 11.3
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 21.6,
+        "Gary Kirsten": 18.9,
+        "Rahul Dravid": 17.4,
+        "Gautam Gambhir": 15.5,
+        "Ravi Shastri": 15.3
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 20.6,
+        "Gary Kirsten": 18.7,
+        "Rahul Dravid": 17.5,
+        "Gautam Gambhir": 14.9,
+        "Ravi Shastri": 14.8
+      }
+    }
+  },
+  "Sanju Samson": {
+    "role": "Wicketkeeper",
+    "hand": "RHB",
+    "bowling": "None",
+    "caps": 81,
+    "batAvg": 30.05,
+    "batSR": 161.76,
+    "bowlEcon": 0.0,
+    "wicketsYr": 0,
+    "squad_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 46.3,
+        "Ravi Shastri": 45.3,
+        "Gary Kirsten": 41.8,
+        "Gautam Gambhir": 39.7,
+        "Rahul Dravid": 35.7
+      },
+      "TEST_SENA": {
+        "Ravi Shastri": 48.4,
+        "Duncan Fletcher": 47.6,
+        "Gary Kirsten": 43.5,
+        "Gautam Gambhir": 40.4,
+        "Rahul Dravid": 38.0
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 42.3,
+        "Gary Kirsten": 41.2,
+        "Ravi Shastri": 39.6,
+        "Gautam Gambhir": 35.0,
+        "Rahul Dravid": 33.8
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 43.4,
+        "Gary Kirsten": 40.7,
+        "Ravi Shastri": 40.1,
+        "Rahul Dravid": 34.9,
+        "Gautam Gambhir": 33.5
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 51.3,
+        "Ravi Shastri": 49.1,
+        "Gary Kirsten": 48.9,
+        "Gautam Gambhir": 41.9,
+        "Rahul Dravid": 40.5
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 52.3,
+        "Ravi Shastri": 50.7,
+        "Gary Kirsten": 49.6,
+        "Rahul Dravid": 42.9,
+        "Gautam Gambhir": 42.1
+      }
+    },
+    "raw_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 16.5,
+        "Ravi Shastri": 16.1,
+        "Gary Kirsten": 14.7,
+        "Gautam Gambhir": 13.8,
+        "Rahul Dravid": 12.1
+      },
+      "TEST_SENA": {
+        "Ravi Shastri": 17.4,
+        "Duncan Fletcher": 17.1,
+        "Gary Kirsten": 15.4,
+        "Gautam Gambhir": 14.1,
+        "Rahul Dravid": 13.1
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 14.9,
+        "Gary Kirsten": 14.4,
+        "Ravi Shastri": 13.8,
+        "Gautam Gambhir": 11.8,
+        "Rahul Dravid": 11.3
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 15.3,
+        "Gary Kirsten": 14.3,
+        "Ravi Shastri": 14.0,
+        "Rahul Dravid": 11.8,
+        "Gautam Gambhir": 11.1
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 18.5,
+        "Ravi Shastri": 17.6,
+        "Gary Kirsten": 17.5,
+        "Gautam Gambhir": 14.7,
+        "Rahul Dravid": 14.2
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 18.9,
+        "Ravi Shastri": 18.3,
+        "Gary Kirsten": 17.8,
+        "Rahul Dravid": 15.2,
+        "Gautam Gambhir": 14.8
+      }
+    }
+  },
+  "R Ashwin": {
+    "role": "Spin All-Rounder",
+    "hand": "RHB",
+    "bowling": "Finger Spin",
+    "caps": 282,
+    "batAvg": 23.65,
+    "batSR": 59.48,
+    "bowlEcon": 3.38,
+    "wicketsYr": 0,
+    "squad_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 42.5,
+        "Gary Kirsten": 36.9,
+        "Ravi Shastri": 32.8,
+        "Gautam Gambhir": 30.4,
+        "Rahul Dravid": 29.1
+      },
+      "TEST_SENA": {
+        "Duncan Fletcher": 42.8,
+        "Gary Kirsten": 37.7,
+        "Ravi Shastri": 33.3,
+        "Gautam Gambhir": 31.0,
+        "Rahul Dravid": 29.5
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 26.5,
+        "Gary Kirsten": 25.4,
+        "Gautam Gambhir": 20.9,
+        "Ravi Shastri": 20.9,
+        "Rahul Dravid": 19.8
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 26.8,
+        "Gary Kirsten": 25.8,
+        "Ravi Shastri": 21.8,
+        "Gautam Gambhir": 21.2,
+        "Rahul Dravid": 20.4
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 30.1,
+        "Gary Kirsten": 27.4,
+        "Ravi Shastri": 22.6,
+        "Gautam Gambhir": 21.0,
+        "Rahul Dravid": 20.5
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 31.4,
+        "Gary Kirsten": 28.1,
+        "Ravi Shastri": 23.6,
+        "Gautam Gambhir": 21.6,
+        "Rahul Dravid": 21.3
+      }
+    },
+    "raw_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 15.0,
+        "Gary Kirsten": 12.6,
+        "Ravi Shastri": 10.8,
+        "Gautam Gambhir": 9.7,
+        "Rahul Dravid": 9.1
+      },
+      "TEST_SENA": {
+        "Duncan Fletcher": 15.1,
+        "Gary Kirsten": 13.0,
+        "Ravi Shastri": 11.1,
+        "Gautam Gambhir": 10.0,
+        "Rahul Dravid": 9.3
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 7.8,
+        "Gary Kirsten": 7.2,
+        "Gautam Gambhir": 4.7,
+        "Ravi Shastri": 4.7,
+        "Rahul Dravid": 4.0
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 8.0,
+        "Gary Kirsten": 7.4,
+        "Ravi Shastri": 5.2,
+        "Gautam Gambhir": 4.8,
+        "Rahul Dravid": 4.4
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 9.6,
+        "Gary Kirsten": 8.2,
+        "Ravi Shastri": 5.7,
+        "Gautam Gambhir": 4.7,
+        "Rahul Dravid": 4.4
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 10.2,
+        "Gary Kirsten": 8.6,
+        "Ravi Shastri": 6.2,
+        "Gautam Gambhir": 5.1,
+        "Rahul Dravid": 4.9
+      }
+    }
+  },
+  "Shivam Dube": {
+    "role": "Pace All-Rounder",
+    "hand": "LHB",
+    "bowling": "Pace",
+    "caps": 40,
+    "batAvg": 32.0,
+    "batSR": 142.0,
+    "bowlEcon": 7.8,
+    "wicketsYr": 10,
+    "squad_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 98.3,
+        "Ravi Shastri": 97.4,
+        "Gautam Gambhir": 96.7,
+        "Rahul Dravid": 93.9,
+        "Gary Kirsten": 91.3
+      },
+      "TEST_SENA": {
+        "Duncan Fletcher": 98.3,
+        "Ravi Shastri": 97.5,
+        "Gautam Gambhir": 96.5,
+        "Rahul Dravid": 94.0,
+        "Gary Kirsten": 91.7
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 97.6,
+        "Ravi Shastri": 96.6,
+        "Gautam Gambhir": 95.1,
+        "Rahul Dravid": 91.5,
+        "Gary Kirsten": 90.6
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 97.4,
+        "Ravi Shastri": 96.6,
+        "Gautam Gambhir": 94.4,
+        "Rahul Dravid": 91.8,
+        "Gary Kirsten": 90.7
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 98.5,
+        "Ravi Shastri": 98.0,
+        "Gautam Gambhir": 97.1,
+        "Rahul Dravid": 94.5,
+        "Gary Kirsten": 93.3
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 98.2,
+        "Ravi Shastri": 97.9,
+        "Gautam Gambhir": 96.5,
+        "Rahul Dravid": 94.1,
+        "Gary Kirsten": 93.1
+      }
+    },
+    "raw_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 58.8,
+        "Ravi Shastri": 54.4,
+        "Gautam Gambhir": 51.9,
+        "Rahul Dravid": 45.3,
+        "Gary Kirsten": 41.5
+      },
+      "TEST_SENA": {
+        "Duncan Fletcher": 58.7,
+        "Ravi Shastri": 54.6,
+        "Gautam Gambhir": 51.1,
+        "Rahul Dravid": 45.5,
+        "Gary Kirsten": 42.0
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 54.9,
+        "Ravi Shastri": 51.5,
+        "Gautam Gambhir": 47.6,
+        "Rahul Dravid": 41.8,
+        "Gary Kirsten": 40.6
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 54.2,
+        "Ravi Shastri": 51.4,
+        "Gautam Gambhir": 46.3,
+        "Rahul Dravid": 42.2,
+        "Gary Kirsten": 40.8
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 59.5,
+        "Ravi Shastri": 57.1,
+        "Gautam Gambhir": 53.1,
+        "Rahul Dravid": 46.4,
+        "Gary Kirsten": 44.3
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 58.3,
+        "Ravi Shastri": 56.3,
+        "Gautam Gambhir": 51.1,
+        "Rahul Dravid": 45.6,
+        "Gary Kirsten": 44.1
+      }
+    }
+  },
+  "Washington Sundar": {
+    "role": "Spin All-Rounder",
+    "hand": "LHB",
+    "bowling": "Finger Spin",
+    "caps": 105,
+    "batAvg": 24.31,
+    "batSR": 61.96,
+    "bowlEcon": 4.05,
+    "wicketsYr": 12,
+    "squad_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 91.1,
+        "Gary Kirsten": 89.7,
+        "Ravi Shastri": 81.3,
+        "Gautam Gambhir": 81.2,
+        "Rahul Dravid": 78.3
+      },
+      "TEST_SENA": {
+        "Duncan Fletcher": 91.0,
+        "Gary Kirsten": 89.5,
+        "Gautam Gambhir": 81.8,
+        "Ravi Shastri": 80.8,
+        "Rahul Dravid": 78.9
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 86.6,
+        "Gary Kirsten": 84.7,
+        "Gautam Gambhir": 76.3,
+        "Ravi Shastri": 73.8,
+        "Rahul Dravid": 69.1
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 85.8,
+        "Gary Kirsten": 83.9,
+        "Gautam Gambhir": 76.2,
+        "Ravi Shastri": 72.0,
+        "Rahul Dravid": 69.9
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 88.5,
+        "Gary Kirsten": 87.6,
+        "Ravi Shastri": 76.4,
+        "Gautam Gambhir": 74.7,
+        "Rahul Dravid": 73.4
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 88.8,
+        "Gary Kirsten": 88.6,
+        "Ravi Shastri": 76.6,
+        "Gautam Gambhir": 76.1,
+        "Rahul Dravid": 75.8
+      }
+    },
+    "raw_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 41.3,
+        "Gary Kirsten": 39.7,
+        "Gautam Gambhir": 32.7,
+        "Ravi Shastri": 32.7,
+        "Rahul Dravid": 30.9
+      },
+      "TEST_SENA": {
+        "Duncan Fletcher": 41.1,
+        "Gary Kirsten": 39.5,
+        "Gautam Gambhir": 33.0,
+        "Ravi Shastri": 32.4,
+        "Rahul Dravid": 31.2
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 36.7,
+        "Gary Kirsten": 35.1,
+        "Gautam Gambhir": 29.7,
+        "Ravi Shastri": 28.4,
+        "Rahul Dravid": 26.1
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 36.0,
+        "Gary Kirsten": 34.5,
+        "Gautam Gambhir": 29.6,
+        "Ravi Shastri": 27.4,
+        "Rahul Dravid": 26.4
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 38.4,
+        "Gary Kirsten": 37.6,
+        "Ravi Shastri": 29.7,
+        "Gautam Gambhir": 28.8,
+        "Rahul Dravid": 28.1
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 38.8,
+        "Gary Kirsten": 38.5,
+        "Ravi Shastri": 29.8,
+        "Gautam Gambhir": 29.6,
+        "Rahul Dravid": 29.4
+      }
+    }
+  },
+  "Shubman Gill": {
+    "role": "Top-Order Batter",
+    "hand": "RHB",
+    "bowling": "Finger Spin",
+    "caps": 140,
+    "batAvg": 33.73,
+    "batSR": 91.54,
+    "bowlEcon": 6.24,
+    "wicketsYr": 0,
+    "squad_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 98.4,
+        "Gary Kirsten": 97.2,
+        "Ravi Shastri": 97.0,
+        "Gautam Gambhir": 96.3,
+        "Rahul Dravid": 95.7
+      },
+      "TEST_SENA": {
+        "Duncan Fletcher": 98.5,
+        "Gary Kirsten": 97.5,
+        "Ravi Shastri": 96.8,
+        "Gautam Gambhir": 96.6,
+        "Rahul Dravid": 95.9
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 96.0,
+        "Gary Kirsten": 93.7,
+        "Ravi Shastri": 93.4,
+        "Gautam Gambhir": 92.9,
+        "Rahul Dravid": 90.0
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 96.6,
+        "Gary Kirsten": 94.2,
+        "Gautam Gambhir": 94.0,
+        "Ravi Shastri": 93.5,
+        "Rahul Dravid": 90.3
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 96.6,
+        "Gary Kirsten": 94.0,
+        "Ravi Shastri": 93.5,
+        "Rahul Dravid": 89.2,
+        "Gautam Gambhir": 85.4
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 97.5,
+        "Gary Kirsten": 95.8,
+        "Ravi Shastri": 94.5,
+        "Rahul Dravid": 91.7,
+        "Gautam Gambhir": 89.6
+      }
+    },
+    "raw_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 59.0,
+        "Gary Kirsten": 53.6,
+        "Ravi Shastri": 52.7,
+        "Gautam Gambhir": 50.5,
+        "Rahul Dravid": 49.1
+      },
+      "TEST_SENA": {
+        "Duncan Fletcher": 60.0,
+        "Gary Kirsten": 54.5,
+        "Ravi Shastri": 52.0,
+        "Gautam Gambhir": 51.5,
+        "Rahul Dravid": 49.5
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 49.8,
+        "Gary Kirsten": 45.0,
+        "Ravi Shastri": 44.5,
+        "Gautam Gambhir": 43.7,
+        "Rahul Dravid": 40.0
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 51.4,
+        "Gary Kirsten": 45.9,
+        "Gautam Gambhir": 45.6,
+        "Ravi Shastri": 44.7,
+        "Rahul Dravid": 40.4
+      },
+      "T20I_Home": {
+        "Duncan Fletcher": 51.3,
+        "Gary Kirsten": 45.4,
+        "Ravi Shastri": 44.7,
+        "Rahul Dravid": 39.1,
+        "Gautam Gambhir": 35.7
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 54.6,
+        "Gary Kirsten": 49.2,
+        "Ravi Shastri": 46.4,
+        "Rahul Dravid": 42.0,
+        "Gautam Gambhir": 39.6
+      }
+    }
+  },
+  "Mohammed Siraj": {
+    "role": "Specialist Fast Bowler",
+    "hand": "RHB",
+    "bowling": "Pace",
+    "caps": 112,
+    "batAvg": 3.6,
+    "batSR": 39.13,
+    "bowlEcon": 3.58,
+    "wicketsYr": 26,
+    "squad_scores": {
+      "TEST_Home": {
+        "Ravi Shastri": 94.4,
+        "Duncan Fletcher": 94.1,
+        "Gary Kirsten": 93.7,
+        "Gautam Gambhir": 91.9,
+        "Rahul Dravid": 89.8
+      },
+      "TEST_SENA": {
+        "Ravi Shastri": 95.9,
+        "Duncan Fletcher": 95.6,
+        "Gary Kirsten": 95.2,
+        "Gautam Gambhir": 93.8,
+        "Rahul Dravid": 92.8
+      },
+      "ODI_Home": {
+        "Ravi Shastri": 79.2,
+        "Gary Kirsten": 78.7,
+        "Duncan Fletcher": 77.7,
+        "Gautam Gambhir": 75.3,
+        "Rahul Dravid": 73.6
+      },
+      "ODI_SENA": {
+        "Ravi Shastri": 80.7,
+        "Duncan Fletcher": 80.5,
+        "Gary Kirsten": 80.3,
+        "Rahul Dravid": 78.1,
+        "Gautam Gambhir": 77.6
+      },
+      "T20I_Home": {
+        "Ravi Shastri": 80.6,
+        "Gary Kirsten": 79.2,
+        "Duncan Fletcher": 78.1,
+        "Gautam Gambhir": 71.2,
+        "Rahul Dravid": 66.8
+      },
+      "T20I_SENA": {
+        "Ravi Shastri": 82.7,
+        "Gary Kirsten": 82.4,
+        "Duncan Fletcher": 81.7,
+        "Gautam Gambhir": 74.8,
+        "Rahul Dravid": 74.2
+      }
+    },
+    "raw_scores": {
+      "TEST_Home": {
+        "Ravi Shastri": 46.2,
+        "Duncan Fletcher": 45.6,
+        "Gary Kirsten": 45.0,
+        "Gautam Gambhir": 42.3,
+        "Rahul Dravid": 39.8
+      },
+      "TEST_SENA": {
+        "Ravi Shastri": 49.6,
+        "Duncan Fletcher": 48.9,
+        "Gary Kirsten": 48.0,
+        "Gautam Gambhir": 45.2,
+        "Rahul Dravid": 43.6
+      },
+      "ODI_Home": {
+        "Ravi Shastri": 31.4,
+        "Gary Kirsten": 31.1,
+        "Duncan Fletcher": 30.5,
+        "Gautam Gambhir": 29.1,
+        "Rahul Dravid": 28.3
+      },
+      "ODI_SENA": {
+        "Ravi Shastri": 32.3,
+        "Duncan Fletcher": 32.2,
+        "Gary Kirsten": 32.0,
+        "Rahul Dravid": 30.7,
+        "Gautam Gambhir": 30.4
+      },
+      "T20I_Home": {
+        "Ravi Shastri": 32.2,
+        "Gary Kirsten": 31.4,
+        "Duncan Fletcher": 30.7,
+        "Gautam Gambhir": 27.0,
+        "Rahul Dravid": 25.0
+      },
+      "T20I_SENA": {
+        "Ravi Shastri": 33.7,
+        "Gary Kirsten": 33.5,
+        "Duncan Fletcher": 33.0,
+        "Gautam Gambhir": 28.9,
+        "Rahul Dravid": 28.6
+      }
+    }
+  },
+  "KL Rahul": {
+    "role": "Wicketkeeper",
+    "hand": "RHB",
+    "bowling": "None",
+    "caps": 229,
+    "batAvg": 50.79,
+    "batSR": 66.26,
+    "bowlEcon": 0.0,
+    "wicketsYr": 0,
+    "squad_scores": {
+      "TEST_Home": {
+        "Gautam Gambhir": 98.4,
+        "Ravi Shastri": 98.3,
+        "Gary Kirsten": 98.3,
+        "Duncan Fletcher": 98.3,
+        "Rahul Dravid": 95.6
+      },
+      "TEST_SENA": {
+        "Gautam Gambhir": 98.5,
+        "Duncan Fletcher": 98.5,
+        "Ravi Shastri": 98.3,
+        "Gary Kirsten": 98.2,
+        "Rahul Dravid": 96.1
+      },
+      "ODI_Home": {
+        "Gautam Gambhir": 91.2,
+        "Ravi Shastri": 90.1,
+        "Duncan Fletcher": 88.0,
+        "Gary Kirsten": 87.6,
+        "Rahul Dravid": 84.7
+      },
+      "ODI_SENA": {
+        "Gautam Gambhir": 91.5,
+        "Ravi Shastri": 88.9,
+        "Duncan Fletcher": 88.9,
+        "Gary Kirsten": 88.2,
+        "Rahul Dravid": 84.6
+      },
+      "T20I_Home": {
+        "Ravi Shastri": 93.3,
+        "Gary Kirsten": 92.3,
+        "Duncan Fletcher": 92.2,
+        "Gautam Gambhir": 91.2,
+        "Rahul Dravid": 83.8
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 91.5,
+        "Gary Kirsten": 91.4,
+        "Ravi Shastri": 91.4,
+        "Gautam Gambhir": 90.2,
+        "Rahul Dravid": 83.5
+      }
+    },
+    "raw_scores": {
+      "TEST_Home": {
+        "Gautam Gambhir": 58.9,
+        "Ravi Shastri": 58.8,
+        "Duncan Fletcher": 58.6,
+        "Gary Kirsten": 58.3,
+        "Rahul Dravid": 48.8
+      },
+      "TEST_SENA": {
+        "Gautam Gambhir": 59.9,
+        "Duncan Fletcher": 59.7,
+        "Ravi Shastri": 58.7,
+        "Gary Kirsten": 58.2,
+        "Rahul Dravid": 49.9
+      },
+      "ODI_Home": {
+        "Gautam Gambhir": 41.3,
+        "Ravi Shastri": 40.0,
+        "Duncan Fletcher": 37.9,
+        "Gary Kirsten": 37.6,
+        "Rahul Dravid": 35.1
+      },
+      "ODI_SENA": {
+        "Gautam Gambhir": 41.7,
+        "Ravi Shastri": 38.8,
+        "Duncan Fletcher": 38.8,
+        "Gary Kirsten": 38.1,
+        "Rahul Dravid": 35.0
+      },
+      "T20I_Home": {
+        "Ravi Shastri": 44.4,
+        "Gary Kirsten": 42.9,
+        "Duncan Fletcher": 42.7,
+        "Gautam Gambhir": 41.4,
+        "Rahul Dravid": 34.4
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 41.8,
+        "Ravi Shastri": 41.7,
+        "Gary Kirsten": 41.6,
+        "Gautam Gambhir": 40.2,
+        "Rahul Dravid": 34.2
+      }
+    }
+  },
+  "Dhruv Jurel": {
+    "role": "Middle-Order Batter",
+    "hand": "RHB",
+    "bowling": "None",
+    "caps": 14,
+    "batAvg": 32.75,
+    "batSR": 59.55,
+    "bowlEcon": 0.0,
+    "wicketsYr": 0,
+    "squad_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 91.8,
+        "Gautam Gambhir": 91.0,
+        "Ravi Shastri": 90.2,
+        "Rahul Dravid": 87.8,
+        "Gary Kirsten": 86.2
+      },
+      "TEST_SENA": {
+        "Duncan Fletcher": 91.2,
+        "Gautam Gambhir": 90.4,
+        "Ravi Shastri": 90.3,
+        "Rahul Dravid": 87.0,
+        "Gary Kirsten": 85.8
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 79.7,
+        "Ravi Shastri": 78.7,
+        "Gautam Gambhir": 78.5,
+        "Rahul Dravid": 76.9,
+        "Gary Kirsten": 72.8
+      },
+      "ODI_SENA": {
+        "Duncan Fletcher": 80.1,
+        "Gautam Gambhir": 80.0,
+        "Ravi Shastri": 78.6,
+        "Rahul Dravid": 76.6,
+        "Gary Kirsten": 74.2
+      },
+      "T20I_Home": {
+        "Ravi Shastri": 80.7,
+        "Duncan Fletcher": 80.3,
+        "Gautam Gambhir": 76.4,
+        "Gary Kirsten": 75.5,
+        "Rahul Dravid": 75.2
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 79.0,
+        "Ravi Shastri": 78.9,
+        "Gautam Gambhir": 75.9,
+        "Rahul Dravid": 74.9,
+        "Gary Kirsten": 74.5
+      }
+    },
+    "raw_scores": {
+      "TEST_Home": {
+        "Duncan Fletcher": 42.2,
+        "Gautam Gambhir": 41.1,
+        "Ravi Shastri": 40.2,
+        "Rahul Dravid": 37.7,
+        "Gary Kirsten": 36.3
+      },
+      "TEST_SENA": {
+        "Duncan Fletcher": 41.4,
+        "Gautam Gambhir": 40.4,
+        "Ravi Shastri": 40.3,
+        "Rahul Dravid": 37.0,
+        "Gary Kirsten": 36.0
+      },
+      "ODI_Home": {
+        "Duncan Fletcher": 31.7,
+        "Ravi Shastri": 31.1,
+        "Gautam Gambhir": 31.0,
+        "Rahul Dravid": 30.0,
+        "Gary Kirsten": 27.9
+      },
+      "ODI_SENA": {
+        "Gautam Gambhir": 31.9,
+        "Duncan Fletcher": 31.9,
+        "Ravi Shastri": 31.0,
+        "Rahul Dravid": 29.9,
+        "Gary Kirsten": 28.5
+      },
+      "T20I_Home": {
+        "Ravi Shastri": 32.3,
+        "Duncan Fletcher": 32.1,
+        "Gautam Gambhir": 29.8,
+        "Gary Kirsten": 29.2,
+        "Rahul Dravid": 29.1
+      },
+      "T20I_SENA": {
+        "Duncan Fletcher": 31.3,
+        "Ravi Shastri": 31.2,
+        "Gautam Gambhir": 29.5,
+        "Rahul Dravid": 28.9,
+        "Gary Kirsten": 28.7
+      }
+    }
+  }
+}

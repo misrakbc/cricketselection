@@ -3,519 +3,330 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>India Cricket Coach Selection Predictor</title>
+  <title>Coach Predictors & Red-Ball Selection Dynamics | Indian Cricket</title>
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
-  <style>
-    .progress-bar {
-      transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-  </style>
 </head>
 <body class="bg-transparent text-[var(--foreground)] antialiased p-3 sm:p-5 font-sans">
-  <div class="max-w-4xl mx-auto bg-[var(--card)] text-[var(--foreground)] border border-[var(--border)] rounded-2xl p-4 sm:p-6 shadow-md">
+  <div class="max-w-5xl mx-auto bg-[var(--card)] text-[var(--foreground)] border border-[var(--border)] rounded-2xl p-4 sm:p-6 shadow-md space-y-8">
     
-    <!-- Top Navigation -->
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-[var(--border)] pb-4 mb-5 gap-3">
+    <!-- Top Nav Header -->
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-[var(--border)] pb-4 gap-3">
       <div>
         <div class="flex items-center gap-2">
-          <span class="inline-block w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
-          <h1 class="text-xl sm:text-2xl font-bold tracking-tight">Cricketer Selection Predictor</h1>
+          <span class="inline-block w-3 h-3 rounded-full bg-indigo-500 animate-pulse"></span>
+          <h1 class="text-xl sm:text-2xl font-bold tracking-tight">Coach Predictors & Red-Ball Selection Dynamics</h1>
         </div>
         <p class="text-xs sm:text-sm text-[var(--muted-foreground)] mt-0.5">
           Trained on 1,021 Cricsheet India matches (2001–2026) across Tests, ODIs & T20Is
         </p>
       </div>
       <div class="flex items-center gap-2">
-        <a href="predictors.html" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-indigo-500 text-white hover:bg-indigo-600 transition flex items-center gap-1.5 shadow-xs">
-          <span>📊 Coach Predictors & Red-Ball Deep Dive →</span>
+        <a href="index.html" class="px-3 py-1.5 text-xs font-bold rounded-lg bg-[var(--primary)] text-[var(--primary-foreground)] shadow-xs">
+          📊 Coach Predictors & Red-Ball
+        </a>
+        <a href="predictor.html" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-[var(--secondary)] text-[var(--secondary-foreground)] border border-[var(--border)] hover:bg-[var(--accent)] transition flex items-center gap-1">
+          🏏 Live Predictor & Player Builder →
         </a>
       </div>
     </div>
 
-    <!-- Mode Selector & Controls Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-5">
-      
-      <!-- Player Selection -->
-      <div class="space-y-1.5 md:col-span-2">
-        <label class="block text-xs font-bold uppercase tracking-wider text-[var(--muted-foreground)]">Select Indian Player</label>
-        <select id="playerSelect" onchange="updateView()" class="w-full bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)] rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary)] font-medium">
-          <option value="Virat Kohli" selected>Virat Kohli (Top-Order Specialist / Legend)</option>
-          <option value="Hardik Pandya">Hardik Pandya (Pace All-Rounder)</option>
-          <option value="Yashasvi Jaiswal">Yashasvi Jaiswal (LHB Aggressive Opener)</option>
-          <option value="Kuldeep Yadav">Kuldeep Yadav (Left-Arm Wrist Spinner)</option>
-          <option value="Axar Patel">Axar Patel (LHB Spin All-Rounder)</option>
-          <option value="Arshdeep Singh">Arshdeep Singh (Left-Arm Pacer)</option>
-          <option value="Jasprit Bumrah">Jasprit Bumrah (Specialist Fast Bowler)</option>
-          <option value="Rohit Sharma">Rohit Sharma (Opener / Captain)</option>
-          <option value="Rishabh Pant">Rishabh Pant (LHB Wicketkeeper)</option>
-          <option value="Ravindra Jadeja">Ravindra Jadeja (Spin All-Rounder)</option>
-          <option value="Suryakumar Yadav">Suryakumar Yadav (Middle-Order 360°)</option>
-          <option value="Sanju Samson">Sanju Samson (WK / Top-Order Batter)</option>
-          <option value="R Ashwin">R Ashwin (Spin All-Rounder / Off-Spinner)</option>
-          <option value="Shivam Dube">Shivam Dube (LHB Power-Hitter / Pace AR)</option>
-          <option value="Washington Sundar">Washington Sundar (LHB Off-Spin AR)</option>
-          <option value="Shubman Gill">Shubman Gill (Top-Order Batter)</option>
-          <option value="Mohammed Siraj">Mohammed Siraj (Frontline Pacer)</option>
-          <option value="KL Rahul">KL Rahul (WK / Middle-Order Batter)</option>
-          <option value="Dhruv Jurel">Dhruv Jurel (WK / Middle-Order Test Specialist)</option>
-        </select>
+    <!-- Section 1: Main Predictors Under Each Coach -->
+    <div class="space-y-4">
+      <div class="flex items-center gap-2">
+        <span class="px-2 py-0.5 text-xs font-bold rounded bg-indigo-500/20 text-indigo-500 uppercase">Part 1</span>
+        <h2 class="text-lg font-bold">Main Predictors Under Each Coach & How They Differ</h2>
       </div>
-
-      <!-- Format Selection -->
-      <div class="space-y-1.5">
-        <label class="block text-xs font-bold uppercase tracking-wider text-[var(--muted-foreground)]">Match Format</label>
-        <div class="grid grid-cols-3 gap-1 bg-[var(--background)] p-1 rounded-lg border border-[var(--border)] text-center text-xs font-semibold">
-          <button id="btnTEST" onclick="setFormat('TEST')" class="py-1.5 rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] shadow-xs transition">TEST</button>
-          <button id="btnODI" onclick="setFormat('ODI')" class="py-1.5 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition">ODI</button>
-          <button id="btnT20I" onclick="setFormat('T20I')" class="py-1.5 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition">T20I</button>
-        </div>
-      </div>
-
-      <!-- Venue Conditions -->
-      <div class="space-y-1.5">
-        <label class="block text-xs font-bold uppercase tracking-wider text-[var(--muted-foreground)]">Venue Conditions</label>
-        <div class="grid grid-cols-2 gap-1 bg-[var(--background)] p-1 rounded-lg border border-[var(--border)] text-center text-xs font-semibold">
-          <button id="btnHome" onclick="setVenue('Home')" class="py-1.5 rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] shadow-xs transition">Subcontinent</button>
-          <button id="btnSena" onclick="setVenue('SENA')" class="py-1.5 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition">SENA Overseas</button>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Selection Calibration Mode Toggle -->
-    <div class="bg-[var(--secondary)]/40 border border-[var(--border)] rounded-xl p-3 mb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-      <div>
-        <span class="text-xs font-bold uppercase tracking-wider text-[var(--foreground)] block">Probability Mode</span>
-        <span class="text-[11px] text-[var(--muted-foreground)]">Switch between squad selection lock vs raw bilateral appearance rate</span>
-      </div>
-      <div class="flex items-center gap-1 bg-[var(--background)] p-1 rounded-lg border border-[var(--border)] text-xs font-semibold">
-        <button id="modeSquad" onclick="setMode('squad')" class="px-3 py-1 rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] shadow-xs transition">
-          Matchday Squad Lock (Available)
-        </button>
-        <button id="modeRaw" onclick="setMode('raw')" class="px-3 py-1 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition">
-          Raw Contender Pool (Includes Rest)
-        </button>
-      </div>
-    </div>
-
-    <!-- Player Profile Card (Enriched with Test & First-Class stats) -->
-    <div id="playerBio" class="bg-[var(--background)] border border-[var(--border)] rounded-xl p-4 mb-6 text-sm grid grid-cols-2 sm:grid-cols-4 gap-3">
-      <!-- Populated via JS -->
-    </div>
-
-    <!-- Coach Selection Probabilities Bars -->
-    <div class="space-y-4 mb-6">
-      <div class="flex items-center justify-between">
-        <h2 class="text-sm font-bold uppercase tracking-wider text-[var(--foreground)]">Predicted Selection Probability by Coach</h2>
-        <span id="poolSubtext" class="text-xs text-[var(--muted-foreground)]">Playing XI Lock Rate when Named in 15-Man Squad</span>
-      </div>
-
-      <div id="coachBarsContainer" class="space-y-3">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-
-    <!-- Tactical Insight Box -->
-    <div id="tacticalInsight" class="border border-[var(--border)] bg-[var(--secondary)] rounded-xl p-4 mb-6">
-      <h3 class="text-xs font-bold uppercase tracking-wider text-[var(--foreground)] mb-1 flex items-center gap-1.5">
-        <svg class="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14H8a4 4 0 01-.8-7.92A4.002 4.002 0 0115.8 9.2 4.002 4.002 0 0112 14z" />
-        </svg>
-        Model Tactical Breakdown
-      </h3>
-      <p id="tacticalText" class="text-xs sm:text-sm text-[var(--foreground)] leading-relaxed">
-        Loading tactical insight...
+      <p class="text-xs sm:text-sm text-[var(--muted-foreground)] leading-relaxed">
+        Our statistical models (Interaction Logistic Regression with odds multipliers and Random Forest feature importances) reveal distinct philosophies that guided selection across Indian cricket's major coaching eras:
       </p>
+
+      <!-- Coach Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        
+        <!-- Gautam Gambhir -->
+        <div class="bg-[var(--background)] border border-[var(--border)] rounded-xl p-4 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-sm text-indigo-500">Gautam Gambhir</h3>
+            <span class="text-[10px] px-1.5 py-0.5 rounded bg-indigo-500/10 text-indigo-400 font-semibold">2024–Present</span>
+          </div>
+          <div class="text-xs space-y-1.5 text-[var(--muted-foreground)]">
+            <p><strong class="text-[var(--foreground)]">#1 Predictor:</strong> LHB Matchup Utility (Avg 3.92 LHBs / match — highest in history)</p>
+            <p><strong class="text-[var(--foreground)]">#2 Predictor:</strong> Left-Arm Pace Angle (Odds Ratio: 1.20)</p>
+            <p><strong class="text-[var(--foreground)]">#3 Predictor:</strong> Multi-Utility All-Rounders (Bowling depth to #8/#9)</p>
+            <p><strong class="text-[var(--foreground)]">Deprioritizes:</strong> Pure non-bowling specialist anchors (Top-order odds: 0.71, Specialist pace: 0.75)</p>
+          </div>
+          <div class="pt-2 border-t border-[var(--border)] text-[11px] text-[var(--foreground)]">
+            <em>"Matchups, bowling options in the top 7, and high boundary strike rates take precedence over traditional long-innings accumulators."</em>
+          </div>
+        </div>
+
+        <!-- Rahul Dravid -->
+        <div class="bg-[var(--background)] border border-[var(--border)] rounded-xl p-4 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-sm text-blue-500">Rahul Dravid</h3>
+            <span class="text-[10px] px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-400 font-semibold">2021–2024</span>
+          </div>
+          <div class="text-xs space-y-1.5 text-[var(--muted-foreground)]">
+            <p><strong class="text-[var(--foreground)]">#1 Predictor:</strong> Batting Depth / Dual Spin-ARs (2.33 all-rounders / match)</p>
+            <p><strong class="text-[var(--foreground)]">#2 Predictor:</strong> Attacking Wrist-Spin (Odds Ratio: 1.33, Kuldeep Yadav)</p>
+            <p><strong class="text-[var(--foreground)]">#3 Predictor:</strong> Role Continuity (Highest weight on 1-year format continuity: 0.326)</p>
+            <p><strong class="text-[var(--foreground)]">Deprioritizes:</strong> One-dimensional tailenders who cannot bat</p>
+          </div>
+          <div class="pt-2 border-t border-[var(--border)] text-[11px] text-[var(--foreground)]">
+            <em>"Deep batting security paired with specialized middle-overs strike bowlers (wrist spin), avoiding knee-jerk squad churn."</em>
+          </div>
+        </div>
+
+        <!-- Ravi Shastri -->
+        <div class="bg-[var(--background)] border border-[var(--border)] rounded-xl p-4 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-sm text-amber-500">Ravi Shastri</h3>
+            <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-400 font-semibold">2017–2021</span>
+          </div>
+          <div class="text-xs space-y-1.5 text-[var(--muted-foreground)]">
+            <p><strong class="text-[var(--foreground)]">#1 Predictor:</strong> 20-Wicket Specialist Weapons (Specialist Spin: 1.19, Fast Bowlers: 1.11)</p>
+            <p><strong class="text-[var(--foreground)]">#2 Predictor:</strong> Express Pace Overseas (4-man pace battery in SENA Tests)</p>
+            <p><strong class="text-[var(--foreground)]">#3 Predictor:</strong> Pace All-Rounder Balance (Hardik Pandya / Shardul Thakur)</p>
+            <p><strong class="text-[var(--foreground)]">Deprioritizes:</strong> Bits-and-pieces players who neither take wickets nor dominate</p>
+          </div>
+          <div class="pt-2 border-t border-[var(--border)] text-[11px] text-[var(--foreground)]">
+            <em>"Aggressive 5-bowler template: backing frontline pace and attacking spinners ('Kul-Cha') to bowl opponents out twice."</em>
+          </div>
+        </div>
+
+        <!-- Gary Kirsten -->
+        <div class="bg-[var(--background)] border border-[var(--border)] rounded-xl p-4 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-sm text-emerald-500">Gary Kirsten</h3>
+            <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-semibold">2008–2011</span>
+          </div>
+          <div class="text-xs space-y-1.5 text-[var(--muted-foreground)]">
+            <p><strong class="text-[var(--foreground)]">#1 Predictor:</strong> Pure Specialist Anchors (Top-order anchor odds: 1.11)</p>
+            <p><strong class="text-[var(--foreground)]">#2 Predictor:</strong> Part-Time Bowling Utility (Yuvraj, Raina, Sehwag over designated ARs)</p>
+            <p><strong class="text-[var(--foreground)]">#3 Predictor:</strong> Settled Core & Low Churn (Lowest all-rounders in XI: 1.01)</p>
+            <p><strong class="text-[var(--foreground)]">Deprioritizes:</strong> Frequent rotations; designated pace all-rounders (0.23 odds)</p>
+          </div>
+          <div class="pt-2 border-t border-[var(--border)] text-[11px] text-[var(--foreground)]">
+            <em>"Clear role definitions: top 6 score the runs, 4 specialist bowlers take wickets, part-timers squeeze middle overs."</em>
+          </div>
+        </div>
+
+        <!-- Duncan Fletcher -->
+        <div class="bg-[var(--background)] border border-[var(--border)] rounded-xl p-4 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-sm text-purple-500">Duncan Fletcher</h3>
+            <span class="text-[10px] px-1.5 py-0.5 rounded bg-purple-500/10 text-purple-400 font-semibold">2011–2015</span>
+          </div>
+          <div class="text-xs space-y-1.5 text-[var(--muted-foreground)]">
+            <p><strong class="text-[var(--foreground)]">#1 Predictor:</strong> Spin All-Rounder Genesis (1.52 / match; Ashwin & Jadeja)</p>
+            <p><strong class="text-[var(--foreground)]">#2 Predictor:</strong> Pace All-Rounder Value (Odds Ratio: 1.29)</p>
+            <p><strong class="text-[var(--foreground)]">#3 Predictor:</strong> Technical Batting Prowess (Rebuilding transition era)</p>
+            <p><strong class="text-[var(--foreground)]">Deprioritizes:</strong> Non-batting specialist spinners (Odds Ratio: 0.49)</p>
+          </div>
+          <div class="pt-2 border-t border-[var(--border)] text-[11px] text-[var(--foreground)]">
+            <em>"Instituted India's modern limited-overs template at the 2013 Champions Trophy with Jadeja-Ashwin anchoring the middle."</em>
+          </div>
+        </div>
+
+        <!-- Anil Kumble -->
+        <div class="bg-[var(--background)] border border-[var(--border)] rounded-xl p-4 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-sm text-rose-500">Anil Kumble</h3>
+            <span class="text-[10px] px-1.5 py-0.5 rounded bg-rose-500/10 text-rose-400 font-semibold">2016–2017</span>
+          </div>
+          <div class="text-xs space-y-1.5 text-[var(--muted-foreground)]">
+            <p><strong class="text-[var(--foreground)]">#1 Predictor:</strong> Spin Dominance & Tireless Workloads (Ashwin & Jadeja peak)</p>
+            <p><strong class="text-[var(--foreground)]">#2 Predictor:</strong> Red-Ball Grinding & First-Class Pedigree</p>
+            <p><strong class="text-[var(--foreground)]">#3 Predictor:</strong> Ruthless Home Fortress Record (Won 12 of 17 Tests)</p>
+            <p><strong class="text-[var(--foreground)]">Deprioritizes:</strong> Flamboyant white-ball slogging in multi-day formats</p>
+          </div>
+          <div class="pt-2 border-t border-[var(--border)] text-[11px] text-[var(--foreground)]">
+            <em>"Classic Test discipline: relentless spin suffocation, defensive patience, and grinding batting."</em>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <!-- Empirical Coach Archetype Matrix Toggle -->
-    <div class="border-t border-[var(--border)] pt-4">
-      <details class="group">
-        <summary class="cursor-pointer text-xs font-bold uppercase tracking-wider text-[var(--muted-foreground)] hover:text-[var(--foreground)] flex items-center justify-between">
-          <span>View Empirical Coach Playing-XI Composition Scorecard</span>
-          <span class="group-open:rotate-180 transition-transform">▼</span>
-        </summary>
-        <div class="mt-3 overflow-x-auto">
-          <table class="w-full text-left text-xs border-collapse border border-[var(--border)]">
-            <thead>
-              <tr class="bg-[var(--secondary)] text-[var(--secondary-foreground)]">
-                <th class="p-2 border border-[var(--border)] font-semibold">Coach</th>
-                <th class="p-2 border border-[var(--border)] font-semibold">All-Rounders</th>
-                <th class="p-2 border border-[var(--border)] font-semibold">Pace AR</th>
-                <th class="p-2 border border-[var(--border)] font-semibold">Spin AR</th>
-                <th class="p-2 border border-[var(--border)] font-semibold">Fast Bowlers</th>
-                <th class="p-2 border border-[var(--border)] font-semibold">Wrist Spinners</th>
-                <th class="p-2 border border-[var(--border)] font-semibold">LHB Batters</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-[var(--border)]">
-              <tr>
-                <td class="p-2 border border-[var(--border)] font-medium">Gautam Gambhir</td>
-                <td class="p-2 border border-[var(--border)]">2.11</td>
-                <td class="p-2 border border-[var(--border)]">0.75</td>
-                <td class="p-2 border border-[var(--border)]">1.36</td>
-                <td class="p-2 border border-[var(--border)]">1.67</td>
-                <td class="p-2 border border-[var(--border)]">1.69</td>
-                <td class="p-2 border border-[var(--border)] font-bold text-emerald-500">3.92 (Highest)</td>
-              </tr>
-              <tr>
-                <td class="p-2 border border-[var(--border)] font-medium">Rahul Dravid</td>
-                <td class="p-2 border border-[var(--border)] font-bold text-emerald-500">2.33 (Highest)</td>
-                <td class="p-2 border border-[var(--border)]">0.76</td>
-                <td class="p-2 border border-[var(--border)] font-bold text-emerald-500">1.57</td>
-                <td class="p-2 border border-[var(--border)]">2.40</td>
-                <td class="p-2 border border-[var(--border)]">1.54</td>
-                <td class="p-2 border border-[var(--border)]">3.02</td>
-              </tr>
-              <tr>
-                <td class="p-2 border border-[var(--border)] font-medium">Ravi Shastri</td>
-                <td class="p-2 border border-[var(--border)]">1.77</td>
-                <td class="p-2 border border-[var(--border)] font-bold text-emerald-500">0.81</td>
-                <td class="p-2 border border-[var(--border)]">0.96</td>
-                <td class="p-2 border border-[var(--border)] font-bold text-emerald-500">2.24 (Express)</td>
-                <td class="p-2 border border-[var(--border)]">1.52</td>
-                <td class="p-2 border border-[var(--border)]">2.49</td>
-              </tr>
-              <tr>
-                <td class="p-2 border border-[var(--border)] font-medium">Gary Kirsten</td>
-                <td class="p-2 border border-[var(--border)]">1.01 (Lowest)</td>
-                <td class="p-2 border border-[var(--border)]">0.15</td>
-                <td class="p-2 border border-[var(--border)]">0.86</td>
-                <td class="p-2 border border-[var(--border)]">2.41</td>
-                <td class="p-2 border border-[var(--border)]">1.53</td>
-                <td class="p-2 border border-[var(--border)]">2.99</td>
-              </tr>
-              <tr>
-                <td class="p-2 border border-[var(--border)] font-medium">Duncan Fletcher</td>
-                <td class="p-2 border border-[var(--border)]">1.66</td>
-                <td class="p-2 border border-[var(--border)]">0.14</td>
-                <td class="p-2 border border-[var(--border)]">1.52</td>
-                <td class="p-2 border border-[var(--border)]">2.02</td>
-                <td class="p-2 border border-[var(--border)]">1.11</td>
-                <td class="p-2 border border-[var(--border)]">3.05</td>
-              </tr>
-            </tbody>
-          </table>
+    <!-- Section 2: Test & First-Class Dynamics -->
+    <div class="space-y-4 border-t border-[var(--border)] pt-6">
+      <div class="flex items-center gap-2">
+        <span class="px-2 py-0.5 text-xs font-bold rounded bg-emerald-500/20 text-emerald-500 uppercase">Part 2</span>
+        <h2 class="text-lg font-bold">Test Match & First-Class Selection Dynamics</h2>
+      </div>
+      <p class="text-xs sm:text-sm text-[var(--muted-foreground)] leading-relaxed">
+        Test cricket selection obeys entirely different mathematical rules than white-ball formats. In Test and First-Class (Ranji Trophy, Duleep Trophy, India A) cricket, match selection hinges on <strong>workload endurance, condition polarity (Home vs SENA), and long-innings defense</strong>:
+      </p>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs border-collapse border border-[var(--border)]">
+          <thead>
+            <tr class="bg-[var(--secondary)] text-[var(--secondary-foreground)]">
+              <th class="p-2.5 border border-[var(--border)] font-semibold">Era / Coach</th>
+              <th class="p-2.5 border border-[var(--border)] font-semibold">Test Top-Order Batters</th>
+              <th class="p-2.5 border border-[var(--border)] font-semibold">Test Pace ARs</th>
+              <th class="p-2.5 border border-[var(--border)] font-semibold">Test Spin ARs</th>
+              <th class="p-2.5 border border-[var(--border)] font-semibold">Test Fast Bowlers</th>
+              <th class="p-2.5 border border-[var(--border)] font-semibold">Test Specialist Spinners</th>
+              <th class="p-2.5 border border-[var(--border)] font-semibold">Overseas SENA Template</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[var(--border)]">
+            <tr>
+              <td class="p-2.5 border border-[var(--border)] font-medium">Gary Kirsten (2008–11)</td>
+              <td class="p-2.5 border border-[var(--border)]">0.568</td>
+              <td class="p-2.5 border border-[var(--border)]">0.024</td>
+              <td class="p-2.5 border border-[var(--border)]">0.000</td>
+              <td class="p-2.5 border border-[var(--border)]">0.306</td>
+              <td class="p-2.5 border border-[var(--border)] font-bold text-amber-500">0.381 (Highest)</td>
+              <td class="p-2.5 border border-[var(--border)]">3 Pacers (Zaheer, Ishant, Sreesanth) + Harbhajan + 7 Batters</td>
+            </tr>
+            <tr>
+              <td class="p-2.5 border border-[var(--border)] font-medium">Duncan Fletcher (2011–15)</td>
+              <td class="p-2.5 border border-[var(--border)]">0.492</td>
+              <td class="p-2.5 border border-[var(--border)]">0.000</td>
+              <td class="p-2.5 border border-[var(--border)]">0.333</td>
+              <td class="p-2.5 border border-[var(--border)]">0.295</td>
+              <td class="p-2.5 border border-[var(--border)]">0.197</td>
+              <td class="p-2.5 border border-[var(--border)]">Ashwin/Jadeja spin foundation + pace rotations</td>
+            </tr>
+            <tr>
+              <td class="p-2.5 border border-[var(--border)] font-medium">Anil Kumble (2016–17)</td>
+              <td class="p-2.5 border border-[var(--border)]">0.596</td>
+              <td class="p-2.5 border border-[var(--border)]">0.000</td>
+              <td class="p-2.5 border border-[var(--border)] font-bold text-emerald-500">0.574 (Peak)</td>
+              <td class="p-2.5 border border-[var(--border)]">0.229</td>
+              <td class="p-2.5 border border-[var(--border)]">0.096</td>
+              <td class="p-2.5 border border-[var(--border)]">Spin fortress: Ashwin & Jadeja at peak dominance</td>
+            </tr>
+            <tr>
+              <td class="p-2.5 border border-[var(--border)] font-medium">Ravi Shastri (2017–21)</td>
+              <td class="p-2.5 border border-[var(--border)]">0.561</td>
+              <td class="p-2.5 border border-[var(--border)] font-bold text-amber-500">0.137 (Highest)</td>
+              <td class="p-2.5 border border-[var(--border)]">0.330</td>
+              <td class="p-2.5 border border-[var(--border)] font-bold text-emerald-500">0.281 (Express)</td>
+              <td class="p-2.5 border border-[var(--border)]">0.051</td>
+              <td class="p-2.5 border border-[var(--border)]">4 Express Pacers (Bumrah, Shami, Ishant, Siraj) + Hardik/Shardul</td>
+            </tr>
+            <tr>
+              <td class="p-2.5 border border-[var(--border)] font-medium">Rahul Dravid (2021–24)</td>
+              <td class="p-2.5 border border-[var(--border)]">0.392</td>
+              <td class="p-2.5 border border-[var(--border)]">0.108</td>
+              <td class="p-2.5 border border-[var(--border)]">0.318</td>
+              <td class="p-2.5 border border-[var(--border)]">0.193</td>
+              <td class="p-2.5 border border-[var(--border)]">0.053</td>
+              <td class="p-2.5 border border-[var(--border)]">Batting depth at #8 (Shardul overseas, Axar/Sundar at home)</td>
+            </tr>
+            <tr>
+              <td class="p-2.5 border border-[var(--border)] font-medium">Gautam Gambhir (2024–)</td>
+              <td class="p-2.5 border border-[var(--border)]">0.353</td>
+              <td class="p-2.5 border border-[var(--border)]">0.069</td>
+              <td class="p-2.5 border border-[var(--border)] font-bold text-emerald-500">0.424</td>
+              <td class="p-2.5 border border-[var(--border)]">0.229</td>
+              <td class="p-2.5 border border-[var(--border)]">0.085</td>
+              <td class="p-2.5 border border-[var(--border)]">LHB counter-punching (Jaiswal, Pant, Sundar) + multi-utility</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-3">
+        <div class="bg-[var(--background)] p-3.5 rounded-xl border border-[var(--border)]">
+          <h4 class="font-bold text-xs uppercase text-emerald-500 mb-1">First-Class to Test Batting Conversion</h4>
+          <p class="text-xs text-[var(--muted-foreground)] leading-relaxed">
+            In domestic multi-day matches (Ranji & Duleep Trophy), coaches historically looked for <strong>balls faced per dismissal</strong> and a <strong>Ranji average &gt;52.0</strong> (e.g. Cheteshwar Pujara, Ajinkya Rahane, Mayank Agarwal). Under Gambhir and Dravid, selection has also rewarded <strong>first-class boundary percentage, proactive strike rates, and overseas India A performances</strong> (Yashasvi Jaiswal, Dhruv Jurel, Sarfaraz Khan).
+          </p>
         </div>
-      </details>
+        <div class="bg-[var(--background)] p-3.5 rounded-xl border border-[var(--border)]">
+          <h4 class="font-bold text-xs uppercase text-amber-500 mb-1">First-Class to Test Bowling Workloads</h4>
+          <p class="text-xs text-[var(--muted-foreground)] leading-relaxed">
+            Red-ball fast bowling selection requires proven stamina: bowling <strong>18–25 overs per day</strong> at 138+ km/h with an economy &lt;2.80 and strike rate &lt;45.0. Shastri demanded express velocity (Bumrah, Siraj, Umesh, Shami), whereas Fletcher & Dravid favored seam control and line-and-length attrition (Bhuvneshwar, Shami, Mukesh Kumar).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: Empirical Playing XI Composition Scorecard -->
+    <div class="space-y-4 border-t border-[var(--border)] pt-6">
+      <div class="flex items-center gap-2">
+        <span class="px-2 py-0.5 text-xs font-bold rounded bg-blue-500/20 text-blue-500 uppercase">Part 3</span>
+        <h2 class="text-lg font-bold">Empirical Playing XI Team Compositions Across All Formats</h2>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs border-collapse border border-[var(--border)]">
+          <thead>
+            <tr class="bg-[var(--secondary)] text-[var(--secondary-foreground)]">
+              <th class="p-2.5 border border-[var(--border)] font-semibold">Coach</th>
+              <th class="p-2.5 border border-[var(--border)] font-semibold">Total All-Rounders</th>
+              <th class="p-2.5 border border-[var(--border)] font-semibold">Pace ARs</th>
+              <th class="p-2.5 border border-[var(--border)] font-semibold">Spin ARs</th>
+              <th class="p-2.5 border border-[var(--border)] font-semibold">Specialist Fast Bowlers</th>
+              <th class="p-2.5 border border-[var(--border)] font-semibold">Wrist Spinners</th>
+              <th class="p-2.5 border border-[var(--border)] font-semibold">Left-Hand Batters (LHBs)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[var(--border)]">
+            <tr>
+              <td class="p-2.5 border border-[var(--border)] font-medium">Gautam Gambhir</td>
+              <td class="p-2.5 border border-[var(--border)]">2.11</td>
+              <td class="p-2.5 border border-[var(--border)]">0.75</td>
+              <td class="p-2.5 border border-[var(--border)]">1.36</td>
+              <td class="p-2.5 border border-[var(--border)]">1.67</td>
+              <td class="p-2.5 border border-[var(--border)]">1.69</td>
+              <td class="p-2.5 border border-[var(--border)] font-bold text-emerald-500">3.92 (All-Time High)</td>
+            </tr>
+            <tr>
+              <td class="p-2.5 border border-[var(--border)] font-medium">Rahul Dravid</td>
+              <td class="p-2.5 border border-[var(--border)] font-bold text-emerald-500">2.33 (Highest)</td>
+              <td class="p-2.5 border border-[var(--border)]">0.76</td>
+              <td class="p-2.5 border border-[var(--border)] font-bold text-emerald-500">1.57</td>
+              <td class="p-2.5 border border-[var(--border)]">2.40</td>
+              <td class="p-2.5 border border-[var(--border)] font-bold text-emerald-500">1.54</td>
+              <td class="p-2.5 border border-[var(--border)]">3.02</td>
+            </tr>
+            <tr>
+              <td class="p-2.5 border border-[var(--border)] font-medium">Ravi Shastri</td>
+              <td class="p-2.5 border border-[var(--border)]">1.77</td>
+              <td class="p-2.5 border border-[var(--border)] font-bold text-amber-500">0.81</td>
+              <td class="p-2.5 border border-[var(--border)]">0.96</td>
+              <td class="p-2.5 border border-[var(--border)] font-bold text-emerald-500">2.24 (Express)</td>
+              <td class="p-2.5 border border-[var(--border)]">1.52</td>
+              <td class="p-2.5 border border-[var(--border)]">2.49</td>
+            </tr>
+            <tr>
+              <td class="p-2.5 border border-[var(--border)] font-medium">Gary Kirsten</td>
+              <td class="p-2.5 border border-[var(--border)]">1.01 (Lowest)</td>
+              <td class="p-2.5 border border-[var(--border)]">0.15</td>
+              <td class="p-2.5 border border-[var(--border)]">0.86</td>
+              <td class="p-2.5 border border-[var(--border)]">2.41</td>
+              <td class="p-2.5 border border-[var(--border)]">1.53</td>
+              <td class="p-2.5 border border-[var(--border)]">2.99</td>
+            </tr>
+            <tr>
+              <td class="p-2.5 border border-[var(--border)] font-medium">Duncan Fletcher</td>
+              <td class="p-2.5 border border-[var(--border)]">1.66</td>
+              <td class="p-2.5 border border-[var(--border)]">0.14</td>
+              <td class="p-2.5 border border-[var(--border)]">1.52</td>
+              <td class="p-2.5 border border-[var(--border)]">2.02</td>
+              <td class="p-2.5 border border-[var(--border)]">1.11</td>
+              <td class="p-2.5 border border-[var(--border)]">3.05</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Call to action button to Live Predictor & Builder -->
+    <div class="border-t border-[var(--border)] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 bg-[var(--secondary)]/30 p-4 rounded-xl">
+      <div>
+        <h3 class="text-sm font-bold">Ready to test specific players or build your own custom cricketer?</h3>
+        <p class="text-xs text-[var(--muted-foreground)]">Use our live probability engine to test 19 Indian cricketers or build any custom profile with custom stats.</p>
+      </div>
+      <a href="predictor.html" class="px-4 py-2 text-xs font-bold rounded-lg bg-indigo-500 text-white hover:bg-indigo-600 transition shadow-xs whitespace-nowrap">
+        Launch Live Predictor & Builder →
+      </a>
     </div>
 
   </div>
-
-  <script>
-    const PLAYERS_DATA = {
-      "Virat Kohli": {
-        role: "Top-Order Specialist", hand: "RHB", bowling: "Occasional Pace", caps: 552,
-        testStats: "115 Tests | 8,947 Runs | Avg 49.2 | 29 100s",
-        fcStats: "First-Class: 144 Matches | 11,200 Runs | Avg 51.5 | 36 100s",
-        batAvg: 53.6, batSR: 93.8, bowlEcon: 6.2, wicketsYr: 1,
-        // Squad Lock: Conditioned on being in 15-man squad / available for format
-        squad_scores: {
-          "TEST_Home": { "Anil Kumble": 99.2, "Ravi Shastri": 98.8, "Duncan Fletcher": 97.5, "Gautam Gambhir": 98.1, "Rahul Dravid": 97.9, "Gary Kirsten": 88.0 },
-          "TEST_SENA": { "Anil Kumble": 99.0, "Ravi Shastri": 99.5, "Duncan Fletcher": 98.1, "Gautam Gambhir": 98.5, "Rahul Dravid": 98.2, "Gary Kirsten": 85.5 },
-          "ODI_Home":  { "Duncan Fletcher": 99.0, "Ravi Shastri": 99.2, "Rahul Dravid": 98.5, "Gautam Gambhir": 98.8, "Gary Kirsten": 91.0 },
-          "ODI_SENA":  { "Ravi Shastri": 99.5, "Duncan Fletcher": 99.1, "Rahul Dravid": 98.8, "Gautam Gambhir": 98.6, "Gary Kirsten": 89.5 },
-          "T20I_Home": { "Ravi Shastri": 98.5, "Rahul Dravid": 97.2, "Duncan Fletcher": 95.0, "Gary Kirsten": 84.0, "Gautam Gambhir": 0.0 },
-          "T20I_SENA": { "Ravi Shastri": 99.0, "Rahul Dravid": 97.8, "Duncan Fletcher": 95.5, "Gary Kirsten": 82.5, "Gautam Gambhir": 0.0 }
-        },
-        // Raw Pool: Unconditioned appearance over all matches (includes bilateral B-team rests)
-        raw_scores: {
-          "TEST_Home": { "Anil Kumble": 97.1, "Duncan Fletcher": 93.5, "Ravi Shastri": 89.2, "Rahul Dravid": 78.5, "Gary Kirsten": 45.2, "Gautam Gambhir": 82.0 },
-          "TEST_SENA": { "Anil Kumble": 96.5, "Duncan Fletcher": 92.8, "Ravi Shastri": 91.0, "Rahul Dravid": 82.1, "Gary Kirsten": 48.0, "Gautam Gambhir": 84.5 },
-          "ODI_Home":  { "Duncan Fletcher": 93.5, "Ravi Shastri": 85.2, "Rahul Dravid": 55.4, "Gary Kirsten": 46.8, "Gautam Gambhir": 62.0 },
-          "ODI_SENA":  { "Duncan Fletcher": 94.0, "Ravi Shastri": 88.1, "Rahul Dravid": 58.2, "Gary Kirsten": 45.1, "Gautam Gambhir": 65.0 },
-          "T20I_Home": { "Ravi Shastri": 72.4, "Rahul Dravid": 48.2, "Duncan Fletcher": 68.0, "Gary Kirsten": 38.0, "Gautam Gambhir": 0.0 },
-          "T20I_SENA": { "Ravi Shastri": 76.5, "Rahul Dravid": 51.0, "Duncan Fletcher": 71.2, "Gary Kirsten": 36.5, "Gautam Gambhir": 0.0 }
-        },
-        tactical: "In active formats (Tests and ODIs), Virat Kohli is an automatic 98%–99% selection lock across every coach. His raw multi-format appearance dropped to 52% under Dravid solely due to bilateral rest rotations, and is 0% in T20Is under Gambhir because he officially retired from T20Is in June 2024."
-      },
-      "Hardik Pandya": {
-        role: "Pace All-Rounder", hand: "RHB", bowling: "Right-Arm Pace", caps: 238,
-        testStats: "11 Tests | 532 Runs (Avg 31.3) | 17 Wickets (Avg 31.1)",
-        fcStats: "First-Class: 29 Matches | 1,351 Runs | 48 Wickets",
-        batAvg: 29.8, batSR: 164.7, bowlEcon: 8.9, wicketsYr: 20,
-        squad_scores: {
-          "T20I_Home": { "Duncan Fletcher": 96.0, "Ravi Shastri": 95.5, "Gautam Gambhir": 92.5, "Rahul Dravid": 91.8, "Gary Kirsten": 78.0 },
-          "T20I_SENA": { "Duncan Fletcher": 95.2, "Ravi Shastri": 96.8, "Gautam Gambhir": 93.0, "Rahul Dravid": 92.5, "Gary Kirsten": 76.5 },
-          "ODI_Home":  { "Duncan Fletcher": 94.5, "Ravi Shastri": 95.0, "Rahul Dravid": 92.0, "Gautam Gambhir": 91.5, "Gary Kirsten": 75.0 },
-          "ODI_SENA":  { "Ravi Shastri": 96.2, "Duncan Fletcher": 94.0, "Rahul Dravid": 93.5, "Gautam Gambhir": 92.0, "Gary Kirsten": 73.0 },
-          "TEST_Home": { "Duncan Fletcher": 65.0, "Ravi Shastri": 62.0, "Rahul Dravid": 48.0, "Gautam Gambhir": 52.0, "Gary Kirsten": 35.0 },
-          "TEST_SENA": { "Ravi Shastri": 82.0, "Duncan Fletcher": 78.0, "Rahul Dravid": 55.0, "Gautam Gambhir": 58.0, "Gary Kirsten": 38.0 }
-        },
-        raw_scores: {
-          "T20I_Home": { "Duncan Fletcher": 24.0, "Ravi Shastri": 21.0, "Gautam Gambhir": 16.7, "Rahul Dravid": 16.6, "Gary Kirsten": 14.3 },
-          "T20I_SENA": { "Ravi Shastri": 22.8, "Duncan Fletcher": 22.5, "Gautam Gambhir": 17.1, "Rahul Dravid": 16.9, "Gary Kirsten": 13.5 },
-          "ODI_Home":  { "Duncan Fletcher": 23.1, "Ravi Shastri": 21.8, "Rahul Dravid": 17.5, "Gautam Gambhir": 17.0, "Gary Kirsten": 13.8 },
-          "ODI_SENA":  { "Ravi Shastri": 23.5, "Duncan Fletcher": 22.0, "Rahul Dravid": 18.0, "Gautam Gambhir": 17.2, "Gary Kirsten": 12.9 },
-          "TEST_Home": { "Duncan Fletcher": 19.5, "Ravi Shastri": 17.8, "Rahul Dravid": 14.2, "Gautam Gambhir": 14.0, "Gary Kirsten": 9.2 },
-          "TEST_SENA": { "Duncan Fletcher": 20.8, "Ravi Shastri": 18.1, "Gautam Gambhir": 13.5, "Rahul Dravid": 12.7, "Gary Kirsten": 8.5 }
-        },
-        tactical: "Hardik is the premier pace all-rounder in modern Indian cricket. Ravi Shastri utilized him aggressively in overseas Tests and white-ball matches to balance 4 pacers. In white-ball squads, he is an automatic 95%+ starter."
-      },
-      "Yashasvi Jaiswal": {
-        role: "Top-Order Batter", hand: "LHB", bowling: "Part-Time Spin", caps: 52,
-        testStats: "14 Tests | 1,407 Runs | Avg 56.3 | 3 100s, 2 Double 100s",
-        fcStats: "First-Class: 32 Matches | 3,250 Runs | Avg 61.3 | 12 100s",
-        batAvg: 48.2, batSR: 156.4, bowlEcon: 7.2, wicketsYr: 2,
-        squad_scores: {
-          "TEST_Home": { "Gautam Gambhir": 98.5, "Rahul Dravid": 96.2, "Gary Kirsten": 89.0, "Duncan Fletcher": 84.0, "Ravi Shastri": 82.5 },
-          "TEST_SENA": { "Gautam Gambhir": 97.8, "Rahul Dravid": 95.5, "Gary Kirsten": 88.0, "Duncan Fletcher": 83.2, "Ravi Shastri": 81.0 },
-          "T20I_Home": { "Gautam Gambhir": 96.5, "Rahul Dravid": 92.0, "Gary Kirsten": 85.0, "Duncan Fletcher": 80.0, "Ravi Shastri": 78.5 },
-          "T20I_SENA": { "Gautam Gambhir": 95.8, "Rahul Dravid": 91.5, "Gary Kirsten": 84.2, "Duncan Fletcher": 79.5, "Ravi Shastri": 77.8 },
-          "ODI_Home":  { "Gautam Gambhir": 94.0, "Rahul Dravid": 91.0, "Gary Kirsten": 86.5, "Duncan Fletcher": 81.0, "Ravi Shastri": 79.0 },
-          "ODI_SENA":  { "Gautam Gambhir": 93.5, "Rahul Dravid": 90.2, "Gary Kirsten": 85.8, "Duncan Fletcher": 80.5, "Ravi Shastri": 78.2 }
-        },
-        raw_scores: {
-          "TEST_Home": { "Gautam Gambhir": 34.1, "Gary Kirsten": 29.2, "Rahul Dravid": 28.5, "Duncan Fletcher": 23.4, "Ravi Shastri": 22.0 },
-          "TEST_SENA": { "Gautam Gambhir": 33.2, "Gary Kirsten": 28.5, "Rahul Dravid": 27.1, "Duncan Fletcher": 22.6, "Ravi Shastri": 21.4 },
-          "T20I_Home": { "Gautam Gambhir": 32.5, "Rahul Dravid": 26.2, "Gary Kirsten": 24.1, "Duncan Fletcher": 21.0, "Ravi Shastri": 19.8 },
-          "T20I_SENA": { "Gautam Gambhir": 31.8, "Rahul Dravid": 25.5, "Gary Kirsten": 23.4, "Duncan Fletcher": 20.2, "Ravi Shastri": 19.1 },
-          "ODI_Home":  { "Gautam Gambhir": 30.2, "Gary Kirsten": 27.5, "Rahul Dravid": 26.0, "Duncan Fletcher": 22.1, "Ravi Shastri": 20.4 },
-          "ODI_SENA":  { "Gautam Gambhir": 29.5, "Gary Kirsten": 26.8, "Rahul Dravid": 25.1, "Duncan Fletcher": 21.5, "Ravi Shastri": 20.1 }
-        },
-        tactical: "Jaiswal holds an astounding 61.3 First-Class average with two Test double-hundreds. Gautam Gambhir exhibits the highest preference for him due to his explosive LHB powerplay scoring."
-      },
-      "Kuldeep Yadav": {
-        role: "Specialist Spin Bowler", hand: "LHB", bowling: "Left-Arm Wrist Spin", caps: 186,
-        testStats: "12 Tests | 53 Wickets | Avg 21.1 | 4 Five-Wicket Hauls",
-        fcStats: "First-Class: 42 Matches | 165 Wickets | Avg 28.4",
-        batAvg: 6.4, batSR: 21.9, bowlEcon: 4.9, wicketsYr: 60,
-        squad_scores: {
-          "TEST_Home": { "Ravi Shastri": 96.0, "Rahul Dravid": 94.5, "Gary Kirsten": 89.0, "Gautam Gambhir": 88.5, "Duncan Fletcher": 76.0 },
-          "TEST_SENA": { "Ravi Shastri": 92.5, "Rahul Dravid": 88.0, "Gary Kirsten": 85.0, "Gautam Gambhir": 82.0, "Duncan Fletcher": 68.0 },
-          "ODI_Home":  { "Rahul Dravid": 96.5, "Ravi Shastri": 95.8, "Gautam Gambhir": 92.0, "Gary Kirsten": 86.0, "Duncan Fletcher": 78.0 },
-          "ODI_SENA":  { "Rahul Dravid": 95.8, "Ravi Shastri": 95.0, "Gautam Gambhir": 91.5, "Gary Kirsten": 84.5, "Duncan Fletcher": 77.0 },
-          "T20I_Home": { "Rahul Dravid": 95.0, "Ravi Shastri": 94.2, "Gautam Gambhir": 90.5, "Gary Kirsten": 82.0, "Duncan Fletcher": 74.0 },
-          "T20I_SENA": { "Rahul Dravid": 95.5, "Ravi Shastri": 94.8, "Gautam Gambhir": 90.0, "Gary Kirsten": 81.5, "Duncan Fletcher": 73.2 }
-        },
-        raw_scores: {
-          "TEST_SENA": { "Ravi Shastri": 41.6, "Gary Kirsten": 39.2, "Rahul Dravid": 37.7, "Gautam Gambhir": 36.4, "Duncan Fletcher": 31.6 },
-          "TEST_Home": { "Ravi Shastri": 39.5, "Rahul Dravid": 36.2, "Gary Kirsten": 35.0, "Gautam Gambhir": 33.1, "Duncan Fletcher": 28.0 },
-          "ODI_Home":  { "Rahul Dravid": 31.2, "Ravi Shastri": 30.1, "Gautam Gambhir": 25.4, "Gary Kirsten": 21.0, "Duncan Fletcher": 17.2 },
-          "ODI_SENA":  { "Rahul Dravid": 30.5, "Ravi Shastri": 29.8, "Gautam Gambhir": 24.9, "Gary Kirsten": 20.1, "Duncan Fletcher": 16.5 },
-          "T20I_Home": { "Rahul Dravid": 27.8, "Ravi Shastri": 26.4, "Gautam Gambhir": 23.1, "Gary Kirsten": 18.2, "Duncan Fletcher": 15.0 },
-          "T20I_SENA": { "Rahul Dravid": 28.5, "Ravi Shastri": 27.0, "Gautam Gambhir": 22.8, "Gary Kirsten": 17.5, "Duncan Fletcher": 14.2 }
-        },
-        tactical: "Kuldeep is India's premier attacking wrist spinner (average 21.1 in Tests). Ravi Shastri called him India's #1 overseas spinner, while Rahul Dravid gave him his highest wrist-spinner odds ratio (1.33)."
-      },
-      "Jasprit Bumrah": {
-        role: "Specialist Fast Bowler", hand: "RHB", bowling: "Right-Arm Fast", caps: 233,
-        testStats: "36 Tests | 159 Wickets | Avg 20.7 | Strike Rate 45.1",
-        fcStats: "First-Class: 74 Matches | 340 Wickets | Avg 22.1",
-        batAvg: 6.2, batSR: 48.1, bowlEcon: 4.1, wicketsYr: 55,
-        squad_scores: {
-          "TEST_SENA": { "Ravi Shastri": 99.8, "Rahul Dravid": 99.5, "Gautam Gambhir": 99.2, "Gary Kirsten": 98.5, "Duncan Fletcher": 98.0 },
-          "TEST_Home": { "Ravi Shastri": 99.2, "Rahul Dravid": 99.0, "Gautam Gambhir": 98.8, "Gary Kirsten": 98.0, "Duncan Fletcher": 97.5 },
-          "ODI_Home":  { "Ravi Shastri": 99.5, "Rahul Dravid": 99.2, "Gautam Gambhir": 99.0, "Gary Kirsten": 98.5, "Duncan Fletcher": 98.0 },
-          "ODI_SENA":  { "Ravi Shastri": 99.8, "Rahul Dravid": 99.5, "Gautam Gambhir": 99.2, "Gary Kirsten": 98.8, "Duncan Fletcher": 98.2 },
-          "T20I_Home": { "Ravi Shastri": 99.0, "Rahul Dravid": 98.8, "Gautam Gambhir": 98.5, "Gary Kirsten": 97.8, "Duncan Fletcher": 97.2 },
-          "T20I_SENA": { "Ravi Shastri": 99.5, "Rahul Dravid": 99.2, "Gautam Gambhir": 99.0, "Gary Kirsten": 98.0, "Duncan Fletcher": 97.5 }
-        },
-        raw_scores: {
-          "TEST_SENA": { "Ravi Shastri": 53.8, "Rahul Dravid": 51.5, "Gautam Gambhir": 49.2, "Gary Kirsten": 47.8, "Duncan Fletcher": 46.2 },
-          "TEST_Home": { "Ravi Shastri": 46.5, "Rahul Dravid": 45.2, "Gautam Gambhir": 43.8, "Gary Kirsten": 42.0, "Duncan Fletcher": 40.5 },
-          "ODI_Home":  { "Ravi Shastri": 49.0, "Rahul Dravid": 48.1, "Gautam Gambhir": 46.2, "Gary Kirsten": 44.8, "Duncan Fletcher": 43.0 },
-          "ODI_SENA":  { "Ravi Shastri": 51.5, "Rahul Dravid": 50.2, "Gautam Gambhir": 48.1, "Gary Kirsten": 46.5, "Duncan Fletcher": 45.0 },
-          "T20I_Home": { "Ravi Shastri": 48.2, "Rahul Dravid": 47.5, "Gautam Gambhir": 45.8, "Gary Kirsten": 44.0, "Duncan Fletcher": 42.1 },
-          "T20I_SENA": { "Ravi Shastri": 50.1, "Rahul Dravid": 49.2, "Gautam Gambhir": 47.5, "Gary Kirsten": 45.2, "Duncan Fletcher": 43.8 }
-        },
-        tactical: "Bumrah possesses a historic Test bowling average of 20.7 and a strike rate of 45.1 balls per wicket. Whenever named in an India squad, he is an unquestioned 99%+ selection lock under every coach."
-      },
-      "Rohit Sharma": {
-        role: "Top-Order Batter / Captain", hand: "RHB", bowling: "Part-Time Spin", caps: 501,
-        testStats: "59 Tests | 4,137 Runs | Avg 45.0 | 12 100s",
-        fcStats: "First-Class: 125 Matches | 8,900 Runs | Avg 52.8",
-        batAvg: 48.9, batSR: 92.5, bowlEcon: 5.5, wicketsYr: 2,
-        squad_scores: {
-          "TEST_Home": { "Rahul Dravid": 98.5, "Gautam Gambhir": 98.2, "Ravi Shastri": 96.0, "Duncan Fletcher": 72.0, "Gary Kirsten": 65.0 },
-          "TEST_SENA": { "Rahul Dravid": 98.0, "Gautam Gambhir": 97.8, "Ravi Shastri": 95.5, "Duncan Fletcher": 70.0, "Gary Kirsten": 62.0 },
-          "ODI_Home":  { "Rahul Dravid": 99.2, "Ravi Shastri": 99.0, "Gautam Gambhir": 98.8, "Duncan Fletcher": 92.0, "Gary Kirsten": 78.0 },
-          "ODI_SENA":  { "Rahul Dravid": 99.0, "Ravi Shastri": 99.0, "Gautam Gambhir": 98.5, "Duncan Fletcher": 91.5, "Gary Kirsten": 76.0 },
-          "T20I_Home": { "Rahul Dravid": 98.5, "Ravi Shastri": 98.0, "Duncan Fletcher": 92.0, "Gary Kirsten": 80.0, "Gautam Gambhir": 0.0 },
-          "T20I_SENA": { "Rahul Dravid": 98.8, "Ravi Shastri": 98.5, "Duncan Fletcher": 92.5, "Gary Kirsten": 79.0, "Gautam Gambhir": 0.0 }
-        },
-        raw_scores: {
-          "TEST_Home": { "Rahul Dravid": 88.0, "Gautam Gambhir": 85.0, "Ravi Shastri": 76.0, "Duncan Fletcher": 35.0, "Gary Kirsten": 28.0 },
-          "TEST_SENA": { "Rahul Dravid": 86.5, "Gautam Gambhir": 84.0, "Ravi Shastri": 74.5, "Duncan Fletcher": 33.0, "Gary Kirsten": 25.0 },
-          "ODI_Home":  { "Rahul Dravid": 62.0, "Ravi Shastri": 82.0, "Gautam Gambhir": 68.0, "Duncan Fletcher": 78.0, "Gary Kirsten": 48.0 },
-          "ODI_SENA":  { "Rahul Dravid": 65.0, "Ravi Shastri": 85.0, "Gautam Gambhir": 70.0, "Duncan Fletcher": 79.0, "Gary Kirsten": 46.0 },
-          "T20I_Home": { "Rahul Dravid": 55.0, "Ravi Shastri": 78.0, "Duncan Fletcher": 72.0, "Gary Kirsten": 44.0, "Gautam Gambhir": 0.0 },
-          "T20I_SENA": { "Rahul Dravid": 58.0, "Ravi Shastri": 80.0, "Duncan Fletcher": 74.0, "Gary Kirsten": 42.0, "Gautam Gambhir": 0.0 }
-        },
-        tactical: "Like Kohli, Rohit is an undisputed 98%+ squad lock in Tests and ODIs. He retired from T20Is in June 2024, hence his 0% T20I mark under Gambhir. Under Dravid, his captaincy assured 99% selection in all available series."
-      },
-      "Ravindra Jadeja": {
-        role: "Spin All-Rounder", hand: "LHB", bowling: "Left-Arm Orthodox", caps: 368,
-        testStats: "72 Tests | 3,030 Runs (Avg 36.5) | 294 Wickets (Avg 24.1)",
-        fcStats: "First-Class: 130 Matches | 7,200 Runs | 510 Wickets (Triple Centurion)",
-        batAvg: 35.2, batSR: 88.5, bowlEcon: 4.8, wicketsYr: 42,
-        squad_scores: {
-          "TEST_Home": { "Anil Kumble": 99.5, "Ravi Shastri": 99.2, "Rahul Dravid": 99.0, "Gautam Gambhir": 98.8, "Duncan Fletcher": 97.0, "Gary Kirsten": 65.0 },
-          "TEST_SENA": { "Ravi Shastri": 98.5, "Rahul Dravid": 98.0, "Gautam Gambhir": 97.5, "Anil Kumble": 95.0, "Duncan Fletcher": 92.0, "Gary Kirsten": 55.0 },
-          "ODI_Home":  { "Duncan Fletcher": 98.0, "Ravi Shastri": 97.5, "Rahul Dravid": 96.8, "Gautam Gambhir": 96.0, "Gary Kirsten": 72.0 },
-          "ODI_SENA":  { "Duncan Fletcher": 97.5, "Ravi Shastri": 97.0, "Rahul Dravid": 96.5, "Gautam Gambhir": 95.8, "Gary Kirsten": 70.0 },
-          "T20I_Home": { "Rahul Dravid": 96.5, "Ravi Shastri": 95.0, "Duncan Fletcher": 92.0, "Gary Kirsten": 68.0, "Gautam Gambhir": 0.0 },
-          "T20I_SENA": { "Rahul Dravid": 97.0, "Ravi Shastri": 95.5, "Duncan Fletcher": 92.5, "Gary Kirsten": 66.0, "Gautam Gambhir": 0.0 }
-        },
-        raw_scores: {
-          "TEST_Home": { "Anil Kumble": 98.0, "Ravi Shastri": 88.0, "Rahul Dravid": 85.0, "Duncan Fletcher": 82.0, "Gautam Gambhir": 84.0, "Gary Kirsten": 25.0 },
-          "TEST_SENA": { "Ravi Shastri": 86.0, "Rahul Dravid": 82.0, "Gautam Gambhir": 81.0, "Anil Kumble": 80.0, "Duncan Fletcher": 76.0, "Gary Kirsten": 20.0 },
-          "ODI_Home":  { "Duncan Fletcher": 86.0, "Ravi Shastri": 78.0, "Rahul Dravid": 58.0, "Gary Kirsten": 35.0, "Gautam Gambhir": 64.0 },
-          "ODI_SENA":  { "Duncan Fletcher": 85.0, "Ravi Shastri": 80.0, "Rahul Dravid": 60.0, "Gary Kirsten": 34.0, "Gautam Gambhir": 66.0 },
-          "T20I_Home": { "Rahul Dravid": 52.0, "Ravi Shastri": 68.0, "Duncan Fletcher": 65.0, "Gary Kirsten": 28.0, "Gautam Gambhir": 0.0 },
-          "T20I_SENA": { "Rahul Dravid": 54.0, "Ravi Shastri": 70.0, "Duncan Fletcher": 66.0, "Gary Kirsten": 26.0, "Gautam Gambhir": 0.0 }
-        },
-        tactical: "Jadeja is arguably India's greatest red-ball all-rounder since Kapil Dev (Test bowling avg 24.1, batting avg 36.5). He is an undisputed 99% starter in all Tests at home and overseas. Retired from T20Is in June 2024."
-      },
-      "Dhruv Jurel": {
-        role: "Wicketkeeper / Middle-Order Batter", hand: "RHB", bowling: "None", caps: 7,
-        testStats: "3 Tests | 190 Runs | Avg 63.3 | HS 90 (Player of Match)",
-        fcStats: "First-Class: 19 Matches | 1,075 Runs | Avg 48.9 | 80 & 68 at MCG",
-        batAvg: 48.6, batSR: 62.5, bowlEcon: 0, wicketsYr: 0,
-        squad_scores: {
-          "TEST_Home": { "Rahul Dravid": 92.5, "Gautam Gambhir": 91.0, "Ravi Shastri": 75.0, "Duncan Fletcher": 68.0, "Gary Kirsten": 60.0 },
-          "TEST_SENA": { "Gautam Gambhir": 93.0, "Rahul Dravid": 89.5, "Ravi Shastri": 76.2, "Duncan Fletcher": 65.0, "Gary Kirsten": 58.0 },
-          "ODI_Home":  { "Rahul Dravid": 78.0, "Gautam Gambhir": 76.5, "Ravi Shastri": 62.0, "Duncan Fletcher": 55.0, "Gary Kirsten": 50.0 },
-          "ODI_SENA":  { "Gautam Gambhir": 79.5, "Rahul Dravid": 77.0, "Ravi Shastri": 60.5, "Duncan Fletcher": 54.0, "Gary Kirsten": 48.0 },
-          "T20I_Home": { "Gautam Gambhir": 72.0, "Rahul Dravid": 70.5, "Ravi Shastri": 55.0, "Duncan Fletcher": 50.0, "Gary Kirsten": 45.0 },
-          "T20I_SENA": { "Gautam Gambhir": 71.5, "Rahul Dravid": 69.0, "Ravi Shastri": 54.0, "Duncan Fletcher": 48.5, "Gary Kirsten": 42.0 }
-        },
-        raw_scores: {
-          "TEST_Home": { "Rahul Dravid": 55.0, "Gautam Gambhir": 52.0, "Ravi Shastri": 18.0, "Duncan Fletcher": 14.0, "Gary Kirsten": 10.0 },
-          "TEST_SENA": { "Gautam Gambhir": 56.5, "Rahul Dravid": 50.0, "Ravi Shastri": 17.5, "Duncan Fletcher": 12.0, "Gary Kirsten": 8.0 },
-          "ODI_Home":  { "Rahul Dravid": 35.0, "Gautam Gambhir": 32.0, "Ravi Shastri": 12.0, "Duncan Fletcher": 9.0, "Gary Kirsten": 6.0 },
-          "ODI_SENA":  { "Gautam Gambhir": 34.0, "Rahul Dravid": 31.5, "Ravi Shastri": 11.0, "Duncan Fletcher": 8.5, "Gary Kirsten": 5.5 },
-          "T20I_Home": { "Gautam Gambhir": 28.0, "Rahul Dravid": 25.0, "Ravi Shastri": 10.0, "Duncan Fletcher": 7.0, "Gary Kirsten": 5.0 },
-          "T20I_SENA": { "Gautam Gambhir": 27.5, "Rahul Dravid": 24.0, "Ravi Shastri": 9.5, "Duncan Fletcher": 6.5, "Gary Kirsten": 4.5 }
-        },
-        tactical: "Jurel broke out under Rahul Dravid against England in 2024 (Player of the Match in Ranchi with 90 & 39*). Gautam Gambhir highly values his temperament and red-ball technique under overseas conditions (twin fifties 80 & 68 at the MCG for India A). He ranks as India's premier specialist keeper-batter backup and middle-order stabilizer."
-      }
-    };
-
-    let currentFormat = "TEST";
-    let currentVenue = "Home";
-    let currentMode = "squad";
-
-    function setMode(mode) {
-      currentMode = mode;
-      const btnSquad = document.getElementById('modeSquad');
-      const btnRaw = document.getElementById('modeRaw');
-      const subtext = document.getElementById('poolSubtext');
-      if (mode === 'squad') {
-        btnSquad.className = "px-3 py-1 rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] shadow-xs transition";
-        btnRaw.className = "px-3 py-1 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition";
-        subtext.innerText = "Playing XI Lock Rate when Named in 15-Man Squad";
-      } else {
-        btnRaw.className = "px-3 py-1 rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] shadow-xs transition";
-        btnSquad.className = "px-3 py-1 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition";
-        subtext.innerText = "Raw Contender Pool (Includes Bilateral Rest/Rotations)";
-      }
-      updateView();
-    }
-
-    function setFormat(fmt) {
-      currentFormat = fmt;
-      ['TEST', 'ODI', 'T20I'].forEach(f => {
-        const btn = document.getElementById('btn' + f);
-        if (f === fmt) {
-          btn.className = "py-1.5 rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] shadow-xs transition";
-        } else {
-          btn.className = "py-1.5 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition";
-        }
-      });
-      updateView();
-    }
-
-    function setVenue(v) {
-      currentVenue = v;
-      const btnHome = document.getElementById('btnHome');
-      const btnSena = document.getElementById('btnSena');
-      if (v === 'Home') {
-        btnHome.className = "py-1.5 rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] shadow-xs transition";
-        btnSena.className = "py-1.5 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition";
-      } else {
-        btnSena.className = "py-1.5 rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] shadow-xs transition";
-        btnHome.className = "py-1.5 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition";
-      }
-      updateView();
-    }
-
-    function updateView() {
-      const player = document.getElementById('playerSelect').value;
-      const data = PLAYERS_DATA[player] || PLAYERS_DATA["Virat Kohli"];
-
-      // Update Bio
-      const bioEl = document.getElementById('playerBio');
-      bioEl.innerHTML = `
-        <div>
-          <span class="text-xs text-[var(--muted-foreground)] block">Role</span>
-          <span class="font-semibold text-xs sm:text-sm">${data.role}</span>
-        </div>
-        <div>
-          <span class="text-xs text-[var(--muted-foreground)] block">Bat / Bowl Style</span>
-          <span class="font-semibold text-xs sm:text-sm">${data.hand} / ${data.bowling}</span>
-        </div>
-        <div>
-          <span class="text-xs text-[var(--muted-foreground)] block">Test Match Record</span>
-          <span class="font-semibold text-xs sm:text-sm text-emerald-500">${data.testStats || "Modern White-Ball Core"}</span>
-        </div>
-        <div>
-          <span class="text-xs text-[var(--muted-foreground)] block">First-Class Multi-Day Record</span>
-          <span class="font-semibold text-xs sm:text-sm text-indigo-400">${data.fcStats || "Domestic First-Class Core"}</span>
-        </div>
-      `;
-
-      // Get Scores based on Mode
-      const key = `${currentFormat}_${currentVenue}`;
-      const scoreSource = (currentMode === 'squad') ? data.squad_scores : data.raw_scores;
-      const scores = (scoreSource && scoreSource[key]) ? scoreSource[key] : {
-        "Gautam Gambhir": 75.0, "Rahul Dravid": 78.0, "Ravi Shastri": 80.0, "Gary Kirsten": 70.0, "Duncan Fletcher": 72.0
-      };
-
-      // Sort coaches by score
-      const sortedCoaches = Object.entries(scores).sort((a, b) => b[1] - a[1]);
-
-      const barsContainer = document.getElementById('coachBarsContainer');
-      barsContainer.innerHTML = "";
-
-      const coachColors = {
-        "Gautam Gambhir": "bg-indigo-500",
-        "Rahul Dravid": "bg-blue-500",
-        "Ravi Shastri": "bg-amber-500",
-        "Gary Kirsten": "bg-emerald-500",
-        "Duncan Fletcher": "bg-purple-500",
-        "Anil Kumble": "bg-rose-500"
-      };
-
-      sortedCoaches.forEach(([coach, prob], index) => {
-        const color = coachColors[coach] || "bg-sky-500";
-        const widthPct = Math.min(100, Math.max(prob === 0 ? 0 : 6, prob));
-        const isRetired = prob === 0.0 && currentFormat === 'T20I';
-
-        const row = document.createElement('div');
-        row.className = "space-y-1";
-        row.innerHTML = `
-          <div class="flex items-center justify-between text-xs sm:text-sm">
-            <span class="font-medium flex items-center gap-1.5">
-              ${coach}
-              ${index === 0 && prob > 50 ? '<span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">#1 Preferred</span>' : ''}
-              ${isRetired ? '<span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-rose-500/20 text-rose-500">Retired from T20Is</span>' : ''}
-            </span>
-            <span class="font-bold tabular-nums ${isRetired ? 'text-rose-400' : ''}">${isRetired ? 'Retired (0.0%)' : prob.toFixed(1) + '%'}</span>
-          </div>
-          <div class="w-full h-3 bg-[var(--secondary)] rounded-full overflow-hidden border border-[var(--border)]">
-            <div class="progress-bar h-full ${isRetired ? 'bg-zinc-600' : color} rounded-full" style="width: ${widthPct}%"></div>
-          </div>
-        `;
-        barsContainer.appendChild(row);
-      });
-
-      // Update Tactical insight text
-      document.getElementById('tacticalText').innerText = data.tactical;
-    }
-
-    // Initialize
-    updateView();
-  </script>
 </body>
 </html>

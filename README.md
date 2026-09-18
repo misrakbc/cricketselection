@@ -90,8 +90,8 @@ Open `index.html` directly in any web browser to access the graphical dashboard 
 ## 📁 Repository Structure
 
 ```
-├── index.html                     # Standalone interactive Web UI / Live Predictor
-├── predictors.html                # Coach Predictors, Test & First-Class Dynamics Deep Dive
+├── index.html                     # Main Screen: Coach Predictors & Red-Ball Selection Dynamics
+├── predictor.html                 # Second Page: Live Selection Predictor & Custom Player Builder
 ├── data_loader.py                 # Downloads & parses Cricsheet JSON match data
 ├── feature_builder.py             # Feature engineering & contention pool constructor
 ├── model_trainer.py               # Logistic Regression interactions & Random Forest trainer
