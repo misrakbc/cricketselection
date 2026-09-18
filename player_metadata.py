@@ -21,6 +21,8 @@ PLAYER_ARCHETYPES = {
     "PA Patel": {"hand": "LHB", "arm": "None", "bowling": "None", "role": "Wicketkeeper"},
     "D Dasgupta": {"hand": "RHB", "arm": "None", "bowling": "None", "role": "Wicketkeeper"},
     "J Sharma": {"hand": "RHB", "arm": "None", "bowling": "None", "role": "Wicketkeeper"},
+    "Dhruv Jurel": {"hand": "RHB", "arm": "None", "bowling": "None", "role": "Wicketkeeper"},
+    "DC Jurel": {"hand": "RHB", "arm": "None", "bowling": "None", "role": "Wicketkeeper"},
     "DH Mongia": {"hand": "LHB", "arm": "Left", "bowling": "Finger Spin", "role": "Middle-Order Batter"},
     
     # Top Order Batters

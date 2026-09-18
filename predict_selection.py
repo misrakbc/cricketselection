@@ -75,7 +75,10 @@ COMMON_ALIASES = {
     "harshit rana": "Harshit Rana",
     "akash deep": "Akash Deep",
     "mayank yadav": "Mayank Yadav",
-    "abhishek sharma": "Abhishek Sharma"
+    "abhishek sharma": "Abhishek Sharma",
+    "dhruv jurel": "Dhruv Jurel",
+    "jurel": "Dhruv Jurel",
+    "dc jurel": "Dhruv Jurel"
 }
 
 COACHES = [
