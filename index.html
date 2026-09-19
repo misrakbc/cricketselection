@@ -413,34 +413,91 @@
         </div>
       </div>
 
-      <!-- Controls Row: Format & Conditions -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 bg-[var(--background)] p-3.5 rounded-xl border border-[var(--border)]">
+      <!-- Controls Row: Format & Conditions (Prominently Selectable) -->
+      <div class="bg-[var(--background)] p-4 rounded-xl border-2 border-[var(--border)] shadow-sm space-y-3">
         
-        <!-- Player Select (For Existing Mode) -->
-        <div id="playerSelectContainer" class="space-y-1">
-          <label class="block text-[11px] font-bold uppercase tracking-wider text-[var(--muted-foreground)]">Select Indian Player</label>
-          <select id="playerSelect" onchange="updateExistingView()" class="w-full bg-[var(--card)] text-[var(--foreground)] border border-[var(--border)] rounded-lg px-3 py-2 text-xs sm:text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            <option value="Virat Kohli">Virat Kohli</option><option value="Rohit Sharma">Rohit Sharma</option><option value="Jasprit Bumrah">Jasprit Bumrah</option><option value="Hardik Pandya">Hardik Pandya</option><option value="Yashasvi Jaiswal">Yashasvi Jaiswal</option><option value="Kuldeep Yadav">Kuldeep Yadav</option><option value="Axar Patel">Axar Patel</option><option value="Arshdeep Singh">Arshdeep Singh</option><option value="Rishabh Pant">Rishabh Pant</option><option value="Ravindra Jadeja">Ravindra Jadeja</option><option value="Suryakumar Yadav">Suryakumar Yadav</option><option value="Sanju Samson">Sanju Samson</option><option value="R Ashwin">R Ashwin</option><option value="Shivam Dube">Shivam Dube</option><option value="Washington Sundar">Washington Sundar</option><option value="Shubman Gill">Shubman Gill</option><option value="Mohammed Siraj">Mohammed Siraj</option><option value="KL Rahul">KL Rahul</option><option value="Dhruv Jurel">Dhruv Jurel</option>
-          </select>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          
+          <!-- Player Select (For Existing Mode) -->
+          <div id="playerSelectContainer" class="space-y-1.5">
+            <label class="block text-xs font-bold uppercase tracking-wider text-[var(--foreground)] flex items-center gap-1.5">
+              <span>👤</span>
+              <span>Select Indian Player</span>
+            </label>
+            <select id="playerSelect" onchange="updateExistingView()" class="w-full bg-[var(--card)] text-[var(--foreground)] border-2 border-[var(--border)] hover:border-indigo-400 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm font-bold shadow-xs focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer transition">
+              <option value="Virat Kohli">Virat Kohli</option><option value="Rohit Sharma">Rohit Sharma</option><option value="Jasprit Bumrah">Jasprit Bumrah</option><option value="Hardik Pandya">Hardik Pandya</option><option value="Yashasvi Jaiswal">Yashasvi Jaiswal</option><option value="Kuldeep Yadav">Kuldeep Yadav</option><option value="Axar Patel">Axar Patel</option><option value="Arshdeep Singh">Arshdeep Singh</option><option value="Rishabh Pant">Rishabh Pant</option><option value="Ravindra Jadeja">Ravindra Jadeja</option><option value="Suryakumar Yadav">Suryakumar Yadav</option><option value="Sanju Samson">Sanju Samson</option><option value="R Ashwin">R Ashwin</option><option value="Shivam Dube">Shivam Dube</option><option value="Washington Sundar">Washington Sundar</option><option value="Shubman Gill">Shubman Gill</option><option value="Mohammed Siraj">Mohammed Siraj</option><option value="KL Rahul">KL Rahul</option><option value="Dhruv Jurel">Dhruv Jurel</option>
+            </select>
+          </div>
+
+          <!-- Format Selector: Ultra Visible & Tactile -->
+          <div class="space-y-1.5">
+            <div class="flex items-center justify-between">
+              <label class="block text-xs font-bold uppercase tracking-wider text-[var(--foreground)] flex items-center gap-1.5">
+                <span>🏏</span>
+                <span>Match Format</span>
+              </label>
+              <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-400">
+                Click to Switch
+              </span>
+            </div>
+            <div class="grid grid-cols-3 gap-1.5 bg-[var(--card)] p-1.5 rounded-xl border-2 border-[var(--border)] text-center text-xs font-bold shadow-xs">
+              <button id="btnTEST" onclick="setFormat('TEST')" class="py-2 px-1 rounded-lg bg-indigo-600 text-white font-extrabold shadow-md border-2 border-indigo-400 flex items-center justify-center gap-1 cursor-pointer transition transform scale-[1.02]">
+                <span>🔴</span>
+                <span>TEST</span>
+                <span id="checkTEST" class="text-[11px] font-black">✓</span>
+              </button>
+              <button id="btnODI" onclick="setFormat('ODI')" class="py-2 px-1 rounded-lg bg-[var(--background)] hover:bg-[var(--secondary)] text-[var(--foreground)] font-semibold border-2 border-[var(--border)] hover:border-indigo-400/60 shadow-xs flex items-center justify-center gap-1 cursor-pointer transition transform active:scale-95">
+                <span>🔵</span>
+                <span>ODI</span>
+                <span id="checkODI" class="hidden text-[11px] font-black">✓</span>
+              </button>
+              <button id="btnT20I" onclick="setFormat('T20I')" class="py-2 px-1 rounded-lg bg-[var(--background)] hover:bg-[var(--secondary)] text-[var(--foreground)] font-semibold border-2 border-[var(--border)] hover:border-indigo-400/60 shadow-xs flex items-center justify-center gap-1 cursor-pointer transition transform active:scale-95">
+                <span>🟢</span>
+                <span>T20I</span>
+                <span id="checkT20I" class="hidden text-[11px] font-black">✓</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Venue Selector: Ultra Visible & Tactile -->
+          <div class="space-y-1.5">
+            <div class="flex items-center justify-between">
+              <label class="block text-xs font-bold uppercase tracking-wider text-[var(--foreground)] flex items-center gap-1.5">
+                <span>🌍</span>
+                <span>Playing Conditions</span>
+              </label>
+              <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">
+                Click to Switch
+              </span>
+            </div>
+            <div class="grid grid-cols-2 gap-1.5 bg-[var(--card)] p-1.5 rounded-xl border-2 border-[var(--border)] text-center text-xs font-bold shadow-xs">
+              <button id="btnHome" onclick="setVenue('Home')" class="py-2 px-2 rounded-lg bg-emerald-600 text-white font-extrabold shadow-md border-2 border-emerald-400 flex items-center justify-center gap-1.5 cursor-pointer transition transform scale-[1.02]">
+                <span>🏟️</span>
+                <span>Subcontinent</span>
+                <span id="checkHome" class="text-[11px] font-black">✓</span>
+              </button>
+              <button id="btnSena" onclick="setVenue('SENA')" class="py-2 px-2 rounded-lg bg-[var(--background)] hover:bg-[var(--secondary)] text-[var(--foreground)] font-semibold border-2 border-[var(--border)] hover:border-emerald-400/60 shadow-xs flex items-center justify-center gap-1.5 cursor-pointer transition transform active:scale-95">
+                <span>✈️</span>
+                <span>SENA Overseas</span>
+                <span id="checkSena" class="hidden text-[11px] font-black">✓</span>
+              </button>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Format Selector -->
-        <div class="space-y-1">
-          <label class="block text-[11px] font-bold uppercase tracking-wider text-[var(--muted-foreground)]">Match Format</label>
-          <div class="grid grid-cols-3 gap-1 bg-[var(--card)] p-1 rounded-lg border border-[var(--border)] text-center text-xs font-semibold">
-            <button id="btnTEST" onclick="setFormat('TEST')" class="py-1.5 rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] shadow-xs transition">TEST</button>
-            <button id="btnODI" onclick="setFormat('ODI')" class="py-1.5 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition">ODI</button>
-            <button id="btnT20I" onclick="setFormat('T20I')" class="py-1.5 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition">T20I</button>
+        <!-- Live Active Context Confirmation Banner -->
+        <div class="pt-2.5 border-t border-[var(--border)] flex flex-wrap items-center justify-between gap-2 text-xs">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span class="text-[var(--muted-foreground)] font-medium">Currently Selected Scenario:</span>
+            <span id="activeContextBanner" class="font-extrabold text-[var(--foreground)] px-2.5 py-0.5 rounded-md bg-[var(--secondary)] border border-[var(--border)]">
+              TEST Match • Subcontinent Pitch
+            </span>
           </div>
-        </div>
-
-        <!-- Venue Selector -->
-        <div class="space-y-1">
-          <label class="block text-[11px] font-bold uppercase tracking-wider text-[var(--muted-foreground)]">Playing Conditions</label>
-          <div class="grid grid-cols-2 gap-1 bg-[var(--card)] p-1 rounded-lg border border-[var(--border)] text-center text-xs font-semibold">
-            <button id="btnHome" onclick="setVenue('Home')" class="py-1.5 rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] shadow-xs transition">Subcontinent</button>
-            <button id="btnSena" onclick="setVenue('SENA')" class="py-1.5 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition">SENA Overseas</button>
-          </div>
+          <span class="text-[11px] text-indigo-400 font-medium">
+            💡 Click buttons above to switch format/venue in real time
+          </span>
         </div>
 
       </div>
@@ -727,12 +784,16 @@
       currentFormat = fmt;
       ['TEST', 'ODI', 'T20I'].forEach(f => {
         const btn = document.getElementById('btn' + f);
+        const check = document.getElementById('check' + f);
         if (f === fmt) {
-          btn.className = "py-1.5 rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] shadow-xs transition";
+          btn.className = "py-2 px-1 rounded-lg bg-indigo-600 text-white font-extrabold shadow-md border-2 border-indigo-400 flex items-center justify-center gap-1 cursor-pointer transition transform scale-[1.02]";
+          if (check) check.classList.remove('hidden');
         } else {
-          btn.className = "py-1.5 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition";
+          btn.className = "py-2 px-1 rounded-lg bg-[var(--background)] hover:bg-[var(--secondary)] text-[var(--foreground)] font-semibold border-2 border-[var(--border)] hover:border-indigo-400/60 shadow-xs flex items-center justify-center gap-1 cursor-pointer transition transform active:scale-95";
+          if (check) check.classList.add('hidden');
         }
       });
+      updateActiveBanner();
       if (currentSubMode === 'existing') updateExistingView(); else calcCustomPlayer();
     }
 
@@ -740,14 +801,30 @@
       currentVenue = v;
       const btnHome = document.getElementById('btnHome');
       const btnSena = document.getElementById('btnSena');
+      const checkHome = document.getElementById('checkHome');
+      const checkSena = document.getElementById('checkSena');
+
       if (v === 'Home') {
-        btnHome.className = "py-1.5 rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] shadow-xs transition";
-        btnSena.className = "py-1.5 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition";
+        btnHome.className = "py-2 px-2 rounded-lg bg-emerald-600 text-white font-extrabold shadow-md border-2 border-emerald-400 flex items-center justify-center gap-1.5 cursor-pointer transition transform scale-[1.02]";
+        btnSena.className = "py-2 px-2 rounded-lg bg-[var(--background)] hover:bg-[var(--secondary)] text-[var(--foreground)] font-semibold border-2 border-[var(--border)] hover:border-emerald-400/60 shadow-xs flex items-center justify-center gap-1.5 cursor-pointer transition transform active:scale-95";
+        if (checkHome) checkHome.classList.remove('hidden');
+        if (checkSena) checkSena.classList.add('hidden');
       } else {
-        btnSena.className = "py-1.5 rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] shadow-xs transition";
-        btnHome.className = "py-1.5 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition";
+        btnSena.className = "py-2 px-2 rounded-lg bg-emerald-600 text-white font-extrabold shadow-md border-2 border-emerald-400 flex items-center justify-center gap-1.5 cursor-pointer transition transform scale-[1.02]";
+        btnHome.className = "py-2 px-2 rounded-lg bg-[var(--background)] hover:bg-[var(--secondary)] text-[var(--foreground)] font-semibold border-2 border-[var(--border)] hover:border-emerald-400/60 shadow-xs flex items-center justify-center gap-1.5 cursor-pointer transition transform active:scale-95";
+        if (checkSena) checkSena.classList.remove('hidden');
+        if (checkHome) checkHome.classList.add('hidden');
       }
+      updateActiveBanner();
       if (currentSubMode === 'existing') updateExistingView(); else calcCustomPlayer();
+    }
+
+    function updateActiveBanner() {
+      const banner = document.getElementById('activeContextBanner');
+      if (banner) {
+        const venueLabel = currentVenue === 'Home' ? 'Subcontinent Pitch (Home / Asia)' : 'SENA Overseas (AUS, ENG, SA, NZ)';
+        banner.innerText = `${currentFormat} Match • ${venueLabel}`;
+      }
     }
 
     function renderBars(scores, tacticalText, retirementNotice) {
